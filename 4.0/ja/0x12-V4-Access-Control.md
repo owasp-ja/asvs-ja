@@ -16,15 +16,15 @@
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **4.1.1** | 特に、クライアント側のアクセス制御が存在し、それが迂回される可能性がある場合には、アプリケーションは信頼できるサービスレイヤに対してアクセス制御ルールを適用する。 | ✓ | ✓ | ✓ | 602 |
 | **4.1.2** | アクセス制御で使用されるすべてのユーザ属性とデータ属性およびポリシー情報は、特に認可されていない限りエンドユーザーによって操作されない。 | ✓ | ✓ | ✓ | 639 |
-| **4.1.3** | 最小権限の原則が導入されている。ユーザは認可されているものについてのみ、機能やデータファイル、URL、コントローラ、サービス、他のリソースにアクセスできる。これは、なりすましや権限昇格に対する防御となる。 ([C7](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ |  285 |
-| **4.1.4** | デフォルト拒否の原則が存在する。これにより新規のユーザやロールは最小限の権限または権限なしで開始し、アクセスが明示的に割り当てられるまで新しい機能へのアクセスができません。 ([C7](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ |  276 |
-| **4.1.5** | 例外が発生した場合も含めて、アクセス制御がセキュアに失敗する。 ([C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ |  285 |
+| **4.1.3** | 最小権限の原則が導入されている。ユーザは認可されているものについてのみ、機能やデータファイル、URL、コントローラ、サービス、他のリソースにアクセスできる。これは、なりすましや権限昇格に対する防御となる。 ([C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ |  285 |
+| **4.1.4** | デフォルト拒否の原則が存在する。これにより新規のユーザやロールは最小限の権限または権限なしで開始し、アクセスが明示的に割り当てられるまで新しい機能へのアクセスができません。 ([C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ |  276 |
+| **4.1.5** | 例外が発生した場合も含めて、アクセス制御がセキュアに失敗する。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ |  285 |
 
 ## V4.2 オペレーションレベルアクセス制御
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **4.2.1** | 機密データおよび API が、他人のレコードの作成や更新、全員のレコードの閲覧、すべてのレコードの削除など、レコードの作成、読み取り、更新、削除を目的とするダイレクトオブジェクト攻撃に対して保護されている。 | ✓ | ✓ | ✓ | 639 |
+| **4.2.1** | 機密データおよび API が、他人のレコードの作成や更新、全員のレコードの閲覧、すべてのレコードの削除など、レコードの作成、読み取り、更新、削除を目的とする Insecure Direct Object Reference (IDOR) 攻撃に対して保護されている。 | ✓ | ✓ | ✓ | 639 |
 | **4.2.2** | 認証済みの機能を保護するために、アプリケーションやフレームワークが強力な CSRF 対策メカニズムを実施していること、および有効な自動化対策や CSRF 対策が未認証機能の保護を実施している。 | ✓ | ✓ | ✓ | 352 |
 
 ## V4.3 他のアクセス制御の考慮
@@ -39,7 +39,7 @@
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Testing Guide 4.0: Authorization](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
-* [OWASP CSRF Cheat Sheet](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
-* [OWASP REST Cheat Sheet](https://www.owasp.org/index.php/REST_Security_Cheat_Sheet)
+* [OWASP Testing Guide 4.0: Authorization](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/05-Authorization_Testing/README.html)
+* [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
+* [OWASP CSRF Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+* [OWASP REST Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)

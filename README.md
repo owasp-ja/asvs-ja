@@ -1,8 +1,8 @@
 # OWASP Application Security Verification Standard ja
 
-This is the Japanese translation of the [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS).
+This is draft for Japanese translation of the [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS).
 
-## OWASP アプリケーションセキュリティ検証標準 4.0.1 Software ISAC 邦訳版
+## OWASP アプリケーションセキュリティ検証標準 4.0 邦訳版
 
 * [ヘッダ](4.0/ja/0x00-Header.md)
 * [口絵](4.0/ja/0x01-Frontispiece.md)

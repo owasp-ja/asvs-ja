@@ -9,24 +9,24 @@ Web ベースのアプリケーションやステートフル API の中核と�
 * セッションは、各個人に固有のものであり、推測や共有することはできません
 * セッションは、不要になったときや非アクティブ期間内にタイムアウトしたときに無効になります
 
-前述のように、これらの要件は、一般的な脅威や一般的に悪用される認証の脆弱性にフォーカスした、選択された NIST 800-63b 管理策の準拠サブセットとなるように適合されています。以前の検証要件は廃止、重複削除、またはほとんどの場合、必須の [NIST 800-63b](https://pages.nist.gov/800-63-3/sp800-63b.htmlx) 要件の意図と厳密に一致するように調整されています。
+前述のように、これらの要件は、一般的な脅威や一般的に悪用される認証の脆弱性にフォーカスした、選択された NIST 800-63b 管理策の準拠サブセットとなるように適合されています。以前の検証要件は廃止、重複削除、またはほとんどの場合、必須の [NIST 800-63b](https://pages.nist.gov/800-63-3/sp800-63b.html) 要件の意図と厳密に一致するように調整されています。
 
 ## セキュリティ検証要件
 
 ## V3.1 基本セッション管理要件
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.1.1** | アプリケーションが URL パラメータやエラーメッセージ内にセッショントークンを漏洩しない。 | ✓ | ✓ | ✓ | 598 |  |
+| **3.1.1** | アプリケーションが URL パラメータ内にセッショントークンを漏洩しない。 | ✓ | ✓ | ✓ | 598 |  |
 
 ## V3.2 セッションバインディング要件
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.2.1** | アプリケーションがユーザ認証時に新しいセッショントークンを生成する。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 384 | 7.1 |
-| **3.2.2** | セッショントークンに少なくとも 64 ビットのエントロピーがある。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 331 | 7.1 |
+| **3.2.1** | アプリケーションがユーザ認証時に新しいセッショントークンを生成する。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 384 | 7.1 |
+| **3.2.2** | セッショントークンに少なくとも 64 ビットのエントロピーがある。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 331 | 7.1 |
 | **3.2.3** | 適切に保護された Cookie (セクション 3.4 を参照) や HTML 5 セッションストレージなどのセキュアな方法を使用して、アプリケーションがブラウザにセッショントークンのみを保存する。 | ✓ | ✓ | ✓ | 539 | 7.1 |
-| **3.2.4** | セッショントークンが承認済みの暗号化アルゴリズムを使用して生成されている。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 331 | 7.1 |
+| **3.2.4** | セッショントークンが承認済みの暗号化アルゴリズムを使用して生成されている。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 331 | 7.1 |
 
 TLS や他のセキュアなトランスポートチャネルはセッション管理の必須要件です。これは通信セキュリティの章でカバーされています。
 
@@ -36,41 +36,41 @@ TLS や他のセキュアなトランスポートチャネルはセッション�
 
 このコンテキストでのレベル 1 は IAL1/AAL1, レベル 2 は IAL2/AAL3, レベル 3 は IAL3/AAL3 です。IAL2/AAL2 および IAL3/AAL3 では、アイドルタイムアウトはより短くなり、ログアウトやセッションを再開するための再認証にはアイドルタイムの下限とします。
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.3.1** | 「戻る」ボタンや下流の依拠当事者 (Relying Parties) が、依拠当事者 (Relying Parties) 間を含め認証済みセッションを再開しないように、ログアウトおよび有効期限によってセッショントークンが無効になる。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 613 | 7.1 |
-| **3.3.2** | オーセンティケータがユーザにログインしたままでいることを許可する場合、アクティブに使用されているときと、アイドル期間後の両方で、定期的に再認証が行われる。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | 30 日 | 12 時間 or 30 分のアイドル状態、 2FA はオプショナル | 12 時間 or 15 分のアイドル状態、 2FA 利用を | 613 | 7.2 |
-| **3.3.3** | パスワードが正常に変更された後、アプリケーションが他のすべてのアクティブセッションを終了している。および、これがアプリケーション、フェデレーションログイン（存在する場合）、依拠当事者 (Relying Parties) すべてに有効となっている。 |  | ✓ | ✓ | 613 | |
-| **3.3.4** | ユーザがすべての現在のアクティブなセッションまたはデバイスを表示、ログアウトできる。 |  | ✓ | ✓ | 613 | 7.1 |
+| **3.3.1** | 「戻る」ボタンや下流の依拠当事者 (Relying Parties) が、依拠当事者 (Relying Parties) 間を含め認証済みセッションを再開しないように、ログアウトおよび有効期限によってセッショントークンが無効になる。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 613 | 7.1 |
+| **3.3.2** | オーセンティケータがユーザにログインしたままでいることを許可する場合、アクティブに使用されているときと、アイドル期間後の両方で、定期的に再認証が行われる。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 30 日 | 12 時間 or 30 分のアイドル状態、 2FA はオプショナル | 12 時間 or 15 分のアイドル状態、 2FA 利用を | 613 | 7.2 |
+| **3.3.3** | パスワードが正常に変更された後  (including change via password reset/recovery)、アプリケーションが他のすべてのアクティブセッションを gives the option to 終了している。および、これがアプリケーション、フェデレーションログイン（存在する場合）、依拠当事者 (Relying Parties) すべてに有効となっている。 |  | ✓ | ✓ | 613 | |
+| **3.3.4** | ユーザがすべての現在のアクティブなセッションまたはデバイスを表示、 (having re-entered login credentials) ログアウトできる。 |  | ✓ | ✓ | 613 | 7.1 |
 
 ## V3.4 クッキーベースのセッション管理
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.4.1** | クッキーベースのセッショントークンに Secure 属性が設定されている。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 614 | 7.1.1 |
-| **3.4.2** | クッキーベースのセッショントークンに HttpOnly 属性が設定されている。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 1004 | 7.1.1 |
-| **3.4.3** | クロスサイトリクエストフォージェリ攻撃を抑制するために、クッキーベースのセッショントークンが SameSite 属性を利用している。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 16 | 7.1.1 |
+| **3.4.1** | クッキーベースのセッショントークンに Secure 属性が設定されている。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 614 | 7.1.1 |
+| **3.4.2** | クッキーベースのセッショントークンに HttpOnly 属性が設定されている。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 1004 | 7.1.1 |
+| **3.4.3** | クロスサイトリクエストフォージェリ攻撃を抑制するために、クッキーベースのセッショントークンが SameSite 属性を利用している。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 16 | 7.1.1 |
 | **3.4.4** | セッションクッキーの機密性を確保するために、クッキーベースのセッショントークンが"__Host-"プレフィックス（参考文献を参照）を使用している。 | ✓ | ✓ | ✓ | 16 | 7.1.1 |
-| **3.4.5** | セッションクッキーを上書きまたは開示する可能性があるセッションクッキーを設定または使用する他のアプリケーションを持つドメイン名配下でアプリケーションが公開されている場合は、最も正確なパスを使用してクッキーベースのセッショントークンに path 属性を設定している。 ([C6](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 16 | 7.1.1 |
+| **3.4.5** | セッションクッキーを上書きまたは開示する可能性があるセッションクッキーを設定または使用する他のアプリケーションを持つドメイン名配下でアプリケーションが公開されている場合は、最も正確なパスを使用してクッキーベースのセッショントークンに path 属性を設定している。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 16 | 7.1.1 |
 
 ## V3.5 トークンベースのセッション管理
 
 トークンベースのセッション管理には JWT, OAuth, SAML, API キーが含まれます。これらのうち、API キーは脆弱なことが分かっているため、新しいコードでは使用すべきではありません。
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.5.1** | アプリケーションが、サブスクライバ(Subscriber)として、OAuth および Refresh Token を自ら処理せず、ユーザがリンクされたアプリケーションとの信頼関係を終了できるようにしている。 |  | ✓ | ✓ | 290 | 7.1.2 |
+| **3.5.1** | アプリケーションが allows users to revoke OAuth tokens that form リンクされたアプリケーションとの信頼関係 |  | ✓ | ✓ | 290 | 7.1.2 |
 | **3.5.2** | レガシーな実装を除いて、アプリケーションが静的な API シークレットや API キーではなくセッショントークンを使用している。 |  | ✓ | ✓ | 798 | |
 | **3.5.3** | ステートレスセッショントークンがデジタル署名、暗号化、およびその他の対策を使用して、改ざん、エンベローピング、リプレイ、ヌル暗号、鍵置き換え攻撃から保護されている。 |  | ✓ | ✓ | 345 | |
 
 ## V3.6 フェデレーションまたはアサーションからの再認証
 
-このセクションは依拠当事者（Relying Parties）またはクレデンシャルサービスプロバイダ（CSP）のコードを書いている人に関係するものです。これらの機能を実装するコードに依存する場合には、これらの問題が正しく処理されていることを確認します。
+このセクションは依拠当事者（Relying Parties, RP）またはクレデンシャルサービスプロバイダ（Credential Service Provider, CSP）のコードを書いている人に関係するものです。これらの機能を実装するコードに依存する場合には、これらの問題が正しく処理されていることを確認します。
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.6.1** | 依拠当事者 (Relying Parties) が CSP に最大認証時間を指定していること、および CSP がその期間内にセッションを使用していない場合は、CSP がサブスクライバ (Subscriber) を再認証する。 | | | ✓ | 613 | 7.2.1 |
-| **3.6.2** | CSP がユーザを再認証する必要があるかどうかを依拠当事者 (Relying Parties) が決定できるように、CSP が依拠当事者 (Relying Parties) に最後の認証イベントを通知する。 | | | ✓ | 613| 7.2.1 |
+| **3.6.1** | 依拠当事者 (Relying Parties, PR) が Credential Service Provider (CSP) に最大認証時間を指定していること、および CSP がその期間内にセッションを使用していない場合は、CSP がサブスクライバ (Subscriber) を再認証する。 | | | ✓ | 613 | 7.2.1 |
+| **3.6.2** | Credential Service Provider (CSP) がユーザを再認証する必要があるかどうかを依拠当事者 (Relying Parties) が決定できるように、CSP が依拠当事者 (Relying Parties) に最後の認証イベントを通知する。 | | | ✓ | 613| 7.2.1 |
 
 ## V3.7 セッション管理の悪用に対する防御
 
@@ -82,14 +82,14 @@ TLS や他のセキュアなトランスポートチャネルはセッション�
 
 攻撃者は、クレデンシャルをロック、リセット、リカバリしようと試みることにより、ハーフオープン攻撃を開始します。一般的なセッション管理デザインパターンは、未認証、半認証 (パスワードリセット、ユーザ名忘れ) 、完全認証コードの間でユーザプロファイルセッションオブジェクトやモデルを再利用します。このデザインパターンは、パスワードハッシュやロールなど、被害者のプロファイルを含む有効なセッションオブジェクトやまたはトークンを入力します。コントローラまたはルータのアクセス制御チェックでユーザが完全にログインしていることを正しく検証していない場合、攻撃者はそのユーザとして行動できるかもしれません。攻撃には、ユーザのパスワードを既知の値に変更する、有効なパスワードリセットを実行するために電子メールアドレスを更新する、多要素認証を無効にする、新しい MFA デバイスを登録する、API キーを公開または変更する、などがあります。
 
-| # | 説明 | L1 | L2 | L3 | CWE | NIST &sect; |
+| # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **3.7.1** | 機密性の高いトランザクションやアカウントの変更を許可する前に、アプリケーションが完全で有効なログインセッションを確保していること、または再認証や二次検証を必要としている。 | ✓ | ✓ | ✓ | 778 | |
+| **3.7.1** | 機密性の高いトランザクションやアカウントの変更を許可する前に、アプリケーションが再認証や二次 factor 検証を必要としている。 | ✓ | ✓ | ✓ | 306 | |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Testing Guide 4.0: Session Management Testing](https://www.owasp.org/index.php/Testing_for_Session_Management)
-* [OWASP Session Management Cheat Sheet](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [OWASP Testing Guide 4.0: Session Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/README.html)
+* [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
 * [Set-Cookie __Host- prefix details](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Directives)

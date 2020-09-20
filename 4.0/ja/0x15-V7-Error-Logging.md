@@ -25,10 +25,10 @@ V7.1 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **7.1.1** | アプリケーションがクレデンシャルまたは支払い情報をログに保存していない。セッショントークンは、不可逆的なハッシュ形式でのみログに保存する。 ([C9, C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 532 |
-| **7.1.2** | 現地のプライバシー法または関連するセキュリティポリシーで定義されているその他のセンシティブなデータをログに記録していない。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 532 |
-| **7.1.3** | 成功および失敗した認証イベント、アクセス制御の失敗、デシリアライゼーションの失敗、および入力検証の失敗を含むセキュリティへの影響が考えられるイベントについてログを保存する。 ([C5, C7](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 778 |
-| **7.1.4** | 各ログのイベントには、イベント発生時のタイムラインを詳細に調査するために必要な情報が含まれている。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 778 |
+| **7.1.1** | アプリケーションがクレデンシャルまたは支払い情報をログに保存していない。セッショントークンは、不可逆的なハッシュ形式でのみログに保存する。 ([C9, C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 532 |
+| **7.1.2** | 現地のプライバシー法または関連するセキュリティポリシーで定義されているその他のセンシティブなデータをログに記録していない。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 532 |
+| **7.1.3** | 成功および失敗した認証イベント、アクセス制御の失敗、デシリアライゼーションの失敗、および入力検証の失敗を含むセキュリティへの影響が考えられるイベントについてログを保存する。 ([C5, C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 778 |
+| **7.1.4** | 各ログのイベントには、イベント発生時のタイムラインを詳細に調査するために必要な情報が含まれている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 778 |
 
 ## V7.2 ログ処理の要件
 
@@ -41,7 +41,7 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **7.2.1** | センシティブなセッション ID やパスワードを保存せずに、すべての認証判定がログに記録されている。これには、セキュリティ調査に必要な関連メタデータを含むリクエストを含める。 | | ✓ | ✓ | 778 |
+| **7.2.1** | センシティブなセッション tokens やパスワードを保存せずに、すべての認証判定がログに記録されている。これには、セキュリティ調査に必要な関連メタデータを含むリクエストを含める。 | | ✓ | ✓ | 778 |
 | **7.2.2** | すべてのアクセス制御判定がログに記録され、失敗したすべての判定がログに記録される。これには、セキュリティ調査に必要な関連メタデータを含むリクエストを含める。 | | ✓ | ✓ | 285 |
 
 ## V7.3 ログ保護の要件
@@ -50,10 +50,10 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **7.3.1** | ログインジェクションを防ぐためにユーザ指定のデータを適切にエンコードする。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 117 |
-| **7.3.2** | ログ閲覧ソフトウェアで表示したときに、すべてのイベントがインジェクションから保護されている。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 117 |
-| **7.3.3** | セキュリティログが不正なアクセスや改変から保護されている。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 200 |
-| **7.3.4** | 時刻源が正しい時間と正しいタイムゾーンに同期されている。システムがグローバルである場合は、インシデント後のフォレンジック分析を支援するために UTC でのみログを記録することを強く検討する。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | |
+| **7.3.1** | ログインジェクションを防ぐためにユーザ指定のデータを適切にエンコードする。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
+| **7.3.2** | ログ閲覧ソフトウェアで表示したときに、すべてのイベントがインジェクションから保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
+| **7.3.3** | セキュリティログが不正なアクセスや改変から保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 200 |
+| **7.3.4** | 時刻源が正しい時間と正しいタイムゾーンに同期されている。システムがグローバルである場合は、インシデント後のフォレンジック分析を支援するために UTC でのみログを記録することを強く検討する。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 
 注：ログのエンコーディング（7.3.1）は、自動化された動的ツールやペネトレーションテストによるテストやレビューは困難ですが、設計者、開発者、ソースコードレビュー者はログのエンコーディングを L1 の要件と考える必要があります。
 
@@ -63,9 +63,9 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **7.4.1** | 予期しないエラーまたはセキュリティ上重要なエラーが発生したときに、サポート担当者が調査に使用できる一意の ID とともに一般的なメッセージが表示される。 ([C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 210 |
-| **7.4.2** | 予期されるエラーおよび予期されないエラー状態を説明するために、例外処理（または機能的に同等なもの）がコードベース全体で使用されている。 ([C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 544 |
-| **7.4.3** | 未処理の例外をすべて捕捉する「最後の手段」となるエラーハンドラが定義されている。 ([C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 460 |
+| **7.4.1** | 予期しないエラーまたはセキュリティ上重要なエラーが発生したときに、サポート担当者が調査に使用できる一意の ID とともに一般的なメッセージが表示される。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 210 |
+| **7.4.2** | 予期されるエラーおよび予期されないエラー状態を説明するために、例外処理（または機能的に同等なもの）がコードベース全体で使用されている。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 544 |
+| **7.4.3** | 未処理の例外をすべて捕捉する「最後の手段」となるエラーハンドラが定義されている。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 431 |
 
 注：Swift や Go のような特定の言語や（および一般的な設計手法を通して）多くの関数型言語は、例外や最終手段イベントハンドラをサポートしていません。このような場合、設計者と開発者は、パターン、言語またはフレームワークで簡単に使える方法を使用して、例外や予期しないイベントまたはセキュリティ関連のイベントをアプリケーションが安全に処理できるようにする必要があります。
 
@@ -73,4 +73,5 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Testing Guide 4.0 content: Testing for Error Handling](https://www.owasp.org/index.php/Testing_for_Error_Handling)
+*  [OWASP Testing Guide 4.0 content: Testing for Error Handling](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README.html)
+*  [OWASP Authentication Cheat Sheet section about error messages](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)

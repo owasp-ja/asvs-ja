@@ -1,7 +1,7 @@
 # Appendix A: 用語集
 
-- **二要素認証 (2FA)** – 2 要素認証は、アカウントログインに第 2 レベルの認証を追加したもの
-- **アドレス空間配置のランダム化 (ASLR)** – メモリ破損のバグ悪用をより困難にする手法
+- **アドレス空間配置のランダム化 (Address Space Layout Randomization)** (ASLR) – メモリ破損のバグ悪用をより困難にする手法
+- **Allow list** – アプリケーションにおいて許可されているデータまたは操作のリスト(例：入力バリデーションで許可されている文字のリストなど)
 - **アプリケーションセキュリティ (Application Security)** – OS やネットワークではなく，OSI 参照モデルのアプリケーション層を構成するコンポーネントの分析に重点をおく、アプリケーションレベルのセキュリティ
 - **アプリケーションセキュリティ検証 (Application Security Verification)** – OWASP ASVS に沿って実施するアプリケーションの技術的評価
 - **アプリケーションセキュリティ検証報告書 (Application Security Verification Report)** – 対象となるアプリケーションの分析と検証結果をまとめた報告書
@@ -11,30 +11,45 @@
 - **コンポーネント (Component)** – 独立したコード単位。ディスクや他のコンポーネントと通信するネットワークインターフェイスとの関連をもちます
 - **クロスサイトスクリプティング (Cross-Site Scripting (XSS))** – クライアントからコンテンツへのスクリプトの注入を可能にする、Web アプリケーションに典型的なセキュリティ上の脆弱性
 - **暗号モジュール (Cryptographic module)** – 暗号アルゴリズムを実装し、暗号鍵を生成する、ハードウェアやソフトウェア、ファームウェア
-- **CWE** - Common Weakness Enumeration（CWE）は、コミュニティが開発した一般的なソフトウェアセキュリティの弱点一覧。共通言語、ソフトウェアセキュリティツールの測定基準、および脆弱性の特定・軽減・防止の取り組みのベースラインとして機能します
-- **DAST** – 動的アプリケーションセキュリティテスト（DAST）技術は、実行状態にあるアプリケーションのセキュリティの脆弱性を示す状況を検出するように設計されています
+- **Common Weakness Enumeration** (CWE) - コミュニティが開発した一般的なソフトウェアセキュリティの弱点一覧。共通言語、ソフトウェアセキュリティツールの測定基準、および脆弱性の特定・軽減・防止の取り組みのベースラインとして機能します
 - **設計検証 (Design Verification)** – アプリケーションのセキュリティアーキテクチャに関する技術的評価
+- **動的アプリケーションセキュリティテスト (Dynamic Application Security Testing)** (DAST) - 技術は、実行状態にあるアプリケーションのセキュリティの脆弱性を示す状況を検出するように設計されています
 - **動的検証 (Dynamic Verification)** – アプリケーションの実行中に脆弱性のシグネチャを用いて問題点を検出する自動化ツールを使用すること
+- **Fast IDentity Online** (FIDO) - A set of authentication standards which allow a variety of different authentication methods to be used including biometrics, Trusted Platform Modules (TPMs), USB security tokens, etc.
 - **グローバル一意識別子（GUID）** – ソフトウェアで識別子として使用される一意の照会番号
 - **HTTP** – 分散、コラボレーション、ハイパーメディア情報システム用のアプリケーションプロトコル．World Wide Web におけるデータ通信の基盤
 - **ハードコードされた鍵 (Hardcoded keys)** – コード、コメント、ファイルなど、ファイルシステムに格納されている暗号化鍵
+- **Hardware Security Module** (HSM) - Hardware component which is able to store cryptographic keys and other secrets in a protected manner.
+- **Hibernate Query Language** (HQL) - A query language that is similar in appearance to SQL used by the Hibernate ORM library. 
 - **入力バリデーション (Input Validation)** – 信頼できないユーザ入力を正規化およびバリデーションします
 - **悪性コード (Malicious Code)** – アプリケーションの開発時にアプリケーションのオーナに気付かれることなく導入されるコードであり，アプリケーションのセキュリティポリシーを回避します。ウイルスやワームなどのマルウェアとは異なります！
 - **マルウェア (Malware)** – アプリケーションの実行時に、ユーザや管理者に気付かれることなくアプリケーションに侵入する実行コード
 - **Open Web Application Security Project (OWASP)** – The Open Web Application Security Project (OWASP) は、アプリケーションソフトウェアのセキュリティ向上に注力する、自由でオープンなコミュニティ。OWASP のミッションは、アプリケーションのセキュリティを"見える化" することで、人や組織が、アプリケーションセキュリティのリスクについて十分な情報に基づいた決断を下すことができることです。http://www.owasp.org/ を参照
+- **One-time Password** (OTP) - A password which is uniquely generated to be used on a single occasion.
+- **Object-relational Mapping** (ORM) - A system used to allow a relational/table-based database to be referenced and queried within an application program using an application-compatible object model.
+- **Password-Based Key Derivation Function 2** (PBKDF2) - A special one-way algorithm used to create a strong cryptographic key from an input text (such as a password) and an additional random salt value and can therefore be used make it harder to crack a password offline if the resulting value is stored instead of the original password.
 - **個人を特定できる情報 Personally Identifiable Information (PII)** - - 単独または他の情報と共に使用して、1 人の人物を識別したり、連絡したり、居場所を特定したり、または状況に応じて個人を識別したりできる情報
-- **位置独立実行形式 (PIE)** – 位置独立実行可能ファイル（PIE）は、1 次メモリのどこかに配置されて、絶対アドレスに関係なく適切に実行される機械語
-- **公開鍵暗号基盤 (PKI)** – 公開鍵暗号基盤（PKI）は、公開鍵をエンティティのそれぞれの ID にバインドする取り決めです。バインディングは、認証局（CA）での証明書の登録および発行のプロセスを通じて確立
-- **SAST** – 静的アプリケーションセキュリティテスト（SAST）は、アプリケーションのソースコード、バイトコード、セキュリティの脆弱性を示すコーディングおよびバイナリを分析するために設計された一連の技術。SAST ソリューションは、実行されていない状態の「インサイドアウト」からアプリケーションを分析
-- **SDLC** – ソフトウェア開発ライフサイクル
+- **位置独立実行形式 (Position-independent executable)** (PIE) - 1 次メモリのどこかに配置されて、絶対アドレスに関係なく適切に実行される機械語
+- **公開鍵暗号基盤 (Public Key Infrastructure)** (PKI) - 公開鍵をエンティティのそれぞれの ID にバインドする取り決めです。バインディングは、認証局（CA）での証明書の登録および発行のプロセスを通じて確立
+- **Public Switched Telephone Network** (PSTN) - The traditional telephone network including both fixed-line telephones and mobile telephones.
+- **Relying Party** (RP) - Generally an application which is relying on a user having authenticated against a separate authentication provider. The application is relying on some sort of token or set of signed assertions provided by that authentication provider to trust that the user is who they say they are.
+- **静的アプリケーションセキュリティテスト (Static application security testing)** (SAST) - アプリケーションのソースコード、バイトコード、セキュリティの脆弱性を示すコーディングおよびバイナリを分析するために設計された一連の技術。SAST ソリューションは、実行されていない状態の「インサイドアウト」からアプリケーションを分析
+- **ソフトウェア開発ライフサイクル (Software development lifecycle)** (SDLC) - The step by step process by which software is developed going from the initial requirements to deployment and maintainance.
 - **セキュリティアーキテクチャ (Security Architecture)** – アプリケーションの設計を抽象化したもの。どこでどのようにセキュリティ管理策を使用しているか、また、ユーザデータとアプリケーションデータを保持する場所とデータの機密性について記述します
 - **セキュリティ設定 (Security Configuration)** – アプリケーションにおけるセキュリティの管理を左右するランタイム設定
 - **セキュリティ管理 (Security Control)** – – セキュリティチェック(例:アクセス制御の検査など)を実行する、あるいは呼出し結果がセキュリティに影響を与えうる(例：監査レコードの生成など)、機能や構成要素
-- **SQL インジェクション (SQL Injection)** – データ駆動型アプリケーションに対する攻撃に使用されるコードインジェクション技法の 1 つ。悪性 SQL 文がデータの入力箇所に挿入されます
-- **SSO アプリケーション (SSO Application)** – シングルサインオン（SSO）は、ユーザが 1 つのアプリケーションにログインした後に、再認証を必要とせずに自動的に他のアプリケーションにログインする。例えば、Google にログインすると、Youtube、Google Docs、Gmail などの他のGoogle サービスにアクセスすると、自動的にログインします
+- **Server-side Request Forgery** (SSRF) - An attack which abuses functionality on the server to read or update internal resources by supplying or modifying a URL which the code running on the server will read or submit data to.
+- **Single Sign-on Authentication** (SSO) - ユーザが 1 つのアプリケーションにログインした後に、再認証を必要とせずに自動的に他のアプリケーションにログインする。例えば、Google にログインすると、YouTube、Google Docs、Gmail などの他のGoogle サービスにアクセスすると、自動的にログインします
+- **SQL インジェクション (SQL Injection)** (SQLi) – データ駆動型アプリケーションに対する攻撃に使用されるコードインジェクション技法の 1 つ。悪性 SQL 文がデータの入力箇所に挿入されます
+- **SVG** - Scalable Vector Graphics
+- **Time-based OTP** - A method of generating an OTP where the current time acts as part of the algorithm to generate the password.
 - **脅威モデリング (Threat Modelling)** - 脅威の主体、セキュリティゾーン、セキュリティ管理、重要な技術資産やビジネス資産を明らかにするための、精緻なセキュリティアーキテクチャの構築に基づく手法
-- **Transport Layer Security** – ネットワークの通信セキュリティを提供する暗号プロトコル
+- **Transport Layer Security** (TLS) – ネットワークの通信セキュリティを提供する暗号プロトコル
+- **Trusted Platform Module** (TPM) - A type of HSM which is usually attached to a larger hardware component such as a motherboard and acts as the "root of trust" for that system.
+- **Two-factor authentication** (2FA) - This adds a second level of authentication to an account log-in.
+- **Universal 2nd Factor** (U2F) - One of the standards created by FIDO specifically for allowing a USB or NFC security key to be used as a 2nd authentication factor.
 - **URI/URL/URL フラグメント (URI/URL/URL fragments)** – Uniform Resource Identifier (URI) は、名前または Web リソースを識別するために使用される文字列。多くの場合リソースへの参照として使用されます
 - **検証者 (Verifier)** – OWASP ASVS の要件に基づいてアプリケーションをレビューする個人またはグループ
-- **ホワイトリスト (Whitelist)** – アプリケーションにおいて許可されているデータまたは操作のリスト(例：入力バリデーションで許可されている文字のリストなど)
+- **What You See Is What You Get** (WYSIWYG) - A type of rich content editor which shows how the content will actually look when rendered rather than showing the coding used to govern the rendering.
 - **X.509 証明書 (X.509 Certificate)** – X.509 証明書は、広く受け入れられている国際的な X.509 公開鍵暗号基盤（PKI）標準を使用して、公開鍵が証明書に含まれるユーザやコンピュータまたはサービス ID に属していることを確認するデジタル証明書
+- **XML eXternal Entity** (XXE) - A type of XML entity that can access local or remote content via a declared system identifier. This may load to various injection attacks.

@@ -27,10 +27,10 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **12.3.1** | パストラバーサルから保護するために、ユーザが送信したファイル名のメタデータがシステムまたはフレームワークファイルや URL API で直接使用されていない。 | ✓ | ✓ | ✓ | 22 |
+| **12.3.1** | パストラバーサルから保護するために、Verify that ユーザが送信したファイル名のメタデータが直接使用されていない by システムまたはフレームワーク filesystems and that a URL API is used | ✓ | ✓ | ✓ | 22 |
 | **12.3.2** | ローカルファイル（LFI）の漏えい、作成、更新、または削除を防止するために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 73 |
-| **12.3.3** | SSRF にも繋がる可能性があるリモートファイル (RFI) の漏えいまたは実行を防ぐために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 98 |
-| **12.3.4** | アプリケーションを反射型ファイルダウンロード（RFD）から保護するため、ユーザが送信したファイル名（JSON、JSONP または URL パラメータの中にある）をバリデートまたは無視し、レスポンスのContent-Type ヘッダは text/plain に設定、および ContentDisposition ヘッダは固定ファイル名を指定する。 | ✓ | ✓ | ✓ | 641 |
+| **12.3.3** | リモートファイルの漏えいまたは実行 via Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks を防ぐために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 98 |
+| **12.3.4** | アプリケーションを反射型ファイルダウンロード（Reflective File Download, RFD）から保護するため、ユーザが送信したファイル名（JSON、JSONP または URL パラメータの中にある）をバリデートまたは無視し、レスポンスのContent-Type ヘッダは text/plain に設定、および ContentDisposition ヘッダは固定ファイル名を指定する。 | ✓ | ✓ | ✓ | 641 |
 | **12.3.5** | OS コマンドインジェクションから保護するために、信頼できないファイルメタデータをシステム API またはライブラリで直接使用しない。 | ✓ | ✓ | ✓ | 78 |
 | **12.3.6** | アプリケーションは、未検証のコンテンツ配信ネットワーク、JavaScript ライブラリ、ノード npm ライブラリ、サーバサイド DLL などの信頼できない場所からの機能を含まず、かつ実行されない。 |  | ✓ | ✓ | 829 |
 
@@ -52,12 +52,12 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **12.6.1** | Web サーバまたはアプリケーションサーバが、リクエストを送信したりデータ/ファイルをロードしたりできるように、リソースまたはシステムにホワイトリストが構成されている。 | ✓ | ✓ | ✓ | 918 |
+| **12.6.1** | Web サーバまたはアプリケーションサーバが、リクエストを送信したりデータ/ファイルをロードしたりできるように、リソースまたはシステムに allow list が構成されている。 | ✓ | ✓ | ✓ | 918 |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
-* [File Extension Handling for Sensitive Information](https://www.owasp.org/index.php/Unrestricted_File_Upload)
+* [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
 * [Reflective file download by Oren Hafif](https://www.trustwave.com/Resources/SpiderLabs-Blog/Reflected-File-Download---A-New-Web-Attack-Vector/)
-* [OWASP Third Party JavaScript Management Cheat Sheet](https://www.owasp.org/index.php/3rd_Party_Javascript_Management_Cheat_Sheet)
+* [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)

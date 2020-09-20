@@ -14,13 +14,14 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **1.1.1** | 開発すべての段階でセキュアソフトウェア開発ライフサイクルを用いている。 ([C1](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | |
+| **1.1.1** | 開発すべての段階でセキュアソフトウェア開発ライフサイクルを用いている。 ([C1](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 | **1.1.2** | 脅威を特定し、対策を計画し、適切なリスク対応を促進し、セキュリティテストを進めるため、すべての設計変更またはスプリントプランニングに対する脅威モデリングが用いている。 | | ✓ | ✓ | 1053 |
 | **1.1.3** | すべてのユーザストーリーおよび機能に、「ユーザが、自分のプロフィールを表示および編集できるようにする。他のユーザのプロフィールを表示または編集するができない」などのセキュリティ上の制限機能が含まれる。 |  | ✓ | ✓ | 1110 |
 | **1.1.4** | すべてのアプリケーションの信頼境界線、コンポーネントおよび重要なデータフローの文書化と正当性がある。 | | ✓ | ✓ | 1059 |
-| **1.1.5** | アプリケーションの高レベルアーキテクチャおよびすべてのリモート接続サービスの定義とセキュリティ分析がなされている。 ([C1](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 1059 |
-| **1.1.6** | 重複や欠落がある、非効果的な、もしくはセキュアでない管理策を回避するために、集中管理され簡潔（エコデザイン）で徹底調査され、セキュアで、再利用可能なセキュリティ管理策が実装されている。 ([C10](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 637 |
+| **1.1.5** | アプリケーションの高レベルアーキテクチャおよびすべてのリモート接続サービスの定義とセキュリティ分析がなされている。 ([C1](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 1059 |
+| **1.1.6** | 重複や欠落がある、非効果的な、もしくはセキュアでない管理策を回避するために、集中管理され簡潔（エコデザイン）で徹底調査され、セキュアで、再利用可能なセキュリティ管理策が実装されている。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 637 |
 | **1.1.7** | セキュアコーディングチェックリスト、セキュリティ要件、ガイドラインまたはポリシーを、すべての開発者およびテスターが利用可能。 | | ✓ | ✓ | 637 |
+| **1.1.8** | Verify availability of a publicly available [security.txt](https://securitytxt.org/) file at the root or .well-known directory of the application that clearly defines a link or e-mail address for people to contact owners about security issues. |  | ✓ | ✓ | 1059 |
 
 ## V1.2 認証アーキテクチャ要件
 
@@ -28,10 +29,9 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **1.2.1** | すべてのアプリケーションコンポーネント、サービスおよびサーバに対して一意の、または特別な低特権の OS アカウントが使用されている。 ([C3](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 250 |
-| **1.2.2** | API、ミドルウェア、データ層などのアプリケーションコンポーネント間の通信が認証されている。 コンポーネントには必要最小限の権限が設定されている。 ([C3](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 306 |
-| **1.2.3** | セキュアであることが知られており、強力な認証を含むよう拡張できる単一で徹底調査された認証機構をアプリケーションが使用していること、アカウントの悪用や侵害を検出するのに十分なログ記録と監視をアプリケーション実装している。 | | ✓ | ✓ | 306 |
-| **1.2.4** | アプリケーションのリスクごとに、弱い代替の認証が存在しないように、すべての認証経路と ID 管理 API が一貫した認証セキュリティ制御強実装している。 | | ✓ | ✓ | 306 |
+| **1.2.1** | API、ミドルウェア、データ層などのアプリケーションコンポーネント間の通信が認証されている。 and use individual user accounts. ([C3](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 306 |
+| **1.2.2** | セキュアであることが知られており、強力な認証を含むよう拡張できる単一で徹底調査された認証機構をアプリケーションが使用していること、アカウントの悪用や侵害を検出するのに十分なログ記録と監視をアプリケーション実装している。 | | ✓ | ✓ | 306 |
+| **1.2.3** | アプリケーションのリスクごとに、弱い代替の認証が存在しないように、すべての認証経路と ID 管理 API が一貫した認証セキュリティ制御強実装している。 | | ✓ | ✓ | 306 |
 
 ## V1.3 セッション管理アーキテクチャ要件
 
@@ -44,19 +44,22 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 | **1.4.1** | アクセス制御ゲートウェイ、サーバ、サーバレス機能などの信頼できる強制ポイントでアクセス制御が実施されている。クライアント上でアクセス制御を実施してはなりません。 | | ✓ | ✓ | 602 |
 | **1.4.2** | 選択したアクセス制御ソリューションがアプリケーションのニーズを満たすのに十分柔軟性がある。 | | ✓ | ✓ | 284 |
 | **1.4.3** | 機能、データファイル、URL、コントローラ、サービス、およびその他のリソースにおける最小特権の原則が実施されている。これにより、なりすましや特権昇格に対する保護が可能となります。 |  | ✓ | ✓ | 272 |
-| **1.4.4** | 保護されたデータやリソースにアクセスするために、アプリケーションが 1 つの十分に検証されたアクセス制御機構を使用している。コピー&ペーストまたは安全でない代替パスを回避するため、すべてのリクエストがこの単一の機構をパスする必要があります。 ([C7](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) |  | ✓ | ✓ | 284 |
-| **1.4.5** | 属性または機能ベースのアクセス制御が使用されており、コードは単にユーザのロールではなくむしろ、機能/データ項目に対するユーザの権限を確認します。それでも、権限はロールを利用して割り当てる必要があります。 ([C7](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 275 |
+| **1.4.4** | Verify that communications between application components, including APIs, middleware and data layers, are performed with the least necessary privileges. ([C3](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 272 |
+| **1.4.5** | 保護されたデータやリソースにアクセスするために、アプリケーションが 1 つの十分に検証されたアクセス制御機構を使用している。コピー&ペーストまたは安全でない代替パスを回避するため、すべてのリクエストがこの単一の機構をパスする必要があります。 ([C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) |  | ✓ | ✓ | 284 |
+| **1.4.6** | 属性または機能ベースのアクセス制御が使用されており、コードは単にユーザのロールではなくむしろ、機能/データ項目に対するユーザの権限を確認します。それでも、権限はロールを利用して割り当てる必要があります。 ([C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 275 |
 
 ## V1.5 入力および出力アーキテクチャ要件
 
 4.0 では、意味のある信頼境界線の用語として「サーバサイド」という用語をなくしました。信頼境界線は依然として重要です。信頼できないブラウザやクライアントデバイスでの決定はバイパス可能です。しかし、今日の主流のアーキテクチャ展開では、信頼の実行点が劇的に変わりました。したがって、ASVS で「信頼できるサービスレイヤ」という用語が使用されている場合、マイクロサービス、サーバレス API、サーバサイド、セキュアブートを備えたクライアントデバイス上の信頼された API、パートナーAPI や外部 API など、場所に関係なく、信頼された実行点を意味します。
 
+The "untrusted client" term here refers to client-side technologies that render the presentation layer, commonly refered to as 'front-end' technologies. The term "serialization" here not only refers to sending data over the wire like an array of values or taking and reading a JSON structure, but also passing complex objects which can contain logic. 
+
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **1.5.1** | 入出力要件が、データの種類や内容および適用法、規制、その他のポリシー準拠に基づいて、取り扱い手順を明確に定義している。 | | ✓ | ✓ | 1029 |
-| **1.5.2** | 信頼できないクライアントと通信するときにシリアライゼーションが使用されていない。これが不可能な場合は、オブジェクトインジェクションを含むデシリアライゼーション攻撃を防ぐために、適切な完全性制御（および機密データが送信される場合はできる限り暗号化）を実施する。 | | ✓ | ✓ | 502 |
-| **1.5.3** | 信頼できるサービスレイヤで入力の妥当性確認が実施されている。 ([C5](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 602 |
-| **1.5.4** | アウトプットエンコーディングが意図されているインタプリタもしくはその近くで生成される。 ([C4](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 116 |
+| **1.5.2** | 信頼できないクライアントと通信するときにシリアライゼーションが使用されていない。これが不可能な場合は、デシリアライゼーション攻撃を防ぐために、 ensure that deserialization is performed safely, for example by only allowing a white-list of object types or not allowing the client to define the object type to deserialize to, | | ✓ | ✓ | 502 |
+| **1.5.3** | 信頼できるサービスレイヤで入力の妥当性確認が実施されている。 ([C5](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 602 |
+| **1.5.4** | アウトプットエンコーディングが意図されているインタプリタもしくはその近くで生成される。 ([C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 116 |
 
 ## V1.6 暗号アーキテクチャ要件
 
@@ -69,14 +72,14 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 | **1.6.1** | 暗号鍵の管理に関する明示的なポリシーがあり、暗号鍵のライフサイクルが NIST SP 800-57 などの鍵管理標準に従っている。 | | ✓ | ✓ | 320 |
 | **1.6.2** | 暗号化サービスの利用者が、Key Vault または API ベースの代替手段を使用して、キーマテリアルおよびその他の秘密情報を保護している。 | | ✓ | ✓ | 320 |
 | **1.6.3** | すべての鍵とパスワードが置き換え可能であり、機密データを再暗号化するため明確に定義されたプロセスの一部となっている。 | | ✓ | ✓ | 320 |
-| **1.6.4** | クライアントによって生成されたまたはクライアントと共有された対称鍵やパスワードまたは API 秘密情報が、ローカルストレージの暗号化などの低リスクの秘密情報の保護、またはパラメータ難読化などの一時的な用途にのみ使用される。クライアントと秘密情報を共有することは、平文と同等であり、アーキテクチャ的にはそのように扱われる必要があります。 | | ✓ | ✓ | 320 |
+| **1.6.4** | Verify that the architecture treats client-side secrets--such as symmetric keys, passwords, or API tokens--as insecure and never uses them to protect or access sensitive data. | | ✓ | ✓ | 320 |
 
 ## V1.7 エラー、ロギング、監査アーキテクチャ要件
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **1.7.1** | システム全体で共通のログ形式とアプローチが使用されている。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 1009 |
-| **1.7.2** | 分析、検出、警告、およびエスカレーションのために、できればリモートシステムにログがセキュアに送信されている。 ([C9](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | |
+| **1.7.1** | システム全体で共通のログ形式とアプローチが使用されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 1009 |
+| **1.7.2** | 分析、検出、警告、およびエスカレーションのために、できればリモートシステムにログがセキュアに送信されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 
 ## V1.8 データ保護とプライバシーアーキテクチャ要件
 
@@ -89,7 +92,7 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **1.9.1** | 特にコンポーネントが異なるコンテナ、システム、サイトまたはクラウドプロバイダにある場合は、アプリケーションがコンポーネント間の通信を暗号化している。 ([C3](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 319 |
+| **1.9.1** | 特にコンポーネントが異なるコンテナ、システム、サイトまたはクラウドプロバイダにある場合は、アプリケーションがコンポーネント間の通信を暗号化している。 ([C3](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 319 |
 | **1.9.2** | 中間者攻撃を防ぐために、アプリケーションコンポーネントが通信リンクの両側の信頼性を検証している。例えば、アプリケーションコンポーネントは TLS 証明書とチェーンを検証する必要があります。 |  | ✓ | ✓ | 295 |
 
 ## V1.10 悪意あるソフトウェアのアーキテクチャ要件
@@ -111,7 +114,7 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **1.12.1** | ユーザがアップロードしたファイルが Web ルートの外部に保存される。 | | ✓ | ✓ | 552 |
-| **1.12.2** | ユーザがアップロードしたファイル（表示またはアプリケーションからダウンロードする必要がある場合）が、オクテットストリームによるダウンロード、またはクラウドファイルストレージバケットなどの無関係なドメインからダウンロードされる。XSS ベクターまたはアップロードされたファイルによる他の攻撃リスクを軽減するため、適切なコンテンツセキュリティポリシー（Content Security Policy）が実装されている。 | | ✓ | ✓ | 646 |
+| **1.12.2** | ユーザがアップロードしたファイル（表示またはアプリケーションからダウンロードする必要がある場合）が、オクテットストリームによるダウンロード、またはクラウドファイルストレージバケットなどの無関係なドメインからダウンロードされる。XSS ベクターまたはアップロードされたファイルによる他の攻撃リスクを軽減するため、適切なコンテンツセキュリティポリシー（Content Security Policy, CSP）が実装されている。 | | ✓ | ✓ | 646 |
 
 ## V1.13 API アーキテクチャ要件
 
@@ -121,20 +124,21 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **1.14.1** | すべてのアプリケーションコンポーネント、サービス、サーバに対して、一意または特別な低権限のオペレーティングシステムアカウントが使用されている。 | | ✓ | ✓ | 923 |
-| **1.14.2** | 信頼できないデバイスにバイナリを展開する場合は、バイナリ署名、信頼できる接続および検証済みのエンドポイントを使用する。 | | ✓ | ✓ | 494 |
-| **1.14.3** | ビルドパイプラインが、古いまたはセキュアでないコンポーネントについて警告し、かつ適切な措置が取られる。 | | ✓ | ✓ | 1104 |
-| **1.14.4** | 特にクラウド環境のビルドスクリプトなどアプリケーションインフラストラクチャがソフトウェアで定義されている場合、ビルドパイプラインにアプリケーションの安全なデプロイを自動的に構成および検証するビルドステップが含まれている。 | | ✓ | ✓ | |
-| **1.14.5** | 特に機密性が高い、またはデシリアライゼーションなど危険な動作を実行している場合は、攻撃者が他のアプリケーションを攻撃するのを遅らせたり阻止したりするために、アプリケーションのデプロイがネットワークレベルで適切にサンドボックス化、コンテナ化および/または隔離されている。 ([C5](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 265 |
-| **1.14.6** | NSAPI プラグイン、Flash、Shockwave、ActiveX、Silverlight、NACL、またはクライアントサイドの Java アプレットなど、サポートがされておらずセキュアでない、または非推奨のクライアント側技術をアプリケーションが使用していない。 | | ✓ | ✓ | 477 |
+| **1.14.1** | すべてのアプリケーションコンポーネント、サービス、サーバに対して、一意または特別な低権限のオペレーティングシステムアカウントが使用されている。 | | ✓ | ✓ | 250 |
+| **1.14.2** | Verify the segregation of components of differing trust levels through well-defined security controls, firewall rules, API gateways, reverse proxies, cloud-based security groups, or similar mechanisms. | | ✓ | ✓ | 923 |
+| **1.14.3** | バイナリ署名、信頼できる接続および検証済みのエンドポイントを使用する。 to deploy binaries to remote devices. | | ✓ | ✓ | 494 |
+| **1.14.4** | ビルドパイプラインが、古いまたはセキュアでないコンポーネントについて警告し、かつ適切な措置が取られる。 | | ✓ | ✓ | 1104 |
+| **1.14.5** | 特にクラウド環境のビルドスクリプトなどアプリケーションインフラストラクチャがソフトウェアで定義されている場合、ビルドパイプラインにアプリケーションの安全なデプロイを自動的に構成および検証するビルドステップが含まれている。 | | ✓ | ✓ | |
+| **1.14.6** | 特に機密性が高い、またはデシリアライゼーションなど危険な動作を実行している場合は、攻撃者が他のアプリケーションを攻撃するのを遅らせたり阻止したりするために、アプリケーションのデプロイがネットワークレベルで適切にサンドボックス化、コンテナ化および/または隔離されている。 ([C5](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
+| **1.14.7** | NSAPI プラグイン、Flash、Shockwave、ActiveX、Silverlight、NACL、またはクライアントサイドの Java アプレットなど、サポートがされておらずセキュアでない、または非推奨のクライアント側技術をアプリケーションが使用していない。 | | ✓ | ✓ | 477 |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Threat Modeling Cheat Sheet](https://www.owasp.org/index.php/Threat_Modeling_Cheat_Sheet)
-* [OWASP Attack Surface Analysis Cheat Sheet](https://www.owasp.org/index.php/Attack_Surface_Analysis_Cheat_Sheet)
-* [OWASP Threat modeling](https://www.owasp.org/index.php/Application_Threat_Modeling)
-* [OWASP Secure SDLC Cheat Sheet](https://www.owasp.org/index.php/Secure_SDLC_Cheat_Sheet)
+* [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
+* [OWASP Attack Surface Analysis Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html)
+* [OWASP Threat modeling](https://owasp.org/www-community/Application_Threat_Modeling)
+* [OWASP Software Assurance Maturity Model Project](https://owasp.org/www-project-samm/)
 * [Microsoft SDL](https://www.microsoft.com/en-us/sdl/)
-* [NIST SP 800-57](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-4/final)
+* [NIST SP 800-57](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)

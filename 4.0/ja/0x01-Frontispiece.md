@@ -51,6 +51,7 @@ Version 4.0.1, March 2019
 - Kelby Ludwig
 - Jason Morrow
 - Rogan Dawes
+- Daniël Geerts
 
 アプリケーションセキュリティ検証標準は 2008 年の ASVS 1.0 から 2016 年の 3.0 に至る関係者の責任の下で作成されています。今日の ASVS にまだ残っている構成と検証項目の多くはもともと Mike Boberski, Jeff Williams, Dave Wichers によって書かれましたが、もっと多くの執筆者がいます。以前に関わりのあったすべての人々に感謝します。以前のバージョンに貢献したすべての人の包括的なリストについては、以前の各バージョンを確認してください。
 
