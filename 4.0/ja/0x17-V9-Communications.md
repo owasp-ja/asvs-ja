@@ -11,16 +11,16 @@
 
 セキュアな TLS 構成に関する業界の主要な勧告は、既存のアルゴリズムや暗号の壊滅的な破綻が原因で頻繁に変更されます。常に最新のバージョンの TLS 設定レビューツール（SSLyze や他の TLS スキャナなど）を使用して、優先順位とアルゴリズム選択を設定してください。設定を定期的にチェックして、セキュアな通信設定が常に存在し有効であることを確認します。
 
-## V9.1 Client 通信のセキュリティ要件
+## V9.1 クライアント通信のセキュリティ要件
 
 すべてのクライアント通信は、暗号化された通信経路を介してのみ行われる必要があります。特に、最新のブラウザや検索エンジンでは、TLS1.2 以降の使用が必須とされています。オンラインツールを使用して定期的に構成を見直し、最新の先進的な手法が採用されていることを確認する必要があります。
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **9.1.1** | TLS がすべてのクライアント接続に使用されており、安全でないプロトコルや非暗号化 communications にフォールバックしない。 ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 319 |
-| **9.1.2** | オンラインまたは最新の TLS テストツールを使用して、強力な cipher suites のみが有効であり、最も強力な cipher suites が優先的に設定されている。 | ✓ | ✓ | ✓ | 326 |
-| **9.1.3** | Verify that only the latest recommended versions of the TLS protocol are enabled, such as TLS 1.2 and TLS 1.3. The latest version of the TLS protocol should be the preferred option. | ✓ | ✓ | ✓ | 326 |
-| **9.1.4** | For thick client applications, verify that the app either uses its own certificate store, or pins the endpoint certificate or public key, and will not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA. |   |   | ✓ | 295 |
+| **9.1.1** | TLS がすべてのクライアント接続に使用されており、安全でないプロトコルや非暗号化通信にフォールバックしない。 ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 319 |
+| **9.1.2** | オンラインまたは最新の TLS テストツールを使用して、強力な暗号スイートのみが有効であり、最も強力な暗号スイートが優先的に設定されている。 | ✓ | ✓ | ✓ | 326 |
+| **9.1.3** | TLS 1.2 や TLS 1.3 など、最新の推奨バージョンの TLS プロトコルのみが有効である。最新バージョンの TLS プロトコルを優先オプションにする。 | ✓ | ✓ | ✓ | 326 |
+| **9.1.4** | シッククライアントアプリケーションの場合、アプリが独自の証明書ストアを使用するか、エンドポイント証明書または公開鍵を固定化するかしており、信頼できる CA により署名されていたとしても、異なる証明書や鍵を提供するエンドポイントとの接続を確立しない。 |   |   | ✓ | 295 |
 
 ## V9.2 サーバ通信のセキュリティ要件
 
