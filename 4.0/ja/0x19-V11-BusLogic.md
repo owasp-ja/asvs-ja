@@ -6,7 +6,7 @@
 
 * ビジネスロジックが正しい順序で処理
 * ビジネスロジックに自動攻撃を検知し防止する制限が実装されている。自動攻撃の例としては，連続的な少額の送金や 1 度に 100 万人の友人を追加する，などがある
-* 高い価値を持つビジネスロジックにおいて悪用ケースや悪用する人を想定している。また，なりしまし (spoofing)，改ざん (tampering)，否認 (repudiation)，情報の漏えい (information disclosure)，権限昇格 (elevation of privilege) 攻撃の対策を行っている
+* 高い価値を持つビジネスロジックにおいて悪用ケースや悪用する人を想定している。また，なりすまし (spoofing)，改ざん (tampering)，否認 (repudiation)，情報の漏えい (information disclosure)，権限昇格 (elevation of privilege) 攻撃の対策を行っている
 
 ## V11.1 ビジネスロジックのセキュリティ要件
 
