@@ -1,4 +1,4 @@
-# Appendix C: IoT 検証要件
+# Appendix C: IoT の検証要件
 
 この章は元々メインブランチにありましたが、OWASP IoT チームが行った作業によって、このテーマに関する 2 つの異なる基準を維持することは意味がありません。4.0 リリースでは、これを付録に移動し、これを必要とするすべての人に、メインの [OWASP IoT プロジェクト](https://owasp.org/www-project-internet-of-things/) 使用することを推奨します。
 

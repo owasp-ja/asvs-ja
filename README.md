@@ -12,11 +12,11 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V1: アーキテクチャ、設計、脅威モデリング要件](4.0/ja/0x10-V1-Architecture.md)
 * [V2: 認証の検証要件](4.0/ja/0x11-V2-Authentication.md)
 * [V3: セッション管理の検証要件](4.0/ja/0x12-V3-Session-management.md)
-* [V4: アクセス制御検証要件](4.0/ja/0x12-V4-Access-Control.md)
-* [V5: バリデーション、無害化とエンコーディング検証要件](4.0/ja/0x13-V5-Validation-Sanitization-Encoding.md)
+* [V4: アクセス制御の検証要件](4.0/ja/0x12-V4-Access-Control.md)
+* [V5: バリデーション、無害化とエンコーディングの検証要件](4.0/ja/0x13-V5-Validation-Sanitization-Encoding.md)
 * [V6: 保存時の暗号化の検証要件](4.0/ja/0x14-V6-Cryptography.md)
-* [V7: エラー処理およびログ記録の要件](4.0/ja/0x15-V7-Error-Logging.md)
-* [V8: データ保護の要件](4.0/ja/0x16-V8-Data-Protection.md)
+* [V7: エラー処理およびログ記録の検証要件](4.0/ja/0x15-V7-Error-Logging.md)
+* [V8: データ保護の検証要件](4.0/ja/0x16-V8-Data-Protection.md)
 * [V9: 通信の検証要件](4.0/ja/0x17-V9-Communications.md)
 * [V10: 悪性コードの検証要件](4.0/ja/0x18-V10-Malicious.md)
 * [V11: ビジネスロジックの検証要件](4.0/ja/0x19-V11-BusLogic.md)
@@ -25,7 +25,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V14: 構成の検証要件](4.0/ja/0x22-V14-Config.md)
 * [Appendix A: 用語集](4.0/ja/0x90-Appendix-A_Glossary.md)
 * [Appendix B: 参考情報](4.0/ja/0x91-Appendix-B_References.md)
-* [Appendix C: IoT検証要件](4.0/ja/0x93-Appendix-C_IoT.md)
+* [Appendix C: IoT の検証要件](4.0/ja/0x93-Appendix-C_IoT.md)
 
 ### 参考資料
 
