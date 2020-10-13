@@ -60,7 +60,7 @@
 | **14.4.1** | すべての HTTP レスポンスに Content-Type ヘッダが含まれている。text/*、*/*+xml および application/xml コンテントタイプでは安全な文字セット（例：UTF-8、ISO-8859-1）も指定している。 | ✓ | ✓ | ✓ | 173 |
 | **14.4.2** | すべての API レスポンスに Content-Disposition:attachment; filename="api.json" ヘッダが含まれている（または他のコンテントタイプの適切なファイル名）。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.4** | すべてのレスポンスに X-Content-Type-Options：nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
+| **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.5** | Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age = 15724800; | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | 「no-referrer」や「same-origin」のような、適切な「ReferrerPolicy」ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 346 |
