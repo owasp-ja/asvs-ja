@@ -6,10 +6,10 @@ OWASP アプリケーションセキュリティ検証標準はアーキテク�
 
 ## 著作権とライセンス
 
+Version 4.0.1, March 2019
+
 ![license](../images/license.png)
 Copyright © 2008-2019 The OWASP Foundation. 本書は [Creative Commons Attribution ShareAlike 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
-
-Version 4.0.1, March 2019
 
 ## プロジェクトリーダー
 
