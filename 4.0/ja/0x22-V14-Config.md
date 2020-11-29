@@ -2,7 +2,7 @@
 
 ## 管理目標
 
-検証対象のアプリケーションが以下を備えていることを確認します。
+検証済みのアプリケーションに以下が含まれていることを確認します。
 
 * 安全で、再現性があり、自動化可能なビルド環境
 * サードパーティのライブラリ、依存関係、構成管理を強化し、アプリケーションに古いコンポーネントや安全でないコンポーネントが含まれないようにします
@@ -36,16 +36,16 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | --- | --- | --- | --- | -- | -- |
-| **14.2.1** | すべてのコンポーネントが最新となっている。できればビルド時またはコンパイル時にディペンデンシチェッカを使用する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 1026 |
+| **14.2.1** | すべてのコンポーネントが最新となっている。できればビルド時またはコンパイル時にディペンデンシチェッカを使用する。 ([C2](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 1026 |
 | **14.2.2** | サンプルアプリケーション、プラットフォームのドキュメント、デフォルトまたはサンプルのユーザなど、不要な機能、ドキュメント、サンプル、コンフィギュレーションがすべて削除されている。 | ✓ | ✓ | ✓ | 1002 |
-| **14.2.3** | JavaScript ライブラリ、CSS、Web フォントなどのアプリケーション資産がコンテンツ配信ネットワーク（Content Delivery Network, CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 829 |
-| **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
-| **14.2.5** | 使用しているすべてのサードパーティライブラリのインベントリカタログが維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
-| **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
+| **14.2.3** | JavaScript ライブラリ、CSS スタイルシート、Web フォントなどのアプリケーション資産がコンテンツ配信ネットワーク（CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 714 |
+| **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 829 |
+| **14.2.5** | 使用しているすべてのサードパーティライブラリのインベントリカタログが維持されている。 ([C2](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | |
+| **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 265 |
 
 ## V14.3 意図しないセキュリティの開示の要件
 
-本番環境の構成を強化して、デバッグコンソールなどの一般的な攻撃から保護し、クロスサイトスクリプティング（Cross-site Scripting, XSS）とリモートファイルインクルード（Remote File Inclusion, RFI）攻撃の基準を引き上げ、歓迎されない多くのペネトレーションテストの報告の特徴である発見された些細な脆弱性を排除します。これらの問題の多くはめったに重大なリスクとして評価されませんが、他の脆弱性と連鎖します。これらの問題がデフォルトで存在しない場合、ほとんどの攻撃が成功する前にレベルが引き上げられます。
+本番環境の構成を強化して、デバッグコンソールなどの一般的な攻撃から保護し、クロスサイトスクリプティング（XSS）とリモートファイルインクルード（RFI）攻撃の基準を引き上げ、歓迎されない多くのペネトレーションテストの報告の特徴である発見された些細な脆弱性を排除します。これらの問題の多くはめったに重大なリスクとして評価されませんが、他の脆弱性と連鎖します。これらの問題がデフォルトで存在しない場合、ほとんどの攻撃が成功する前にレベルが引き上げられます。
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | --- | --- | --- | --- | -- | -- |
@@ -57,30 +57,30 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | --- | --- | --- | --- | -- | -- |
-| **14.4.1** | すべての HTTP レスポンスに Content-Type ヘッダが含まれている。text/*、*/*+xml および application/xml コンテントタイプでは安全な文字セット（例：UTF-8、ISO-8859-1）も指定している。 | ✓ | ✓ | ✓ | 173 |
-| **14.4.2** | すべての API レスポンスに Content-Disposition:attachment; filename="api.json" ヘッダが含まれている（または他のコンテントタイプの適切なファイル名）。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.5** | Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=15724800; includeSubdomains | ✓ | ✓ | ✓ | 523 |
+| **14.4.1** | すべての HTTP レスポンスに、安全な文字セット（例：UTF-8、ISO 8859-1）を指定するコンテントタイプヘッダが含まれている。 | ✓ | ✓ | ✓ | 173 |
+| **14.4.2** | すべての API レスポンスに Content-Disposition:attachment; filename="api.json" が含まれている（または他のコンテントタイプの適切なファイル名）。 | ✓ | ✓ | ✓ | 116 |
+| **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSPv2) が配置されている。 | ✓ | ✓ | ✓ | 1021 |
+| **14.4.4** | すべてのレスポンスに X-Content-Type-Options：nosniff が含まれている。 | ✓ | ✓ | ✓ | 116 |
+| **14.4.5** | HTTP Strict Transport Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age = 15724800; | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | 「no-referrer」や「same-origin」のような、適切な「ReferrerPolicy」ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 346 |
+| **14.4.7** | サードパーティのサイトに埋め込むべきではないサイトで、適切なヘッダが（X-Frame-Options または Content-Security-Policy：frameancestors）が、サイトで使用されている。 | ✓ | ✓ | ✓ | 346 |
 
 ## V14.5 HTTP リクエストヘッダのバリデーションの要件
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | --- | --- | --- | --- | -- | -- |
-| **14.5.1** | アプリケーションサーバが、pre-flight OPTIONS を含む、アプリケーションまたは API で使用されている HTTP メソッドのみを受け入れる。アプリケーションコンテキストに対する無効なリクエストについてログ出力やアラート発行する。 | ✓ | ✓ | ✓ | 749 |
+| **14.5.1** | アプリケーションサーバが、pre-flight OPTIONS を含む、アプリケーションまたは API で使用されている HTTP メソッドのみを受け入れる。 | ✓ | ✓ | ✓ | 749 |
 | **14.5.2** | 提供された Origin ヘッダは、攻撃者によって簡単に変更できるため、認証やアクセス制御の判断に使用されていない。 | ✓ | ✓ | ✓ | 346 |
-| **14.5.3** | オリジン間リソース共有（Cross-Origin Resource Sharing, CORS）の Access-Control-Allow-Origin ヘッダが信頼できるドメインの厳密な許可リストを使用して照合し、「null」オリジンをサポートしていない。 | ✓ | ✓ | ✓ | 346 |
+| **14.5.3** | オリジン間リソース共有（CORS）の Access-Control-Allow-Origin ヘッダが信頼できるドメインの厳密なホワイトリストを使用して照合し、「null」オリジンをサポートしていない。 | ✓ | ✓ | ✓ | 346 |
 | **14.5.4** | 信頼できるプロキシまたは bearer トークンのような SSO デバイスによって追加された HTTP ヘッダがアプリケーションによって認証されている。 | | ✓ | ✓ | 306 |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Web Security Testing Guide 4.1: Testing for HTTP Verb Tampering]( https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering.html)
+* [OWASP Testing Guide 4.0: Testing for HTTP Verb Tampering]( https://www.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_%28OTG-INPVAL-003%29)
 * Content-Disposition の API レスポンスへの追加はクライアントとサーバ間の MIME タイプの誤認識におよびファイル名オプションによる多くの攻撃から防御するのに役立つ。 [Reflected File Download attacks.](https://www.blackhat.com/docs/eu-14/materials/eu-14-Hafif-Reflected-File-Download-A-New-Web-Attack-Vector.pdf)
-* [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
+* [Content Security Policy Cheat Sheet](https://www.owasp.org/index.php?title=Content_Security_Policy_Cheat_Sheet)
 * [Exploiting CORS misconfiguration for BitCoins and Bounties](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
-* [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
-* [Sandboxing third party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
+* [OWASP Testing Guide 4.0: Configuration and Deployment Management Testing](https://www.owasp.org/index.php/Testing_for_configuration_management)
+* [Sandboxing third party components](https://www.owasp.org/index.php/3rd_Party_Javascript_Management_Cheat_Sheet#Sandboxing_Content)

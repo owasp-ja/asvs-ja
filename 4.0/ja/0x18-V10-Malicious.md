@@ -2,7 +2,7 @@
 
 ## 管理目標
 
-コードが以下の上位要件を満たすことを確認します。
+検査対象のコードが次の高次の要件を満たすことを確認します。
 
 * アプリケーションの他の部分に影響が及ばないよう、悪性活動がセキュアな方法で適切に処理される
 * time bomb や他の time based 攻撃に繋がる問題を作り込んでいない
@@ -23,7 +23,7 @@
 
 ## V10.2 悪意コード検索
 
-悪性コードが作り込まれることは極めてまれです。また検出は困難です。コードを 1 行 1 行レビューするのはロジックボムを見つける助けにはなるでしょうが、最も経験を積んだコードレビュー担当者をもってしても、存在すると分かっていても悪性コードを見つけることは容易ではありません。
+悪性コードが作り込まれることは極めてまれです。また検出は困難です。コードを 1 行 1 行レビューするのはロジックボムを見つける助けにはなるでしょうが、最も経験を積んだコードレビュアをもってしても、存在すると分かっていても悪性コードを見つけることは容易ではありません。
 
 このセクションに準拠するには、サードパーティのライブラリを含むソースコードに完全にアクセスする必要があります。
 
@@ -50,5 +50,5 @@
 
 ## 参考情報
 
-* [Hostile Subdomain Takeover, Detectify Labs](https://labs.detectify.com/2014/10/21/hostile-subdomain-takeover-using-herokugithubdesk-more/)
+* [Hostile Sub-Domain Takeover, Detectify Labs](https://labs.detectify.com/2014/10/21/hostile-subdomain-takeover-using-herokugithubdesk-more/)
 * [Hijacking of abandoned subdomains part 2, Detectify Labs](https://labs.detectify.com/2014/12/08/hijacking-of-abandoned-subdomains-part-2/)

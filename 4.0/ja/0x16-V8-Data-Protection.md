@@ -1,4 +1,4 @@
-# V8: データ保護の検証要件
+# V8: データ保護の要件
 
 ## 管理目標
 
@@ -6,7 +6,7 @@
 
 アプリケーションは「ユーザデバイスはどれも完全には信頼できない」ことを前提にする必要があります。共有コンピュータや電話、タブレット等の安全でないデバイスに対してセンシティブなデータの送信や保存を行う場合、アプリケーション側が責任を持って、デバイス上に保存するデータを暗号化し、不正な取得や変更、開示が容易にはできないよう保護する必要があります。
 
-検証対象のアプリケーションが以下の上位のデータ保護要件を満たすことを確認します。
+検証対象のアプリケーションが次の高次のデータ保護要件を満たすことを確認します。
 
 * 機密性：送信と保存の両方で認可されていない監視や開示からデータが保護されている
 * 完全性：攻撃者による悪意のある作成，変更，削除からデータが保護されている
@@ -28,7 +28,7 @@
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **8.2.1** | 最新のブラウザで機密データがキャッシュされないように、アプリケーションは十分なキャッシュ防止ヘッダを設定する。 | ✓ | ✓ | ✓ | 525 |
-| **8.2.2** | ブラウザの記憶域（HTML5 のローカルストレージ、セッションストレージ、IndexedDB、通常の Cookie、FlashCookie など）に保存されるデータにセンシティブなデータや PII が含まれていない。 | ✓ | ✓ | ✓ | 922 |
+| **8.2.2** | クライアントの記憶域（HTML5 のローカルストレージ、セッションストレージ、IndexedDB、通常の Cookie、FlashCookie など）に保存されるデータにセンシティブなデータや PII が含まれていない。 | ✓ | ✓ | ✓ | 922 |
 | **8.2.3** | セッションの終了後、ブラウザの DOM など認証されたデータがクライアントの記憶域から消去される。 | ✓ | ✓ | ✓ | 922 |
 
 ## V8.3 機密性の高い個人データ
@@ -44,10 +44,10 @@
 | **8.3.1** | センシティブなデータが HTTP メッセージボディまたはヘッダでサーバに送信される。どんな HTTP verb のクエリストリングパラメータにもセンシティブなデータが含まれない。 | ✓ | ✓ | ✓ | 319 |
 | **8.3.2** | ユーザが自身のデータをオンデマンドで、削除またはエクスポートできる。 | ✓ | ✓ | ✓ | 212 |
 | **8.3.3** | 個人情報の収集および利用に関する明確なポリシーが、ユーザに提供されている。個人情報が何らかの方法で使用される前に、オプトイン方式で個人情報利用に関する同意を得ている。 | ✓ | ✓ | ✓ | 285 |
-| **8.3.4** | アプリケーションにより作成および処理される、すべてのセンシティブなデータを特定している。センシティブなデータを処理する方法に関するポリシーが、策定されている。 ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 200 |
+| **8.3.4** | アプリケーションにより作成および処理される、すべてのセンシティブなデータを特定している。センシティブなデータを処理する方法に関するポリシーが、策定されている。 ([C8](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | ✓ | ✓ | ✓ | 200 |
 | **8.3.5** | データが関連するデータ保護規制の下で収集されている場合や、アクセスログ記録が必要な場合、センシティブなデータへのアクセスが（センシティブなデータ自体がログに記録されることなく）監査されている。 | | ✓ | ✓ | 532 |
 | **8.3.6** | メモリダンプ攻撃を軽減するため、メモリに保持されたセンシティブな情報は、不要になればすぐに、ゼロまたはランダムデータを使用して上書きする。 | | ✓ | ✓ | 226 |
-| **8.3.7** | 暗号化を必要とするセンシティブなもしくは個人情報は、機密性と完全性の双方を提供する承認済みアルゴリズムを使用して暗号化する。 ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 327 |
+| **8.3.7** | 暗号化を必要とするセンシティブなもしくは個人情報は、機密性と完全性の双方を提供する承認済みアルゴリズムを使用して暗号化する。 ([C8](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Formal_Numbering)) | | ✓ | ✓ | 327 |
 | **8.3.8** | センシティブな個人情報は、古いデータや期限切れのデータが、自動的、定期的、または状況に応じて削除されるなど、データ保持分類の対象となっている。 | | ✓ | ✓ | 285 |
 
 データ保護を検討する際には、主に一括抽出、一括変更、過度の使用について考慮すべきです。例えば、多くのソーシャルメディアシステムではユーザは 1 日に新しい友人を 100 人しか追加できませんが、これらのリクエストがどのシステムから来たのかは重要ではありません。銀行のプラットフォームでは、1000 ユーロを超える資金を外部の機関に転送することは、1 時間当たり 5 つの取引まででブロックすることが期待されています。各システムの要件は大きく異なることがあるため、「異常」を判断するには脅威モデルとビジネスリスクを考慮する必要があります。重要な基準はそのような異常な大量のアクションを検出、阻止、または可能であればブロックする能力です。
@@ -57,8 +57,8 @@
 詳しくは以下の情報を参照してください。
 
 * [Consider using Security Headers website to check security and anti-caching headers](https://securityheaders.io)
-* [OWASP Secure Headers project](https://owasp.org/www-project-secure-headers/)
-* [OWASP Privacy Risks Project](https://owasp.org/www-project-top-10-privacy-risks/)
-* [OWASP User Privacy Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+* [OWASP Secure Headers project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Privacy Risks Project](https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project)
+* [OWASP User Privacy Protection Cheat Sheet](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
 * [European Union General Data Protection Regulation (GDPR) overview](https://edps.europa.eu/data-protection_en)
 * [European Union Data Protection Supervisor - Internet Privacy Engineering Network](https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en)

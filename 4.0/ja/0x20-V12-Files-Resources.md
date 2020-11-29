@@ -2,7 +2,7 @@
 
 ## 管理目標
 
-検証対象のアプリケーションが以下の上位要件を満たすことを確認します。
+検査対象のアプリケーションが次の高次の要件を満たすことを確認します。
 
 * 信頼できないファイルのデータがセキュアな方法で適切に処理される
 * 信頼できない情報源から取得したデータは，Web ルート(webroot) の外に保存され，アクセスが制限される
@@ -27,10 +27,10 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **12.3.1** | ユーザが送信したファイル名のメタデータがシステムまたはフレームワークにより直接使用されていない。パストラバーサルから保護するために URL API が使用されている。 | ✓ | ✓ | ✓ | 22 |
+| **12.3.1** | パストラバーサルから保護するために、ユーザが送信したファイル名のメタデータがシステムまたはフレームワークファイルや URL API で直接使用されていない。 | ✓ | ✓ | ✓ | 22 |
 | **12.3.2** | ローカルファイル（LFI）の漏えい、作成、更新、または削除を防止するために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 73 |
-| **12.3.3** | リモートファイルインクルージョン (Remote File Inclusion, RFI) またはサーバサイドリクエストフォージェリ (Server-side Request Forgery, SSRF) 攻撃によるリモートファイルの漏えいまたは実行を防ぐために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 98 |
-| **12.3.4** | アプリケーションを反射型ファイルダウンロード（Reflective File Download, RFD）から保護するため、ユーザが送信したファイル名（JSON、JSONP または URL パラメータの中にある）をバリデートまたは無視し、レスポンスのContent-Type ヘッダは text/plain に設定、および ContentDisposition ヘッダは固定ファイル名を指定する。 | ✓ | ✓ | ✓ | 641 |
+| **12.3.3** | SSRF にも繋がる可能性があるリモートファイル (RFI) の漏えいまたは実行を防ぐために、ユーザが送信したファイル名のメタデータをバリデートもしくは無視する。 | ✓ | ✓ | ✓ | 98 |
+| **12.3.4** | アプリケーションを反射型ファイルダウンロード（RFD）から保護するため、ユーザが送信したファイル名（JSON、JSONP または URL パラメータの中にある）をバリデートまたは無視し、レスポンスのContent-Type ヘッダは text/plain に設定、および ContentDisposition ヘッダは固定ファイル名を指定する。 | ✓ | ✓ | ✓ | 641 |
 | **12.3.5** | OS コマンドインジェクションから保護するために、信頼できないファイルメタデータをシステム API またはライブラリで直接使用しない。 | ✓ | ✓ | ✓ | 78 |
 | **12.3.6** | アプリケーションは、未検証のコンテンツ配信ネットワーク、JavaScript ライブラリ、ノード npm ライブラリ、サーバサイド DLL などの信頼できない場所からの機能を含まず、かつ実行されない。 |  | ✓ | ✓ | 829 |
 
@@ -52,12 +52,12 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **12.6.1** | Web サーバまたはアプリケーションサーバが、リクエストを送信したりデータ/ファイルをロードしたりできるように、リソースまたはシステムに許可リストが構成されている。 | ✓ | ✓ | ✓ | 918 |
+| **12.6.1** | Web サーバまたはアプリケーションサーバが、リクエストを送信したりデータ/ファイルをロードしたりできるように、リソースまたはシステムにホワイトリストが構成されている。 | ✓ | ✓ | ✓ | 918 |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
-* [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
+* [File Extension Handling for Sensitive Information](https://www.owasp.org/index.php/Unrestricted_File_Upload)
 * [Reflective file download by Oren Hafif](https://www.trustwave.com/Resources/SpiderLabs-Blog/Reflected-File-Download---A-New-Web-Attack-Vector/)
-* [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)
+* [OWASP Third Party JavaScript Management Cheat Sheet](https://www.owasp.org/index.php/3rd_Party_Javascript_Management_Cheat_Sheet)
