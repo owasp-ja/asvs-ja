@@ -98,7 +98,7 @@ Wモダンな Web アプリケーションのアーキテクチャにおいて�
 * [AngularJS Strict Contextual Escaping](https://docs.angularjs.org/api/ng/service/$sce)
 * [AngularJS ngBind](https://docs.angularjs.org/api/ng/directive/ngBind)
 * [Angular Sanitization](https://angular.io/guide/security#sanitization-and-security-contexts)
-* [Angular Template Security](https://angular.io/guide/template-syntax#content-security)
+* [Angular Security](https://angular.io/guide/security)
 * [ReactJS Escaping](https://reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)
 * [Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
 
