@@ -2,8 +2,8 @@
 
 ![OWASP LOGO](../images/owasp_logo_1c_notext.png)
 
-# アプリケーションセキュリティ検証標準 4.0
+# アプリケーションセキュリティ検証標準 4.x (Bleeding Edge version)
 
 ## 最終版
 
-2019 年 3 月
+2021 年
