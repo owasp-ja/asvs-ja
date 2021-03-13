@@ -42,6 +42,12 @@
 | **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
 | **14.2.5** | 使用しているすべてのサードパーティライブラリのインベントリカタログが維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 | **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
+| **14.2.7** | サードパーティコンポーネントが内部で所有および開発されたアプリケーションとは別に供給されている。 | ✓ | ✓ | ✓ | 441 |
+
+
+注: 特定の言語およびパッケージマネージャには、複数の要素 (groupId や artifactId など) を使用してパッケージを識別することを要求するエコシステムがあります。これによりビルドプロセスでリソースをより具体的に識別できるようになります。そうでない場合、パッケージマネージャは含まれているリポジトリまたはミラーの順で動作します。検索順を具体的に示すには、パッケージマネージャに相談してください。
+
+
 
 ## V14.3 意図しないセキュリティの開示の要件
 
@@ -84,3 +90,4 @@
 * [Exploiting CORS misconfiguration for BitCoins and Bounties](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 * [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
 * [Sandboxing third party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
+* [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
