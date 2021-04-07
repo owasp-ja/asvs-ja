@@ -21,7 +21,7 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 | **1.1.5** | アプリケーションの高レベルアーキテクチャおよびすべてのリモート接続サービスの定義とセキュリティ分析がなされている。 ([C1](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 1059 |
 | **1.1.6** | 重複や欠落がある、非効果的な、もしくはセキュアでない管理策を回避するために、集中管理され簡潔（エコデザイン）で徹底調査され、セキュアで、再利用可能なセキュリティ管理策が実装されている。 ([C10](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 637 |
 | **1.1.7** | セキュアコーディングチェックリスト、セキュリティ要件、ガイドラインまたはポリシーを、すべての開発者およびテスト担当者が利用できる。 | | ✓ | ✓ | 637 |
-| **1.1.8** | [追加] アプリケーションのルートまたは .well-known ディレクトリにあり、セキュリティ上の問題について所有者に連絡するためのリンクや電子メールのアドレスを明確に定義した、公開されている [security.txt](https://securitytxt.org/) ファイルが利用できる。 | | ✓ | ✓ | 1059 |
+| **1.1.8** | [追加] アプリケーションのルートまたは .well-known ディレクトリにあり、セキュリティ上の問題について所有者に連絡するためのリンクや電子メールのアドレスを明確に定義した、公開されている security.txt ファイルが利用できる。 | | ✓ | ✓ | 1059 |
 
 ## V1.2 認証アーキテクチャ要件
 
@@ -143,3 +143,4 @@ Web アプリケーションの特定の実装はそのライフタイムを通�
 * [OWASP Software Assurance Maturity Model Project](https://owasp.org/www-project-samm/)
 * [Microsoft SDL](https://www.microsoft.com/en-us/sdl/)
 * [NIST SP 800-57](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)
+* [More information on the security.txt proposed standard](https://securitytxt.org/)
