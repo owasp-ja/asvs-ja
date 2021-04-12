@@ -69,7 +69,7 @@
 | **14.4.2** | すべての API レスポンスに Content-Disposition:attachment; filename="api.json" ヘッダが含まれている（または他のコンテントタイプの適切なファイル名）。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
 | **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.5** | Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=15724800; includeSubdomains | ✓ | ✓ | ✓ | 523 |
+| **14.4.5** | [修正] Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=31536000; includeSubdomains | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | [修正] URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 1021 |
 | **14.4.8** | [追加] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるドメインおよびサブドメインの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
