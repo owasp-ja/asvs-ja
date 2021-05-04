@@ -1,6 +1,6 @@
 # Appendix B: 参考情報
 
-以下の OWASP プロジェクトは、この基準のユーザや採用者に役立つ可能性が高い:
+以下の OWASP プロジェクトはこの標準のユーザや採用者に役立つでしょう。
 
 ## OWASP 主要プロジェクト
 
@@ -10,29 +10,29 @@
 4. OWASP Security Knowledge Framework: [https://owasp.org/www-project-security-knowledge-framework/](https://owasp.org/www-project-security-knowledge-framework/)
 5. OWASP Software Assurance Maturity Model (SAMM): [https://owasp.org/www-project-samm/](https://owasp.org/www-project-samm/)
 
-##  OWASP Cheat Sheet Series project
+##  OWASP チートシートシリーズプロジェクト
 
 [このプロジェクト](https://owasp.org/www-project-cheat-sheets/) には ASVS のさまざまなトピックに関連する多数のチートシートがあります。
 
 ここには ASVS へのマッピングもあります: [https://cheatsheetseries.owasp.org/cheatsheets/IndexASVS.html](https://cheatsheetseries.owasp.org/cheatsheets/IndexASVS.html)
 
-## Mobile Security Related Projects
+## モバイルセキュリティ関連プロジェクト
 
 1. OWASP Mobile Security Project: [https://owasp.org/www-project-mobile-security/](https://owasp.org/www-project-mobile-security/)
 2. OWASP Mobile Top 10 Risks: [https://owasp.org/www-project-mobile-top-10/](https://owasp.org/www-project-mobile-top-10/)
 3. OWASP Mobile Security Testing Guide and Mobile Application Security Verification Standard: [https://owasp.org/www-project-mobile-security-testing-guide/](https://owasp.org/www-project-mobile-security-testing-guide/)
 
-## OWASP Internet of Things related projects
+## OWASP Internet of Things 関連プロジェクト
 
 1. OWASP Internet of Things Project: [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/)
 
-## OWASP Serverless projects
+## OWASP Serverless プロジェクト
 
 1. OWASP Serverless Project: [https://owasp.org/www-project-serverless-top-10/](https://owasp.org/www-project-serverless-top-10/)
 
-## Others
+## その他
 
-同様に、次の Web サイトは、この標準のユーザ/採用者にとって有用である可能性が最も高い
+同様に、以下の Web サイトはこの標準のユーザや採用者に役立つでしょう。
 
 1. SecLists Github: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 2. MITRE Common Weakness Enumeration: [https://cwe.mitre.org/](https://cwe.mitre.org/)
