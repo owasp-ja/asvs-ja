@@ -51,7 +51,7 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **7.3.1** | ログインジェクションを防ぐためにユーザ指定のデータを適切にエンコードする。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
-| **7.3.2** | ログ閲覧ソフトウェアで表示したときに、すべてのイベントがインジェクションから保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
+| **7.3.2** | ログ閲覧ソフトウェアで閲覧したときに、すべてのイベントがインジェクションから保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
 | **7.3.3** | セキュリティログが不正なアクセスや改変から保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 200 |
 | **7.3.4** | 時刻源が正しい時間と正しいタイムゾーンに同期されている。システムがグローバルである場合は、インシデント後のフォレンジック分析を支援するために UTC でのみログを記録することを強く検討する。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 
