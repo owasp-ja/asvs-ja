@@ -41,7 +41,7 @@
 | **14.2.2** | [14.1.6 へ移動] | | | | |
 | **14.2.3** | JavaScript ライブラリ、CSS、Web フォントなどのアプリケーション資産がコンテンツ配信ネットワーク（Content Delivery Network, CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 829 |
 | **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
-| **14.2.5** | 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
+| **14.2.5** | [修正] 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 | **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
 | **14.2.7** | [追加] サードパーティコンポーネントが内部で所有および開発されたアプリケーションとは別に供給されている。 | ✓ | ✓ | ✓ | 441 |
 
