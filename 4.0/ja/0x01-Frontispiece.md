@@ -9,6 +9,7 @@ OWASP アプリケーションセキュリティ検証標準はアーキテク�
 Version 4.x (Bleeding Edge version), 2021
 
 ![license](../images/license.png)
+
 Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribution ShareAlike 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
 
 ## プロジェクトリーダー
@@ -16,14 +17,13 @@ Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribu
 |                      	|                 	|            	|
 |----------------------	|-----------------	|------------	|
 | Andrew van der Stock 	| Daniel Cuthbert 	| Jim Manico 	|
-| Josh C Grossman      	| Mark Burnett    	|            	|
+| Josh C Grossman      	| Elar Lang     	|            	|
 
 ## 主要執筆者
 
-|                	|                	|                   	|
-|----------------	|----------------	|-------------------	|
-| Abhay Bhargav  	| Benedikt Bauer 	| Elar Lang         	|
-| Osama Elnaggar 	| Ron Perris     	| Tonimir Kisasondi 	|
+|                	|                	|
+|----------------	|----------------	|
+| Sjoerd Langkemper	| Isaac Lewis	 	|
 
 ## その他の執筆者およびレビュー担当者
 
@@ -38,7 +38,8 @@ Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribu
 | Marc Aubry     	| Marco Schnüriger 	| Philippe De Ryck    	| Ralph Andalis      	| Ravi Balla          	|
 | Rick Mitchell  	| Riotaro Okada    	| Robin Wood          	| Rogan Dawes        	| Ryan Goltry         	|
 | Sajjad Pourali 	| Serg Belkommen   	| Siim Puustusmaa     	| Ståle Pettersen    	| Stuart Gunter       	|
-| Tal Argoni     	| Tomasz Wrobel    	| Vincent De Schutter 	|                    	|                     	|
+| Tal Argoni     	| Tomasz Wrobel    	| Vincent De Schutter 	| Benedikt Bauer		| Abhay Bhargav       |
+| Osama Elnaggar    | Ron Perris    	| Tonimir Kisasondi  	| 						|  |
 
 クレジットが上記の 4.x クレジットリストにない場合は、将来の 4.x アップデートで認識されるように GitHub のチケットを記録してください。
 
