@@ -73,7 +73,7 @@
 | **14.4.5** | [修正] Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=31536000; includeSubdomains | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | [修正] URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.8** | [追加] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるドメインおよびサブドメインの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
+| **14.4.8** | [追加, 14.5.3 から分割] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるドメインおよびサブドメインの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
 
 ## V14.5 HTTP リクエストヘッダのバリデーション
 
@@ -81,7 +81,7 @@
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **14.5.1** | [修正] アプリケーションサーバが、preflight リクエスト時の OPTIONS を含む、アプリケーションまたは API で使用されている HTTP メソッドのみを受け入れる。 | ✓ | ✓ | ✓ | 749 |
 | **14.5.2** | 提供された Origin ヘッダは、攻撃者によって簡単に変更できるため、認証やアクセス制御の判断に使用されていない。 | ✓ | ✓ | ✓ | 346 |
-| **14.5.3** | [修正] Origin ヘッダがクロスオリジンリソース共有 (CORS) ポリシーを満たすために、許可されたドメインの定義済みリストに対して妥当性確認されている。 | ✓ | ✓ | ✓ | 346 |
+| **14.5.3** | [修正, 14.4.8 へ分割] Origin ヘッダがクロスオリジンリソース共有 (CORS) ポリシーを満たすために、許可されたドメインの定義済みリストに対して妥当性確認されている。 | ✓ | ✓ | ✓ | 346 |
 | **14.5.4** | 信頼できるプロキシまたは bearer トークンのような SSO デバイスによって追加された HTTP ヘッダがアプリケーションによって認証されている。 | | ✓ | ✓ | 306 |
 | **14.5.5** | [追加] HEAD、OPTIONS、TRACE、または GET verb を使用する HTTP リクエストがバックエンドデータ構造を変更することや、状態変更アクションを実行することがない。これらのリクエストは安全なメソッドであり、副作用があってはいけない。 | ✓ | ✓ | ✓ | 650 |
 | **14.5.6** | [追加] HTTP リクエストスマグリングを防ぐために、Transfer-Encoding と Content-Length ヘッダが競合している場合でも、インフラストラクチャが各リクエストを個別に処理する。 | | ✓ | ✓ | 444 |
@@ -96,3 +96,4 @@
 * [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
 * [Sandboxing third party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
 * [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
+* [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
