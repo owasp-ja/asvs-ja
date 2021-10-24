@@ -39,7 +39,7 @@ Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribu
 | Rick Mitchell  	| Riotaro Okada    	| Robin Wood          	| Rogan Dawes        	| Ryan Goltry         	|
 | Sajjad Pourali 	| Serg Belkommen   	| Siim Puustusmaa     	| Ståle Pettersen    	| Stuart Gunter       	|
 | Tal Argoni     	| Tomasz Wrobel    	| Vincent De Schutter 	| Benedikt Bauer		| Abhay Bhargav       |
-| Osama Elnaggar    | Ron Perris    	| Tonimir Kisasondi  	| 						|  |
+| Osama Elnaggar    | Ron Perris    	| Tonimir Kisasondi  	| Sergey Diakonov						|  |
 
 クレジットが上記の 4.x クレジットリストにない場合は、将来の 4.x アップデートで認識されるように GitHub のチケットを記録してください。
 
