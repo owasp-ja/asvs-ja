@@ -1,43 +1,52 @@
-# V9 通信
+# V9 Communication
 
-## 管理目標
+## Control Objective
 
-検証対象のアプリケーションが以下の上位要件を満たすことを確認します。
+Ensure that a verified application meets the following high level requirements:
 
-* 送信されるデータの機密性に関係なく、TLS または強力な暗号が常に使用されている
-* 構成に関する最新の先導的な勧告が、優先アルゴリズムおよび暗号の有効化と順序づけに使用されている
-* 脆弱または近い将来廃止予定のアルゴリズムや暗号は、最後の手段として順序付けされている
-* 非推奨または既知のセキュアでないアルゴリズムや暗号が無効になっている
+* Require TLS or strong encryption, independent of sensitivity of the content.
+* Follow the latest guidance, including:
+  * Configuration advice
+  * Preferred algorithms and ciphers
+* Avoid weak or soon to be deprecated algorithms and ciphers, except as a last resort
+* Disable deprecated or known insecure algorithms and ciphers.
 
-セキュアな TLS 構成に関する業界の主要な勧告は、既存のアルゴリズムや暗号の壊滅的な破綻が原因で頻繁に変更されます。常に最新のバージョンの TLS 設定レビューツール（SSLyze や他の TLS スキャナなど）を使用して、優先順位とアルゴリズム選択を設定してください。設定を定期的にチェックして、セキュアな通信設定が常に存在し有効であることを確認します。
+Within these requirements:
 
-## V9.1 クライアント通信のセキュリティ
+* Stay current with recommended industry advice on secure TLS configuration, as it changes frequently (often due to catastrophic breaks in existing algorithms and ciphers).
+* Use the most recent versions of TLS configuration review tools to configure the preferred order and algorithm selection.
+* Check your configuration periodically to ensure that secure communication is always present and effective.
 
-すべてのクライアント通信は、暗号化された通信経路を介してのみ行われる必要があります。特に、最新のブラウザや検索エンジンでは、TLS1.2 以降の使用が必須とされています。オンラインツールを使用して定期的に構成を見直し、最新の先進的な手法が採用されていることを確認する必要があります。
+## V9.1 Client Communication Security
 
-| # | 説明 | L1 | L2 | L3 | CWE |
+Ensure all client messages are sent over encrypted networks, using TLS 1.2 or later.
+Use up to date tools to review the client configuration on a regular basis.
+
+| # | Description | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **9.1.1** | [修正] TLS がすべてのクライアント接続に使用されており、安全でないプロトコルや非暗号化通信にフォールバックしない。 ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 319 |
-| **9.1.2** | [修正] オンラインまたは最新の TLS テストツールを使用して、強力な暗号スイートのみが有効であり、最も強力な暗号スイートが優先的に設定されている。 | ✓ | ✓ | ✓ | 326 |
-| **9.1.3** | [修正] TLS 1.2 や TLS 1.3 など、最新の推奨バージョンの TLS プロトコルのみが有効である。最新バージョンの TLS プロトコルを優先オプションにする。 | ✓ | ✓ | ✓ | 326 |
-| **9.1.4** | [追加] シッククライアントアプリケーションの場合、アプリが独自の証明書ストアを使用するか、エンドポイント証明書または公開鍵を固定化するかしており、信頼できる CA により署名されていたとしても、異なる証明書や鍵を提供するエンドポイントとの接続を確立しない。 | | | ✓ | 295 |
+| **9.1.1** | [MODIFIED] Verify that TLS is used for all client connectivity, and does not fall back to insecure or unencrypted communications. ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 319 |
+| **9.1.2** | [MODIFIED] Verify using up to date TLS testing tools that only strong cipher suites are enabled, with the strongest cipher suites set as preferred. | ✓ | ✓ | ✓ | 326 |
+| **9.1.3** | [MODIFIED] Verify that only the latest recommended versions of the TLS protocol are enabled, such as TLS 1.2 and TLS 1.3. The latest version of the TLS protocol should be the preferred option. | ✓ | ✓ | ✓ | 326 |
+| **9.1.4** | [ADDED] For thick client applications, verify that the app either uses its own certificate store, or pins the endpoint certificate or public key, and will not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA. | | | ✓ | 295 |
 
-## V9.2 サーバ通信のセキュリティ
+## V9.2 Server Communication Security
 
-サーバ通信は HTTP だけではありません。監視システム、管理ツール、リモートアクセスや SSH、ミドルウェア、データベース、メインフレーム、パートナーまたは外部ソースシステムなど、他のシステムとの安全な接続が必要です。「外部は堅牢だが、内部が傍受しやすい」ことを防ぐために、これらの通信はすべて暗号化する必要があります。
+Server communications are more than just HTTP. Secure connections to and from other systems, such as monitoring systems, management tools, remote access and ssh, middleware, database, mainframes, partner or external source systems &mdash; must be in place. All of these must be encrypted to prevent "hard on the outside, trivially easy to intercept on the inside".
 
-| # | 説明 | L1 | L2 | L3 | CWE |
+| # | Description | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **9.2.1** | [レベル L2 > L1] サーバ接続（外向き、内向きの両方）において、信頼できる TLS 証明書が使用されている。内部で生成された証明書または自己署名証明書を使用する場合、サーバは特定の内部認証局や特定の自己署名証明書のみを信頼するように構成し、それ以外の証明書はすべて拒否する。 | ✓ | ✓ | ✓ | 295 |
-| **9.2.2** | 管理ポート、監視、認証、API、または Web サービスの呼び出し、データベース、クラウド、サーバレス、メインフレーム、外部やパートナー間の接続など、すべての外向き／内向きの接続に TLS などの暗号化通信が使用されている。サーバは、安全でないプロトコルや暗号化されていないプロトコルにフォールバックしてはいけない。 | | ✓ | ✓ | 319 |
-| **9.2.3** | センシティブな情報や機能を持つ外部システムとの暗号化接続がすべて認証されている。 | | ✓ | ✓ | 287 |
-| **9.2.4** | Online Certificate Status Protocol (OCSP) Stapling など証明書の失効を適切にチェックできる機能を設定し、有効にしている。 | | ✓ | ✓ | 299 |
-| **9.2.5** | バックエンドの TLS 通信に関するエラーがログに記録されている。 | | | ✓ | 544 |
+| **9.2.1** | [LEVEL L2 > L1] Verify that connections to and from the server use trusted TLS certificates. Where internally generated or self-signed certificates are used, the server must be configured to only trust specific internal CAs and specific self-signed certificates. All others should be rejected. | ✓ | ✓ | ✓ | 295 |
+| **9.2.2** | Verify that encrypted communications such as TLS is used for all inbound and outbound connections, including for management ports, monitoring, authentication, API, or web service calls, database, cloud, serverless, mainframe, external, and partner connections. The server must not fall back to insecure or unencrypted protocols. | | ✓ | ✓ | 319 |
+| **9.2.3** | Verify that all encrypted connections to external systems that involve sensitive information or functions are authenticated. | | ✓ | ✓ | 287 |
+| **9.2.4** | Verify that proper certification revocation, such as Online Certificate Status Protocol (OCSP) Stapling, is enabled and configured. | | ✓ | ✓ | 299 |
+| **9.2.5** | Verify that backend TLS connection failures are logged. | | | ✓ | 544 |
 
-## 参考情報
+## References
 
-詳しくは以下の情報を参照してください。
+For more information, see also:
 
 * [OWASP – TLS Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 * [OWASP - Pinning Guide](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)
-* 「認定された TLS のモード」に関する注記。これまで、ASVS は米国標準 FIPS 140-2 を参照してきましたが、この米国標準をグローバル標準として適用することは困難であったり、矛盾が生じたり、あるいは混乱を招く可能性があります。要件 9.1.3 に準拠するためのより良い方法は、 https://wiki.mozilla.org/Security/Server_Side_TLS などのガイドを参照したり、https://ssl-config.mozilla.org/ で既知の適切な構成をつくり、sslyze などの既存の TSL 評価ツールや脆弱性スキャナ、信頼できるオンラインの TLS アセスメントサービスを使用して、望ましいレベルのセキュリティを確保することです。本セクションに準拠しない例としては、旧式または安全性の低い暗号やアルゴリズムの使用、Perfect Forward Secrecy の欠如，旧式または安全性の低い SSL プロトコル、脆弱な推奨暗号などが一般に見られます。
+* Notes on “Approved modes of TLS”:
+    * In the past, the ASVS referred to the US standard FIPS 140-2, but as a global standard, applying US standards can be difficult, contradictory, or confusing to apply.
+    * A better method of achieving compliance with section 9.1 would be to review guides such as [Mozilla's Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS) or [generate known good configurations](https://mozilla.github.io/server-side-tls/ssl-config-generator/), and use known and up to date TLS evaluation tools to obtain a desired level of security.
