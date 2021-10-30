@@ -1,4 +1,4 @@
-# V7: エラー処理とログ記録の検証要件
+# V7 エラー処理とログ記録
 
 ## 管理目標
 
@@ -14,7 +14,7 @@
 
 また、アプリケーションが安全に失敗し、エラーが不必要な情報を開示しないようにすることも重要です。
 
-## V7.1 ログ内容の要件
+## V7.1 ログ内容
 
 機密情報をログに記録するのは危険です。ログそのものが機密情報に分類されるため、暗号化する必要が生じ、保存ポリシーの対象となり、セキュリティ監査で開示する必要があります。必要な情報のみをログに保存し、支払い、クレデンシャル（セッショントークンを含む）、機密情報または個人を特定できる情報は絶対に含めないでください。
 
@@ -30,7 +30,7 @@ V7.1 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 | **7.1.3** | 成功および失敗した認証イベント、アクセス制御の失敗、デシリアライゼーションの失敗、および入力検証の失敗を含むセキュリティへの影響が考えられるイベントについてログを保存する。 ([C5, C7](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 778 |
 | **7.1.4** | 各ログのイベントには、イベント発生時のタイムラインを詳細に調査するために必要な情報が含まれている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 778 |
 
-## V7.2 ログ処理の要件
+## V7.2 ログ処理
 
 タイムリーなログ記録は、監査イベント、トリアージおよびエスカレーションにとって重要です。アプリケーションのログが明確で、ローカルまたはリモートの監視システムに送信されたログのいずれかで簡単に監視および分析できることを確認してください。
 
@@ -44,14 +44,14 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 | **7.2.1** | センシティブなセッショントークンやパスワードを保存せずに、すべての認証判定がログに記録されている。これには、セキュリティ調査に必要な関連メタデータを含むリクエストを含める。 | | ✓ | ✓ | 778 |
 | **7.2.2** | すべてのアクセス制御判定がログに記録され、失敗したすべての判定がログに記録される。これには、セキュリティ調査に必要な関連メタデータを含むリクエストを含める。 | | ✓ | ✓ | 285 |
 
-## V7.3 ログ保護の要件
+## V7.3 ログ保護
 
 簡単に変更や削除が可能なログは、調査や訴追には使えません。ログの公開により、アプリケーションまたはアプリケーションに含まれるデータに関する内部の詳細が明らかになる可能性があります。不正な開示、変更、削除からログを保護する際には注意が必要です。
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **7.3.1** | ログインジェクションを防ぐためにユーザ指定のデータを適切にエンコードする。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
-| **7.3.2** | ログ閲覧ソフトウェアで閲覧したときに、すべてのイベントがインジェクションから保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
+| **7.3.1** | ログインジェクションを防ぐためにすべてのログ記録コンポーネントがデータを適切にエンコードしている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 117 |
+| **7.3.2** | [削除, 7.3.1 と重複] | | | | |
 | **7.3.3** | セキュリティログが不正なアクセスや改変から保護されている。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 200 |
 | **7.3.4** | 時刻源が正しい時間と正しいタイムゾーンに同期されている。システムがグローバルである場合は、インシデント後のフォレンジック分析を支援するために UTC でのみログを記録することを強く検討する。 ([C9](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 
@@ -73,5 +73,5 @@ V7.2 は OWASP Top 10 2017:A10 をカバーしています。2017:A10 とこの�
 
 詳しくは以下の情報を参照してください。
 
-*  [OWASP Testing Guide 4.0 content: Testing for Error Handling](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README.html)
-*  [OWASP Authentication Cheat Sheet section about error messages](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
+* [OWASP Testing Guide 4.0 content: Testing for Error Handling](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README.html)
+* [OWASP Authentication Cheat Sheet section about error messages](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
