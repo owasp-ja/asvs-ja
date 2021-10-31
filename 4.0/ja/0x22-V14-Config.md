@@ -26,8 +26,6 @@
 | **14.1.3** | 使用しているアプリケーションサーバとフレームワークの推奨事項に従って、サーバ構成が強化されている。 | | ✓ | ✓ | 16 |
 | **14.1.4** | アプリケーション、構成、およびすべての依存関係が、自動でデプロイスクリプトを使用して再度デプロイできるか、文書化およびテストされた Runbook から妥当な時間で構築できるか、またはバックアップからタイムリーに復元できる。 | | ✓ | ✓ | |
 | **14.1.5** | 許可された管理者が、セキュリティ関連のすべての構成の整合性を検証して改ざんを検出できる。 | | | ✓ | |
-| **14.1.6** | [修正, 14.2.2 から移動] 不要な機能、ドキュメント、サンプルアプリケーション、コンフィギュレーションがすべて削除されている。 | ✓ | ✓ | ✓ | 1002 |
-| **14.1.7** | [追加] 本番環境にテストコードが含まれていない。 | | ✓ | ✓ | 489 |
 
 ## V14.2 依存関係
 
@@ -38,62 +36,49 @@
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **14.2.1** | すべてのコンポーネントが最新となっている。できればビルド時またはコンパイル時にディペンデンシチェッカを使用する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 1026 |
-| **14.2.2** | [14.1.6 へ移動] | | | | |
+| **14.2.2** | 不要な機能、ドキュメント、サンプルアプリケーション、およびコンフィギュレーションがすべて削除されている。 | ✓ | ✓ | ✓ | 1002 |
 | **14.2.3** | JavaScript ライブラリ、CSS、Web フォントなどのアプリケーション資産がコンテンツ配信ネットワーク（Content Delivery Network, CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 829 |
 | **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
-| **14.2.5** | [修正] 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
+| **14.2.5** | 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 | **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
-| **14.2.7** | [追加] サードパーティコンポーネントが内部で所有および開発されたアプリケーションとは別に供給されている。 | ✓ | ✓ | ✓ | 441 |
-
-
-注: 特定の言語およびパッケージマネージャには、複数の要素 (groupId や artifactId など) を使用してパッケージを識別することを要求するエコシステムがあります。これによりビルドプロセスでリソースをより具体的に識別できるようになります。そうでない場合、パッケージマネージャは含まれているリポジトリまたはミラーの順で動作します。検索順を具体的に示すには、パッケージマネージャに相談してください。
-
 
 ## V14.3 意図しないセキュリティの開示
 
 本番環境の構成を強化して、デバッグコンソールなどの一般的な攻撃から保護し、クロスサイトスクリプティング（Cross-site Scripting, XSS）とリモートファイルインクルード（Remote File Inclusion, RFI）攻撃の基準を引き上げ、歓迎されない多くのペネトレーションテストの報告の特徴である発見された些細な脆弱性を排除します。これらの問題の多くはめったに重大なリスクとして評価されませんが、他の脆弱性と連鎖します。これらの問題がデフォルトで存在しない場合、ほとんどの攻撃が成功する前にレベルが引き上げられます。
 
-| # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
 | **14.3.1** | [削除, 7.4.1 と重複] | | | | |
 | **14.3.2** | Web またはアプリケーションサーバとアプリケーションフレームワークのデバッグモードが運用環境で無効になっていることを確認して、デバッグ機能、開発者コンソール、および意図しないセキュリティ開示を排除する。 | ✓ | ✓ | ✓ | 497 |
 | **14.3.3** | HTTP ヘッダまたは HTTP レスポンスの一部がシステムコンポーネントの詳細なバージョン情報を公開していない。 | ✓ | ✓ | ✓ | 200 |
-| **14.3.4** | [追加, 4.3.2 から分割] ディレクトリリスティグは、意図して許可されない限り、無効となっている。 | ✓ | ✓ | ✓ | 548 |
-| **14.3.5** | [追加, 4.3.2 から分割] ファイルやディレクトリのメタデータ (Thumbs.db、.DS_Store、.git、.svn フォルダなど) の検出や開示が許可されていない。 | ✓ | ✓ | ✓ | |
-| **14.3.6** | [12.5.1 から移動] 意図しない情報やソースコードの漏えいを防ぐために、特定のファイル拡張子を持つファイルのみを処理するように Web 層が構成されている。例えば、バックアップファイル（.bak など）、一時作業ファイル（.swp など）、圧縮ファイル（.zip、.tar.gz など）およびエディタで一般的に使用されるその他の拡張子は、必要ない限り処理しない。 | ✓ | ✓ | ✓ | 552 |
 
 ## V14.4 HTTP セキュリティヘッダ
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **14.4.1** | [修正] すべての HTTP レスポンスに Content-Type ヘッダが含まれている。またコンテンツタイプが text/*, /+xml および application/xml の場合には安全な文字セット (UTF-8, ISO-8859-1 など) を指定する。コンテンツは提供された Content-Type ヘッダと一致する必要がある。 | ✓ | ✓ | ✓ | 173 |
-| **14.4.2** | [削除] | | | | |
+| **14.4.1** | すべての HTTP レスポンスに Content-Type ヘッダが含まれている。またコンテンツタイプが text/*, /+xml および application/xml の場合には安全な文字セット (UTF-8, ISO-8859-1 など) を指定する。コンテンツは提供された Content-Type ヘッダと一致する必要がある。 | ✓ | ✓ | ✓ | 173 |
+| **14.4.2** | すべての API レスポンスに Content-Disposition:attachment; filename="api.json" ヘッダが含まれている（または他のコンテントタイプの適切なファイル名）。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
 | **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.5** | [修正] Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=31536000; includeSubdomains | ✓ | ✓ | ✓ | 523 |
-| **14.4.6** | [修正] URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
+| **14.4.5** | Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=15724800; includeSubdomains | ✓ | ✓ | ✓ | 523 |
+| **14.4.6** | URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.8** | [追加, 14.5.3 から分割] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるドメインおよびサブドメインの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
 
 ## V14.5 HTTP リクエストヘッダのバリデーション
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---:| :---: | :---: |
-| **14.5.1** | [修正] アプリケーションサーバが、preflight リクエスト時の OPTIONS を含む、アプリケーションまたは API で使用されている HTTP メソッドのみを受け入れる。 | ✓ | ✓ | ✓ | 749 |
+| **14.5.1** | アプリケーションサーバが、pre-flight OPTIONS を含む、アプリケーションまたは API で使用されている HTTP メソッドのみを受け入れる。アプリケーションコンテキストに対する無効なリクエストについてログ出力やアラート発行する。 | ✓ | ✓ | ✓ | 749 |
 | **14.5.2** | 提供された Origin ヘッダは、攻撃者によって簡単に変更できるため、認証やアクセス制御の判断に使用されていない。 | ✓ | ✓ | ✓ | 346 |
-| **14.5.3** | [修正, 14.4.8 へ分割] Origin ヘッダがクロスオリジンリソース共有 (CORS) ポリシーを満たすために、許可されたドメインの定義済みリストに対して妥当性確認されている。 | ✓ | ✓ | ✓ | 346 |
+| **14.5.3** | オリジン間リソース共有（Cross-Origin Resource Sharing, CORS）の Access-Control-Allow-Origin ヘッダが信頼できるドメインの厳密な許可リストを使用して照合し、「null」オリジンをサポートしていない。 | ✓ | ✓ | ✓ | 346 |
 | **14.5.4** | 信頼できるプロキシまたは bearer トークンのような SSO デバイスによって追加された HTTP ヘッダがアプリケーションによって認証されている。 | | ✓ | ✓ | 306 |
-| **14.5.5** | [追加] HEAD、OPTIONS、TRACE、または GET verb を使用する HTTP リクエストがバックエンドデータ構造を変更することや、状態変更アクションを実行することがない。これらのリクエストは安全なメソッドであり、副作用があってはいけない。 | ✓ | ✓ | ✓ | 650 |
-| **14.5.6** | [追加] HTTP リクエストスマグリングを防ぐために、Transfer-Encoding と Content-Length ヘッダが競合している場合でも、インフラストラクチャが各リクエストを個別に処理する。 | | ✓ | ✓ | 444 |
 
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
 * [OWASP Web Security Testing Guide 4.1: Testing for HTTP Verb Tampering]( https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering.html)
+* Content-Disposition の API レスポンスへの追加はクライアントとサーバ間の MIME タイプの誤認識におよびファイル名オプションによる多くの攻撃から防御するのに役立つ。 [Reflected File Download attacks.](https://www.blackhat.com/docs/eu-14/materials/eu-14-Hafif-Reflected-File-Download-A-New-Web-Attack-Vector.pdf)
 * [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
 * [Exploiting CORS misconfiguration for BitCoins and Bounties](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 * [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
 * [Sandboxing third party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
-* [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
-* [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
