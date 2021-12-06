@@ -29,4 +29,4 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 
 ### 参考資料
 
-* [OWASPアプリケーションセキュリティ検証標準 4.0.1 Software ISAC 邦訳版](https://www.csaj.jp/NEWS/pr/200903_asvs.html)
+* [OWASPアプリケーションセキュリティ検証標準 4.0.1 Software ISAC 邦訳版](https://www.saj.or.jp/documents/NEWS/pr/20200903_OWASP_ASVS4.0-ja.pdf)
