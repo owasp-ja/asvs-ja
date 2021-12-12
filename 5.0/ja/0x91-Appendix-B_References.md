@@ -10,7 +10,7 @@
 4. OWASP Security Knowledge Framework: [https://owasp.org/www-project-security-knowledge-framework/](https://owasp.org/www-project-security-knowledge-framework/)
 5. OWASP Software Assurance Maturity Model (SAMM): [https://owasp.org/www-project-samm/](https://owasp.org/www-project-samm/)
 
-##  OWASP チートシートシリーズプロジェクト
+## OWASP チートシートシリーズプロジェクト
 
 [このプロジェクト](https://owasp.org/www-project-cheat-sheets/) には ASVS のさまざまなトピックに関連する多数のチートシートがあります。
 
