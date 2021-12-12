@@ -70,7 +70,7 @@ TLS や他のセキュアなトランスポートチャネルはセッション�
 | # | 説明 | L1 | L2 | L3 | CWE | [NIST &sect;](https://pages.nist.gov/800-63-3/sp800-63b.html) |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
 | **3.6.1** | 依拠当事者 (Relying Parties, PR) が Credential Service Provider (CSP) に最大認証時間を指定していること、および CSP がその期間内にセッションを使用していない場合は、CSP がユーザを再認証する。 | | | ✓ | 613 | 7.2.1 |
-| **3.6.2** | Credential Service Provider (CSP) がユーザを再認証する必要があるかどうかを依拠当事者 (Relying Parties) が決定できるように、CSP が依拠当事者 (Relying Parties) に最後の認証イベントを通知する。 | | | ✓ | 613| 7.2.1 |
+| **3.6.2** | Credential Service Provider (CSP) がユーザを再認証する必要があるかどうかを依拠当事者 (Relying Parties) が決定できるように、CSP が依拠当事者 (Relying Parties) に最後の認証イベントを通知する。 | | | ✓ | 613 | 7.2.1 |
 
 ## V3.7 セッション管理の悪用に対する防御
 
