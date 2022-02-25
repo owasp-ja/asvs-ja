@@ -45,6 +45,9 @@ NIST 800-63 により「記憶された秘密」と呼ばれるパスワード�
 | **2.1.13** | [追加, 2.1.10 から分割, レベル L1 > L2] アプリケーションがパスワード履歴を保持していない。 | | ✓ | ✓ | | 5.1.1.2 |
 | **2.1.14** | [追加, 2.1.7 から分割, レベル L1 > L3] アカウント登録またはパスワード変更時に送信されるパスワードは一連の侵害されたユーザ名とパスワードのペアと照合されている。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | | ✓ | | 5.1.1.2 |
 
+要件 2.1.7 でよく使用されるパスワードのソースとして考えられるものは以下のとおりです。
+* https://github.com/danielmiessler/SecLists/tree/master/Passwords
+* https://www.ncsc.gov.uk/blog-post/passwords-passwords-everywhere
 
 ## V2.2 一般的なオーセンティケータのセキュリティ
 
