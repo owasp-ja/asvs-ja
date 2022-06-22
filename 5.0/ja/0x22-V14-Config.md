@@ -68,7 +68,7 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **14.4.1** | すべての HTTP レスポンスに Content-Type ヘッダが含まれている。またコンテンツタイプが text/*, /+xml および application/xml の場合には安全な文字セット (UTF-8, ISO-8859-1 など) を指定する。コンテンツは提供された Content-Type ヘッダと一致する必要がある。 | ✓ | ✓ | ✓ | 173 |
 | **14.4.2** | [削除] | | | | |
-| **14.4.3** | HTML、DOM、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
+| **14.4.3** | [修正] HTML、DOM、CSS、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
 | **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
 | **14.4.5** | [修正] Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=31536000; includeSubdomains | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
