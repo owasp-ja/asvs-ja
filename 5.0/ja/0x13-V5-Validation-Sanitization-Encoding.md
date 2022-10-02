@@ -68,7 +68,7 @@ Wモダンな Web アプリケーションのアーキテクチャにおいて�
 | **5.3.2** | [削除] | | | | |
 | **5.3.3** | コンテキストに応じて (できれば自動化された、あるいは最悪でも手動による) 出力エスケープにより反射型、格納型、および DOM ベース XSS から保護されている。 ([C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 79 |
 | **5.3.4** | データ選択またはデータベースクエリ（例、SQL、HQL、ORM、NoSQL）がクエリのパラメータ化、ORM、エンティティフレームワークもしくは他の方法により保護されており、データベースインジェクション攻撃の影響を受けない。 ([C3](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 89 |
-| **5.3.5** | パラメータ化もしくはより安全な機構が存在しない場合、SQL インジェクションから保護するための SQL エスケープの使用など、コンテキスト固有の出力エンコーディングによりインジェクション攻撃から保護されている。 ([C3, C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 89 |
+| **5.3.5** | [削除] | | | | |
 | **5.3.6** | [修正] アプリケーションが JSON インジェクション攻撃から保護されている。 ([C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 75 |
 | **5.3.7** | アプリケーションが LDAP インジェクションの影響を受けない、またはセキュリティ管理策によって LDAP インジェクションが防止される。 ([C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 90 |
 | **5.3.8** | OS コマンドインジェクションに対して保護していること、およびオペレーティングシステムコールがパラメータ化された OS クエリを使用、もしくはコンテキストコマンドライン出力エンコーディングを使用する。 ([C4](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 78 |
