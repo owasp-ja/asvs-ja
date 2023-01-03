@@ -47,7 +47,7 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **12.5.1** | [14.3.6 へ移動] | | | | |
 | **12.5.2** | アップロードされたファイルへの直接のリクエストが HTML/JavaScript コンテンツとして実行されない。 | ✓ | ✓ | ✓ | 434 |
-| **12.5.3** | [修正, 12.3.4 から移動] アプリケーションが JSON、JSONP または URL パラメータに含まれるユーザが送信したファイル名をバリデートまたは無視している。レスポンスの Content-Type ヘッダと Content-Disposition ヘッダはファイルに固定され、ユーザーではなくアプリケーションがセキュアに処理している。 | ✓ | ✓ | ✓ | 641 |
+| **12.5.3** | [修正, 12.3.4 から移動] アプリケーションが JSON、JSONP または URL パラメータに含まれるユーザが送信したファイル名をバリデートまたは無視し、レスポンスの Content-Disposition ヘッダでファイル名を指定している。 | ✓ | ✓ | ✓ | 641 |
 
 ## V12.6 SSRF からの保護
 
@@ -60,5 +60,4 @@
 詳しくは以下の情報を参照してください。
 
 * [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
-* [Reflective file download by Oren Hafif](https://www.trustwave.com/Resources/SpiderLabs-Blog/Reflected-File-Download---A-New-Web-Attack-Vector/)
 * [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)
