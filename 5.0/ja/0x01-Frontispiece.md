@@ -10,7 +10,7 @@ Version 4.x (Bleeding Edge version), 2021
 
 ![license](../images/license.png)
 
-Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribution ShareAlike 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
+Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
 
 ## プロジェクトリーダー
 
