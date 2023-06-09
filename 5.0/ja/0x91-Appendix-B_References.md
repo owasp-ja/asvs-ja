@@ -15,7 +15,7 @@
 
 [このプロジェクト](https://owasp.org/www-project-cheat-sheets/) には ASVS のさまざまなトピックに関連する多数のチートシートがあります。
 
-ここには ASVS へのマッピングもあります: [https://cheatsheetseries.owasp.org/cheatsheets/IndexASVS.html](https://cheatsheetseries.owasp.org/cheatsheets/IndexASVS.html)
+ここには ASVS へのマッピングもあります: [https://cheatsheetseries.owasp.org/IndexASVS.html](https://cheatsheetseries.owasp.org/IndexASVS.html)
 
 ## モバイルセキュリティ関連プロジェクト
 
