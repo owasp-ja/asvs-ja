@@ -14,32 +14,32 @@ Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribu
 
 ## プロジェクトリーダー
 
-|                      	|                 	|            	|
-|----------------------	|-----------------	|------------	|
-| Andrew van der Stock 	| Daniel Cuthbert 	| Jim Manico 	|
-| Josh C Grossman      	| Elar Lang     	|            	|
+|                       |                  |             |
+|---------------------- |----------------- |------------ |
+| Andrew van der Stock  | Daniel Cuthbert  | Jim Manico  |
+| Josh C Grossman       | Elar Lang      |             |
 
 ## 主要執筆者
 
-|                	|                	|
-|----------------	|----------------	|
-| Sjoerd Langkemper	| Isaac Lewis	 	|
+|                 |                 |
+|---------------- |---------------- |
+| Sjoerd Langkemper | Isaac Lewis   |
 
 ## その他の執筆者およびレビュー担当者
 
-|                	|                  	|                     	|                    	|                     	|
-|----------------	|------------------	|---------------------	|--------------------	|---------------------	|
-| Aaron Guzman   	| Anthony Weems    	| Barbara Schachner   	| Christopher Loessl 	| Clément Notin       	|
-| Dan Cornell    	| Daniël Geerts    	| David Clarke        	| David Johansson    	| David Quisenberry   	|
-| Erlend Oftedal 	| Fatih Ersinadim  	| Filip van Laenen    	| Geoff Baskwill     	| Glenn ten Cate      	|
-| Grant Ongers   	| hello7s          	| Jacob Salassi       	| James Sulinski     	| Jason Axley         	|
-| Jason Morrow   	| Javier Dominguez 	| Jet Anderson        	| Jim Newman         	| Jonathan Schnittger 	|
-| Joseph Kerby   	| Kelby Ludwig     	| Lars Haulin         	| Lewis Ardern       	| lyz-code            	|
-| Marc Aubry     	| Marco Schnüriger 	| Philippe De Ryck    	| Ralph Andalis      	| Ravi Balla          	|
-| Rick Mitchell  	| Riotaro Okada    	| Robin Wood          	| Rogan Dawes        	| Ryan Goltry         	|
-| Sajjad Pourali 	| Serg Belkommen   	| Siim Puustusmaa     	| Ståle Pettersen    	| Stuart Gunter       	|
-| Tal Argoni     	| Tomasz Wrobel    	| Vincent De Schutter 	| Benedikt Bauer		| Abhay Bhargav       |
-| Osama Elnaggar    | Ron Perris    	| Tonimir Kisasondi  	| Sergey Diakonov						| Mike Jang |
+|                 |                   |                      |                     |                      |
+|---------------- |------------------ |--------------------- |-------------------- |--------------------- |
+| Aaron Guzman    | Anthony Weems     | Barbara Schachner    | Christopher Loessl  | Clément Notin        |
+| Dan Cornell     | Daniël Geerts     | David Clarke         | David Johansson     | David Quisenberry    |
+| Erlend Oftedal  | Fatih Ersinadim   | Filip van Laenen     | Geoff Baskwill      | Glenn ten Cate       |
+| Grant Ongers    | hello7s           | Jacob Salassi        | James Sulinski      | Jason Axley          |
+| Jason Morrow    | Javier Dominguez  | Jet Anderson         | Jim Newman          | Jonathan Schnittger  |
+| Joseph Kerby    | Kelby Ludwig      | Lars Haulin          | Lewis Ardern        | lyz-code             |
+| Marc Aubry      | Marco Schnüriger  | Philippe De Ryck     | Ralph Andalis       | Ravi Balla           |
+| Rick Mitchell   | Riotaro Okada     | Robin Wood           | Rogan Dawes         | Ryan Goltry          |
+| Sajjad Pourali  | Serg Belkommen    | Siim Puustusmaa      | Ståle Pettersen     | Stuart Gunter        |
+| Tal Argoni      | Tomasz Wrobel     | Vincent De Schutter  | Benedikt Bauer  | Abhay Bhargav       |
+| Osama Elnaggar    | Ron Perris     | Tonimir Kisasondi   | Sergey Diakonov      | Mike Jang |
 
 クレジットが上記の 4.x クレジットリストにない場合は、将来の 4.x アップデートで認識されるように GitHub のチケットを記録してください。
 
