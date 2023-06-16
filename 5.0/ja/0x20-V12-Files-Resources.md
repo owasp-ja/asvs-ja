@@ -16,6 +16,7 @@
 | **12.1.1** | [修正] アプリケーションはパフォーマンスの低下やサービス拒否攻撃を引き起こすことなく処理可能なサイズのファイルのみを受け付けている。 | ✓ | ✓ | ✓ | 400 |
 | **12.1.2** | アプリケーションが圧縮ファイル (zip, gz, docx, odt など) を展開する前に最大許容非圧縮サイズおよび最大ファイル数と照合している。 | | ✓ | ✓ | 409 |
 | **12.1.3** | 1 人のユーザがあまりにも多くのファイルまたは極端に大きいファイルでストレージを圧迫させることができないように、ユーザあたりのファイルサイズクォータと最大ファイル数が適用されている。 | | ✓ | ✓ | 770 |
+| **12.1.4** | [追加] 特に必要な場合 (その場合、シンボリックリンクできるファイルの許可リストを適用する必要がある) を除き、アプリケーションはシンボリックリンクを含む圧縮ファイルのアップロードを許可していない。 | | ✓ | ✓ | 61 |
 
 ## V12.2 ファイルの完全性
 
@@ -62,3 +63,4 @@
 
 * [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
 * [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)
+* [Example of using symlinks for arbitrary file read](https://hackerone.com/reports/1439593)
