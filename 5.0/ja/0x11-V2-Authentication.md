@@ -99,7 +99,7 @@ NIST は SMS を 「制限された」オーセンティケータタイプ ( ["r
 | **2.4.4** | [修正] bcrypt が使用されている場合、ワークファクターは 10 以上であり、パスワードサイズは bcrypt の入力制限により 72 バイトに制限されている。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 916 | 5.1.1.2 |
 | **2.4.5** | [削除] | | | | | |
 | **2.4.6** | [追加] argon2id が使用されている場合、最小構成は 19 MiB のメモリ、イテレーションカウント 2 回、並列度は 1 にすべきである。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 916 | 5.1.1.2 |
-| **2.4.7** | [追加] scrypt が使用されている場合、最小 CPU/メモリコストパラメータは (2^17)、最小ブロックサイズは 8 (1024 バイト)、並列化パラメータは 1 にすべきである。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 916 | 5.1.1.2 |
+| **2.4.7** | [追加] scrypt が使用されている場合、最小 work factor は (2^17)、最小ブロックサイズは 8 (1024 バイト)、並列化パラメータは 1 にすべきである。 ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 916 | 5.1.1.2 |
 
 米国標準が言及されている場合、必要に応じて米国標準の代わりに、またはそれに加えて、地域またはローカルの標準を使用できます。
 
