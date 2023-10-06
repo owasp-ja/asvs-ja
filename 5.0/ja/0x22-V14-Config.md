@@ -43,8 +43,9 @@
 | **14.2.3** | [修正] JavaScript ライブラリ、CSS、Web フォントなどのクライアントサイド資産がコンテンツ配信ネットワーク（Content Delivery Network, CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 829 |
 | **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
 | **14.2.5** | 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
-| **14.2.6** | サードパーティのライブラリをサンドボックス化またはカプセル化して、必要な動作だけをアプリケーションに公開することで、攻撃対象領域を最小化する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 265 |
+| **14.2.6** | [修正, 14.2.8 へ分割, レベル L2 > L3]  リスクの高いサードパーティライブラリや脆弱性の履歴があるライブラリは、必要な動作のみを利用できるようにカプセル化され、攻撃対象領域を減らしている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | | ✓ | 1061 |
 | **14.2.7** | [追加] サードパーティコンポーネントが内部で所有および開発されたアプリケーションとは別に供給されている。 | ✓ | ✓ | ✓ | 441 |
+| **14.2.8** | [追加, 14.2.6 から分割] リスクの高いサードパーティライブラリや脆弱性の履歴があるライブラリは、最も機密性の高いシステムモジュールやサービスからサンドボックス化され、たとえライブラリの脆弱性が悪用されたとしても、機密性の高いシステムモジュールやサービスが侵害されることがない。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | | ✓ | 1061 |
 
 注: 特定の言語およびパッケージマネージャには、複数の要素 (groupId や artifactId など) を使用してパッケージを識別することを要求するエコシステムがあります。これによりビルドプロセスでリソースをより具体的に識別できるようになります。そうでない場合、パッケージマネージャは含まれているリポジトリまたはミラーの順で動作します。検索順を具体的に示すには、パッケージマネージャに相談してください。
 
@@ -114,3 +115,4 @@
 * [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
 * [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
 * [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+* [Tips to Reduce the Attack Surface When Using Third-Party Libraries](https://www.slideshare.net/KatyAnton1/tips-to-reduce-the-attack-surface-when-using-thirdparty-libraries)
