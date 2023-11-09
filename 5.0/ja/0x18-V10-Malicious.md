@@ -1,4 +1,4 @@
-# V10 悪性コード
+# V10 悪性コードおよび安全でないコード
 
 ## 管理目標
 
@@ -48,9 +48,17 @@
 | **10.3.2** | [修正] アプリケーションがコード署名などの完全性保護を採用している場合にのみ、アプリケーションの直接の制御または保護下にないソースからのコード、モジュール、コンテンツ、プラグインをロードまたは実行している。 | ✓ | ✓ | ✓ | 829 |
 | **10.3.3** | 期限切れドメイン名、期限切れ DNS ポインタまたは CNAME、パブリックソースコードリポジトリでの期限切れプロジェクト、一時的なクラウド API、サーバレス機能、ストレージバケット（autogen-bucketid.cloud.example.com）など、DNS エントリまたは DNS サブエントリに依存している場合、アプリケーションがサブドメイン奪取（subdomain takeover）から保護されている。アプリケーションの保護は使用する DNS 名の有効期限または変更を定期的にチェックすることを含めます。 | ✓ | ✓ | ✓ | 350 |
 
+## V10.4 防御的コーディング
+
+| # | 説明 | L1 | L2 | L3 | CWE |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **10.4.1** | [追加] アプリケーションは変数が正しい型であることを明示的に保証し、厳密な等価演算と比較演算を実行して、アプリケーションコードが変数の型について仮定することによって引き起こされる型ジャグリングや型コンフュージョンの脆弱性を回避している。 | ✓ | ✓ | ✓ | 843 |
+| **10.4.2** | [追加] アプリケーションは、明示的な変数宣言の採用、厳密な型チェックの実行、document オブジェクトへのグローバル変数の保存の回避、名前空間分離の実装によって、クライアントサイド JavaScript を使用する際の DOM clobbering を回避している。 | | ✓ | ✓ | 79 |
+
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
 * [Hostile Subdomain Takeover, Detectify Labs](https://labs.detectify.com/2014/10/21/hostile-subdomain-takeover-using-herokugithubdesk-more/)
 * [Hijacking of abandoned subdomains part 2, Detectify Labs](https://labs.detectify.com/2014/12/08/hijacking-of-abandoned-subdomains-part-2/)
+* [Reference on Protecting against DOM Clobbering](https://domclob.xyz/domc_wiki/indicators/patterns.html#secure-patterns--guidelines)
