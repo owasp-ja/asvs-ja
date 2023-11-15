@@ -57,6 +57,13 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **12.6.1** | [14.7.1 へ移動] | | | | |
 
+## V12.7 アプリケーションリソース
+
+| # | 説明 | L1 | L2 | L3 | CWE |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **12.7.1** | [追加] アプリケーションは、たとえばサーキットブレーカーパターンを使用するなど、外部リソースへのアクセスに失敗してもアプリケーション全体が失敗しないように設計されている。 | | ✓ | ✓ | |
+| **12.7.2** | [追加] アプリケーションは、データベース接続、オープンファイル、スレッドなどのシステムリソースを使用し終わると、リソースの枯渇を防ぐために積極的に解放している。 | | ✓ | ✓ | 404 |
+
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
@@ -64,3 +71,4 @@
 * [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
 * [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)
 * [Example of using symlinks for arbitrary file read](https://hackerone.com/reports/1439593)
+* [Explanation of "Magic Bytes" from Wikipedia](https://en.wikipedia.org/wiki/List_of_file_signatures)
