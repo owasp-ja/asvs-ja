@@ -25,7 +25,6 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V14: 構成](5.0/ja/0x22-V14-Config.md)
 * [Appendix A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
 * [Appendix B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
-* [Appendix C: IoT の検証要件](5.0/ja/0x93-Appendix-C_IoT.md)
 
 ### 参考資料
 
