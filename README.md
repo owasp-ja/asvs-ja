@@ -23,6 +23,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V12: ファイルとリソース](5.0/ja/0x20-V12-Files-Resources.md)
 * [V13: API と Web サービス](5.0/ja/0x21-V13-API.md)
 * [V14: 構成](5.0/ja/0x22-V14-Config.md)
+* [V50: Web フロントエンドセキュリティ](5.0/ja/0x50-V50-Web-Frontend-Security.md)
 * [Appendix A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
 * [Appendix B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
 
