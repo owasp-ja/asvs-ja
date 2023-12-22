@@ -41,7 +41,7 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **14.2.1** | すべてのコンポーネントが最新となっている。できればビルド時またはコンパイル時にディペンデンシチェッカを使用する。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | ✓ | ✓ | ✓ | 1026 |
 | **14.2.2** | [14.1.6 へ移動] | | | | |
-| **14.2.3** | [修正] JavaScript ライブラリ、CSS、Web フォントなどのクライアントサイド資産がコンテンツ配信ネットワーク（Content Delivery Network, CDN）または外部プロバイダで外部的にホストされている場合、資産の整合性を検証するためにサブリソース完全性（SRI）が使用されている。 | ✓ | ✓ | ✓ | 829 |
+| **14.2.3** | [50.6.1 へ移動] | | | | |
 | **14.2.4** | サードパーティのコンポーネントが、事前に定義され、信頼され、継続的に維持されるリポジトリからのものとなっている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | 829 |
 | **14.2.5** | 使用しているすべてのサードパーティライブラリのソフトウェア部品表 (SBOM) が維持されている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | ✓ | ✓ | |
 | **14.2.6** | [修正, 14.2.8 へ分割, レベル L2 > L3] リスクの高いサードパーティライブラリや脆弱性の履歴があるライブラリは、必要な動作のみを利用できるようにカプセル化され、攻撃対象領域を減らしている。 ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | | | ✓ | 1061 |
@@ -67,15 +67,14 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **14.4.1** | [修正, 14.4.9 へ分割] すべての HTTP レスポンスにはレスポンスの実際のコンテンツと一致する Content-Type ヘッダが含まれている。 | ✓ | ✓ | ✓ | 173 |
-| **14.4.2** | [削除] | | | | |
-| **14.4.3** | [修正] HTML、DOM、CSS、JSON、JavaScript インジェクションの脆弱性などの XSS 攻撃の影響を軽減するのに役立つ Content Security Policy (CSP) レスポンスヘッダが配置されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.4** | すべてのレスポンスに X-Content-Type-Options: nosniff ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.5** | [修正] Strict-Transport-Security ヘッダがすべてのレスポンスとすべてのサブドメインに含まれている。例えば、Strict-Transport-Security：max-age=31536000; includeSubdomains | ✓ | ✓ | ✓ | 523 |
-| **14.4.6** | URL 内の機密情報が Referer ヘッダを介して信頼できない関係者に公開されないように、適切な Referrer-Policy ヘッダが含まれている。 | ✓ | ✓ | ✓ | 116 |
-| **14.4.7** | Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors と X-Frame-Options レスポンスヘッダを使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。 | ✓ | ✓ | ✓ | 1021 |
-| **14.4.8** | [追加, 14.5.3 から分割] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるオリジンの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
-| **14.4.9** | [追加, 14.4.1 から分割] レスポンスが "text/\*", "\*/\*+xml", "\*/xml" の Content-Type を指定する場合、charset パラメータで安全な文字セット (UTF-8, ISO-8859-1 など) も指定している。 | ✓ | ✓ | ✓ | 173 |
+| **14.4.1** | [修正, 14.4.8 へ分割] すべての HTTP レスポンスにはレスポンスの実際のコンテンツと一致する Content-Type ヘッダが含まれている。 | ✓ | ✓ | ✓ | 173 |
+| **14.4.2** | [削除, 50.5.3 により廃止] | | | | |
+| **14.4.3** | [50.2.1 へ移動] | | | | |
+| **14.4.4** | [50.2.2 へ移動] | | | | |
+| **14.4.5** | [50.2.3 へ移動] | | | | |
+| **14.4.6** | [50.2.4 へ移動] | | | | |
+| **14.4.7** | [50.2.5 へ移動] | | | | |
+| **14.4.8** | [追加, 14.4.1 から分割] レスポンスが "text/\*", "\*/\*+xml", "\*/xml" の Content-Type を指定する場合、charset パラメータで安全な文字セット (UTF-8, ISO-8859-1 など) も指定している。 | ✓ | ✓ | ✓ | 173 |
 
 ## V14.5 HTTP リクエストヘッダのバリデーション
 
@@ -83,7 +82,7 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **14.5.1** | [修正] アプリケーションはアプリケーションまたは API が使用している HTTP メソッド (preflight リクエスト時の OPTIONS を含む) にのみ応答し、未使用のメソッド (TRACE など) はブロックされる。 | ✓ | ✓ | ✓ | 749 |
 | **14.5.2** | [削除, 4.1.1 と重複] | | | | |
-| **14.5.3** | [修正, 14.4.8 へ分割] Origin ヘッダが目的のクロスオリジンリソース共有 (CORS) ポリシーを満たすために、許可されたオリジンの定義済みリストに対して妥当性確認されている。 | ✓ | ✓ | ✓ | 346 |
+| **14.5.3** | [50.2.6, 50.3.3 へ分割] | | | | |
 | **14.5.4** | [削除, 不正確] | | | | |
 | **14.5.5** | [修正, 13.2.1 から移動] HEAD、OPTIONS、TRACE、または GET verb を使用する HTTP リクエストがバックエンドデータ構造を変更することや、状態変更アクションを実行することがない。これらのリクエストは安全なメソッドであり、副作用があってはいけない。 | ✓ | ✓ | ✓ | 650 |
 | **14.5.6** | [追加] インフラストラクチャが RFC2616 に準拠しており、Transfer-Encoding ヘッダフィールドも存在する場合には Content-Length ヘッダフィールドを無視している。 | | ✓ | ✓ | 444 |
@@ -109,11 +108,7 @@
 詳しくは以下の情報を参照してください。
 
 * [OWASP Web Security Testing Guide 4.1: Testing for HTTP Verb Tampering]( https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering.html)
-* [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
-* [Exploiting CORS misconfiguration for BitCoins and Bounties](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 * [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
-* [Sandboxing third party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
 * [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
 * [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
-* [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
 * [Tips to Reduce the Attack Surface When Using Third-Party Libraries](https://www.slideshare.net/KatyAnton1/tips-to-reduce-the-attack-surface-when-using-thirdparty-libraries)
