@@ -23,8 +23,7 @@
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **4.2.1** | 機密データおよび API が、他人のレコードの作成や更新、全員のレコードの閲覧、すべてのレコードの削除など、レコードの作成、読み取り、更新、削除を目的とする非セキュアダイレクトオブジェクト参照 (Insecure Direct Object Reference, IDOR) 攻撃に対して保護されている。 | ✓ | ✓ | ✓ | 639 |
-| **4.2.2** | [修正, 13.2.3 からマージ] アプリケーションがクロスサイトリクエストフォージェリ (CSRF) 攻撃を防御し、認証された機能や機密性の高い公開機能を保護するために、開発フレームワークに組み込まれた CSRF 対策機能や CSRF トークンに加えて多層防御を使用している。 | ✓ | ✓ | ✓ | 352 |
-| **4.2.3** | [追加] メッセージの発信元が信頼できない場合、またはメッセージの構文が無効な場合は、postMessage インタフェースで受信したメッセージが破棄される。 | | ✓ | ✓ | 346 |
+| **4.2.2** | [50.3.1 へ移動] | | | | |
 
 ## V4.3 他のアクセス制御の考慮
 
@@ -40,5 +39,3 @@
 
 * [OWASP Testing Guide 4.0: Authorization](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/05-Authorization_Testing/README.html)
 * [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
-* [OWASP CSRF Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
-* [OWASP REST Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
