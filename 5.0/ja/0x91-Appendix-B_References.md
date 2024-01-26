@@ -12,7 +12,7 @@
 
 ## OWASP チートシートシリーズプロジェクト
 
-[このプロジェクト](https://owasp.org/www-project-cheat-sheets/) には ASVS のさまざまなトピックに関連する多数のチートシートがあります。
+[このプロジェクト](https://owasp.org/www-project-cheat-sheets/) には ASVS のさまざまなトピックに関連するいくつかのチートシートがあります。
 
 ここには ASVS へのマッピングもあります: [https://cheatsheetseries.owasp.org/IndexASVS.html](https://cheatsheetseries.owasp.org/IndexASVS.html)
 
