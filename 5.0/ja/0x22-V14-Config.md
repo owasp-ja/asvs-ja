@@ -52,7 +52,7 @@
 
 ## V14.3 意図しない情報漏洩
 
-本番環境の構成を強化して、デバッグコンソールなどの一般的な攻撃から保護し、クロスサイトスクリプティング（Cross-site Scripting, XSS）とリモートファイルインクルード（Remote File Inclusion, RFI）攻撃の基準を引き上げ、歓迎されない多くのペネトレーションテストの報告の特徴である発見された些細な脆弱性を排除します。これらの問題の多くはめったに重大なリスクとして評価されませんが、他の脆弱性と連鎖します。これらの問題がデフォルトで存在しない場合、ほとんどの攻撃が成功する前にレベルが引き上げられます。
+本番環境の構成を強化して、一般的な攻撃から保護すべきです。対策としては、デバッグコンソールの無効化、クロスサイトスクリプティング（Cross-site Scripting, XSS）とリモートファイルインクルード（Remote File Inclusion, RFI）攻撃の基準の引き上げ、ペネトレーションテストの報告に散見される発見された些細な脆弱性の排除などが挙げられます。これらの問題の多くはめったに重大なリスクとして評価されませんが、他の脆弱性と連鎖します。これらの問題がデフォルトで存在しない場合、ほとんどの攻撃が成功する前にレベルが引き上げられます。
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
@@ -109,6 +109,6 @@
 
 * [OWASP Web Security Testing Guide 4.1: Testing for HTTP Verb Tampering]( https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering.html)
 * [OWASP Web Security Testing Guide 4.1: Configuration and Deployment Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.html)
-* [Defining multiple repositories in maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
+* [Defining multiple repositories in Maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html)
 * [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
 * [Tips to Reduce the Attack Surface When Using Third-Party Libraries](https://www.slideshare.net/KatyAnton1/tips-to-reduce-the-attack-surface-when-using-thirdparty-libraries)
