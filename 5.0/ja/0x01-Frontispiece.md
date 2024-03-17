@@ -6,11 +6,11 @@ OWASP アプリケーションセキュリティ検証標準はアーキテク�
 
 ## 著作権とライセンス
 
-Version 4.x (Bleeding Edge version), 2021
+Version 5.0 (Bleeding Edge version), 2024
 
 ![license](../images/license.png)
 
-Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
+Copyright © 2008-2024 The OWASP Foundation. 本書は [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
 
 ## プロジェクトリーダー
 
@@ -41,6 +41,6 @@ Copyright © 2008-2021 The OWASP Foundation. 本書は [Creative Commons Attribu
 | Tal Argoni      | Tomasz Wrobel     | Vincent De Schutter  | Benedikt Bauer  | Abhay Bhargav       |
 | Osama Elnaggar    | Ron Perris     | Tonimir Kisasondi   | Sergey Diakonov      | Mike Jang |
 
-クレジットが上記の 4.x クレジットリストにない場合は、将来の 4.x アップデートで認識されるように GitHub のチケットを記録してください。
+クレジットが上記の 5.x クレジットリストにない場合は、将来の 5.x アップデートで認識されるように GitHub のチケットを記録してください。
 
 アプリケーションセキュリティ検証標準は 2008 年の ASVS 1.0 から 2016 年の 3.0 に至る関係者の責任の下で作成されています。今日の ASVS にまだ残っている構成と検証項目の多くはもともと Mike Boberski, Jeff Williams, Dave Wichers によって書かれましたが、もっと多くの執筆者がいます。以前に関わりのあったすべての人々に感謝します。以前のバージョンに貢献したすべての人の包括的なリストについては、以前の各バージョンを確認してください。
