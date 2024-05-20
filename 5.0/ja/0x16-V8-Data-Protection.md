@@ -47,7 +47,7 @@
 | **8.3.2** | [修正, 8.3.9 へ分割, レベル L1 > L3] ユーザが自身のデータをオンデマンドで削除できる。 | | | ✓ | |
 | **8.3.3** | [修正, レベル L1 > L3] アプリケーションは個人データの収集および利用する方法に関するガイダンスを提供している。ユーザはこの利用についてオプトインの同意を提供する必要がある。 | | | ✓ | |
 | **8.3.4** | [削除, 1.8.1 へマージ] | | | | |
-| **8.3.5** | データが関連するデータ保護規制の下で収集されている場合や、アクセスログ記録が必要な場合、センシティブなデータへのアクセスが（センシティブなデータ自体がログに記録されることなく）監査されている。 | | ✓ | ✓ | 532 |
+| **8.3.5** | [7.2.7 へ移動] | | | | |
 | **8.3.6** | [削除, 非実用的] | | | | |
 | **8.3.7** | 暗号化を必要とするセンシティブなもしくは個人情報は、機密性と完全性の双方を提供する承認済みアルゴリズムを使用して暗号化する。 | | ✓ | ✓ | 327 |
 | **8.3.8** | センシティブな個人情報は、古いデータや期限切れのデータが、自動的、定期的、または状況に応じて削除されるなど、データ保持分類の対象となっている。 | | ✓ | ✓ | |
@@ -67,7 +67,7 @@
 * [OWASP Privacy Risks Project](https://owasp.org/www-project-top-10-privacy-risks/)
 * [OWASP User Privacy Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
 * [Australian Privacy Principle 11 - Security of personal information](https://www.oaic.gov.au/privacy/australian-privacy-principles-guidelines/chapter-11-app-11-security-of-personal-information)
-* [European Union General Data Protection Regulation (GDPR) overview](https://edps.europa.eu/data-protection_en)
-* [European Union Data Protection Supervisor - Internet Privacy Engineering Network](https://edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en)
+* [European Union General Data Protection Regulation (GDPR) overview](https://www.edps.europa.eu/data-protection_en)
+* [European Union Data Protection Supervisor - Internet Privacy Engineering Network](https://www.edps.europa.eu/data-protection/ipen-internet-privacy-engineering-network_en)
 * [Information on the "Clear-Site-Data" header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)
 * [White paper on Web Cache Deception](https://www.blackhat.com/docs/us-17/wednesday/us-17-Gil-Web-Cache-Deception-Attack-wp.pdf)
