@@ -14,10 +14,10 @@ Copyright © 2008-2024 The OWASP Foundation. 本書は [Creative Commons Attribu
 
 ## プロジェクトリーダー
 
-|                       |                  |             |
-|---------------------- |----------------- |------------ |
-| Andrew van der Stock  | Daniel Cuthbert  | Jim Manico  |
-| Josh C Grossman       | Elar Lang      |             |
+|                       |                  |
+|---------------------- |----------------- |
+| Jim Manico   | Daniel Cuthbert  |
+| Josh C Grossman       | Elar Lang      |
 
 ## 主要執筆者
 
@@ -43,4 +43,4 @@ Copyright © 2008-2024 The OWASP Foundation. 本書は [Creative Commons Attribu
 
 クレジットが上記の 5.x クレジットリストにない場合は、将来の 5.x アップデートで認識されるように GitHub のチケットを記録してください。
 
-アプリケーションセキュリティ検証標準は 2008 年の ASVS 1.0 から 2016 年の 3.0 に至る関係者の責任の下で作成されています。今日の ASVS にまだ残っている構成と検証項目の多くはもともと Mike Boberski, Jeff Williams, Dave Wichers によって書かれましたが、もっと多くの執筆者がいます。以前に関わりのあったすべての人々に感謝します。以前のバージョンに貢献したすべての人の包括的なリストについては、以前の各バージョンを確認してください。
+アプリケーションセキュリティ検証標準は 2008 年の ASVS 1.0 から 2019 年の 4.0 に至る関係者の責任の下で作成されています。今日の ASVS にまだ残っている構成と検証項目の多くはもともと Andrew van der Stock, Mike Boberski, Jeff Williams, Dave Wichers によって書かれましたが、もっと多くの執筆者がいます。以前に関わりのあったすべての人々に感謝します。以前のバージョンに貢献したすべての人の包括的なリストについては、以前の各バージョンを確認してください。
