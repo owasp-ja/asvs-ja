@@ -19,6 +19,7 @@
 | **50.2.5** | [修正, 14.4.7 から移動] Web アプリケーションのコンテンツはデフォルトでサードパーティのサイトに埋め込むことができない、および適切な Content-Security-Policy: frame-ancestors を使用して必要な場所でのみ正規のリソースの埋め込みが許可されている。X-Frame-Options ソリューションは非推奨であることに注意する。 | ✓ | ✓ | ✓ | 1021 |
 | **50.2.6** | [追加, 14.5.3 から分割] クロスオリジンリソース共有 (CORS) Access-Control-Allow-Origin ヘッダが信頼できるオリジンの厳密な許可リストを使用している。 "Access-Control-Allow-Origin: *" を使用する必要がある場合、レスポンスに機密情報が含まれていない。 | ✓ | ✓ | ✓ | 183 |
 | **50.2.7** | [追加] Content-Security-Policy ヘッダが違反を報告する場所を指定している。 | | | ✓ | |
+| **50.2.8** | [追加] アプリケーションのトップレベルドメイン (例: site.tld) がパブリック HSTS プリロードリストに追加され、アプリケーションの TLS の使用が、関連する HTTP レスポンスヘッダのみに依存するのではなく、メインブラウザに直接組み込まれる。 | | | ✓ | |
 
 ## V50.3 ブラウザのオリジン分離
 
@@ -78,3 +79,4 @@ it may need other separate section for "end-user protection via UI"
 * [Sandboxing third-party components](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html#sandboxing-content)
 * [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
 * [OWASP Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+* [HSTS Browser Preload List submission form](https://hstspreload.org/)
