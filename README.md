@@ -25,6 +25,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V14: 構成](5.0/ja/0x22-V14-Config.md)
 * [V50: Web フロントエンドセキュリティ](5.0/ja/0x50-V50-Web-Frontend-Security.md)
 * [V51: OAuth 2.0 プロトコル](5.0/ja/0x51-V51-OAuth2.md)
+* [V53: WebRTC](5.0/ja/0x53-V53-WebRTC.md)
 * [Appendix A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
 * [Appendix B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
 
