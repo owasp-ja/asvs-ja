@@ -17,7 +17,7 @@
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **5.1.1** | アプリケーションが HTTP 変数汚染攻撃に対する防御策を備えている。特にアプリケーションフレームワークが、リクエストパラメータのソース (クエリ文字列、ボディパラメータ、Cookie、ヘッダ) を区別しない場合はこの防御が必要。 | ✓ | ✓ | ✓ | 235 |
-| **5.1.2** | フレームワークが大量のパラメータ割り当て攻撃から保護している、またはフィールドを非公開にするなど安全でないパラメータの代入を防ぐための対策が行われている。 | ✓ | ✓ | ✓ | 915 |
+| **5.1.2** | [10.4.4 へ移動] | | | | |
 | **5.1.3** | [修正] すべての入力は、その入力に対するビジネス上や機能上の期待を強制するために、許可された値、パターン、範囲のリストに照らして、ポジティブバリデーションを使用して検証される。 | ✓ | ✓ | ✓ | 20 |
 | **5.1.4** | [修正, 5.1.7 へ分割] 期待される構造を備えたデータ構造は事前に定義されたルールに従って検証される。 | ✓ | ✓ | ✓ | 20 |
 | **5.1.5** | [修正, 50.7.1 に分割] アプリケーションは、宛先が許可リストに記載されているもののみ、アプリケーション URL から直接別の URL にユーザーを自動的にリダイレクトしている。 | ✓ | ✓ | ✓ | 601 |
@@ -128,7 +128,6 @@
 * [OWASP Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 * [OWASP DOM Based Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
 * [OWASP Java Encoding Project](https://owasp.org/owasp-java-encoder/)
-* [OWASP Mass Assignment Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html)
 * [DOMPurify - Client-side HTML Sanitization Library](https://github.com/cure53/DOMPurify)
 * [XML External Entity (XXE) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
 
