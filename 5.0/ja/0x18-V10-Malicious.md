@@ -55,6 +55,7 @@
 | **10.4.1** | [追加] アプリケーションは変数が正しい型であることを明示的に保証し、厳密な等価演算と比較演算を実行して、アプリケーションコードが変数の型について仮定することによって引き起こされる型ジャグリングや型コンフュージョンの脆弱性を回避している。 | ✓ | ✓ | ✓ | 843 |
 | **10.4.2** | [追加] アプリケーションは、明示的な変数宣言の採用、厳密な型チェックの実行、document オブジェクトへのグローバル変数の保存の回避、名前空間分離の実装によって、クライアントサイド JavaScript を使用する際の DOM clobbering を回避している。 | | ✓ | ✓ | 79 |
 | **10.4.3** | [追加] JavaScript コードはオブジェクトリテラルの代わりに Set() や Map() を使用するなど、プロトタイプ汚染を防ぐ方法で記述している。 | | ✓ | ✓ | |
+| **10.4.4** | [修正, 5.1.2 から移動] アプリケーションには、コントローラやアクションごとに許可されるフィールドを制限することで、大量割り当て攻撃から保護する対策がある。たとえば、そのアクションの一部となることを意図していないフィールド値を挿入または更新することはできない。 | ✓ | ✓ | ✓ | 915 |
 
 ## 参考情報
 
@@ -62,3 +63,4 @@
 
 * [Reference on Protecting against DOM Clobbering](https://domclob.xyz/domc_wiki/indicators/patterns.html#secure-patterns--guidelines)
 * [OWASP Prototype Pollution Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html)
+* [OWASP Mass Assignment Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html)
