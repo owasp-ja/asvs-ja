@@ -8,6 +8,8 @@ OpenAI の GPT のようなものなどの大規模言語モデル (Large Langua
 
 これらは主要な ASVS 要件と同様の厳格なレビューや議論を経ていないため、使用には注意が必要です。
 
+LLM セキュリティコントロールのより詳しい概要については **[OWASP Large Language Model Security Verification Standard](https://github.com/OWASP/www-project-llm-verification-standard)** を参照してください。
+
 ## W.1 入力バリデーションとサニタイゼーション
 
 インジェクション攻撃やその他の悪意のある入力を防ぐために、LLM へのすべての入力が適切に検証およびサニタイズされていることを確認します。
