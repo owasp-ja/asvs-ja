@@ -64,6 +64,15 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **10.5.1** | [修正, 1.14.5 から移動, レベル L2 > L3] アプリケーションアーキテクチャは、サンドボックス化、コンテナ化、ネットワークレベルの分離などの技法を使用して、特にアプリケーションがデシリアライゼーションなどの機密性が高いあるいは危険なアクションを実行しているときに、攻撃者がアプリケーションの他の部分を攻撃するのを遅らせたり阻止している。 | | | ✓ | 265 |
 
+## 10.6 コードの依存関係
+
+依存関係の管理は、どのような種類のアプリケーションであっても、安全な運用に不可欠です。古くなった依存関係や安全でない依存関係で最新の状態を維持しないことが、これまでで最大かつ最も高価な攻撃の根本原因です。パッチで最新の状態を保つことは不可欠ですが、ベンダーはセキュリティ問題を公表せずに修正する可能性があるため、公開された脆弱性の更新だけに頼るとリスクを生じます。
+
+| # | 説明 | L1 | L2 | L3 | CWE |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **10.6.1** | [修正, 14.2.1 から移動] すべてのコンポーネントが最新である。 | ✓ | ✓ | ✓ | |
+| **10.6.2** | [追加] サードパーティコンポーネントは、内部所有であるか外部ソースであるかに関わらず、想定されたリポジトリから組み込まれており、依存関係混同攻撃のリスクはない。 | ✓ | ✓ | ✓ | 427 |
+
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
@@ -71,3 +80,4 @@
 * [Reference on Protecting against DOM Clobbering](https://domclob.xyz/domc_wiki/indicators/patterns.html#secure-patterns--guidelines)
 * [OWASP Prototype Pollution Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html)
 * [OWASP Mass Assignment Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html)
+* [Software Component Verification Standard V2 L1-3 requirements](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/en/0x11-V2-Software_Bill_of_Materials.md)
