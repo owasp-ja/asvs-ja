@@ -10,6 +10,7 @@ OAuth プロセスにはさまざまなペルソナが存在します。詳細�
 | :---: | :--- | :---: | :---: | :---: |
 | **51.1.1** | [追加] トークン (ID トークン、アクセストークン、リフレッシュトークンなど) は本来の目的にのみ使用している。たとえば、ID トークンはクライアントのユーザ認証を証明するためにのみ使用している。 | ✓ | ✓ | ✓ |
 | **51.1.2** | [追加] トークンは厳密にそれを必要とするコンポーネントにのみ送信している。たとえば、アクセストークンやリフレッシュトークンがバックエンドでのみ必要な場合はフロントエンドでアクセスできないようにしている。 | ✓ | ✓ | ✓ |
+| **51.1.3** | [追加] クライアントは、認可サーバからの値 (認可コードや ID トークンなど) が、同じユーザエージェントセッションとトランザクションによって開始された認可フローから得られた値である場合にのみ、その値を受け入れている。これには、コード交換のための証明鍵 (PKCE) 'code_verifier', 'state' または OIDC 'nonce' などのクライアントが生成したシークレットが推測不可能であり、トランザクションに固有であり、トランザクションが開始されたクライアントとユーザエージェントセッションの両方に安全にバインドされていることが必要である。 | ✓ | ✓ | ✓ |
 
 ## V51.2 OAuth 認可サーバ
 
@@ -29,7 +30,6 @@ OAuth プロセスにはさまざまなペルソナが存在します。詳細�
 | **51.2.12** | [追加] 特定のクライアントに対して、たとえば認可サーバがこの値を期待値と検証したり、プッシュ認可リクエスト (PAR) や JWT で保護された認可リクエスト (JAR) を使用することで、攻撃者は 'response_mode' パラメータを改竄できない。 | ✓ | ✓ | ✓ |
 | **51.2.13** | [追加] リフレッシュトークンは、スライディングリフレッシュトークン有効期限が適用されている場合も含め、絶対的な有効期限を持つ。 | ✓ | ✓ | ✓ |
 | **51.2.14** | [追加] リフレッシュトークンとリファレンスアクセストークンは認可されたユーザによって失効されることができる。これは、認可サーバのユーザインタフェースを使用するか、失効に認可サーバ API を使用しているクライアントによって実施できる。 | ✓ | ✓ | ✓ |
-| **51.2.15** | [追加] 認可レスポンスへの認可コードのリプレイはコード交換のための証明鍵 (PKCE) フローを使用するか、OpenID Connect の "nonce" パラメータと ID Token のそれぞれの Claim を使用することで防止している。PKCE チャレンジや OpenID Connect の "nonce" はトランザクション固有であり、トランザクションが開始されたクライアントとユーザエージェントに安全にバインドされなければならない。 | ✓ | ✓ | ✓ |
 
 ## V51.3 OAuth クライアント
 
@@ -92,6 +92,7 @@ OAuth プロセスにはさまざまなペルソナが存在します。詳細�
 
 リソースサーバは保護されたリソースをホストするサーバを指し、保護されたリソースへのアクセストークンを使用したリクエストを受け付けて応答できます。
 
+<!--
 ## OAuth 2.0 の基本
 
 OpenID Connect フローでは、「nonce」パラメータにより CSRF 保護を提供します。さもなければ、ユーザエージェントに安全にバインドされ、「state」パラメータで届けられるワンタイムユーザ CSRF トークンを CSRF 保護に使用しなければなりません。
@@ -115,14 +116,33 @@ PKCE チャレンジや OpenID Connect の「nonce」はトランザクション
 ### リソースオーナーのパスワードクレデンシャルグラント
 
 このグラントタイプは認可サーバだけでなく、さまざまな場所でクレデンシャルを漏洩する可能性があります。リソースオーナーのパスワードクレデンシャルグラントを二要素認証、暗号化クレデンシャル (WebCrypto, WebAuthn など) での認証、複数のステップを必要とする認証プロセスに適応することは困難または不可能になる可能性があります。このグラントタイプはセキュリティ上の懸念があるため、一般的には推奨されません。代わりに、PKCE で認可コードグラントを使用してください。このグラントタイプは OAuth 2.1 使用では省略されています。
+-->
 
-## OAuth 2.0 参考情報
+## 参考情報
 
-詳しくは以下の情報を参照してください。
+OAuth について詳しくは以下の情報を参照してください。
 
-* RFC 6749 - The OAuth 2.0 Authorization Framework: <https://www.rfc-editor.org/info/rfc6749>
-* RFC 6750 - The OAuth 2.0 Authorization Framework: Bearer Token Usage: <https://www.rfc-editor.org/info/rfc6750>
-* OAuth 2.0 Best Practices: <https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#name-best-practices>
-* Mix-up attacks: <https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-18#mix_up>
-* RFC9207 - OAuth 2.0 Authorization Server Issuer Identifier in Authorization Response: <https://datatracker.ietf.org/doc/html/draft-ietf-oauth-iss-auth-resp-00>
-* Other Countermeasures for Mix-up attacks: <https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-18#section-2.1-6>
+* [oauth.net](https://oauth.net/)
+* [OWASP Cheat Sheet: OAuth 2.0 Protocol Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+
+ASVS の OAuth 関連の要件については、以下の発行済みおよびドラフト状態の RFC が使用されます。
+
+* [RFC6749 The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)
+* [RFC6750 The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://datatracker.ietf.org/doc/html/rfc6750)
+* [RFC6819 OAuth 2.0 Threat Model and Security Considerations](https://datatracker.ietf.org/doc/html/rfc6819)
+* [RFC7636 Proof Key for Code Exchange by OAuth Public Clients](https://datatracker.ietf.org/doc/html/rfc7636)
+* [RFC9068 JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068)
+* [RFC8628 OAuth 2.0 Device Authorization Grant](https://datatracker.ietf.org/doc/html/rfc8628)
+* [RFC8707 Resource Indicators for OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc8707)
+* [RFC9126 OAuth 2.0 Pushed Authorization Requests](https://datatracker.ietf.org/doc/html/rfc9126)
+* [RFC9207 OAuth 2.0 Authorization Server Issuer Identification](https://datatracker.ietf.org/doc/html/rfc9207)
+* [RFC9396 OAuth 2.0 Rich Authorization Requests](https://datatracker.ietf.org/doc/html/rfc9396)
+* [RFC9449 OAuth 2.0 Demonstrating Proof of Possession (DPoP)](https://datatracker.ietf.org/doc/html/rfc9449)
+* [draft OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics)<!-- recheck on release -->
+* [draft OAuth 2.0 for Browser-Based Applications](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps)<!-- recheck on release -->
+* [draft The OAuth 2.1 Authorization Framework](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-11)<!-- recheck on release -->
+
+OpenID Connect について詳しくは以下の情報を参照してください。
+
+* [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
+* [FAPI 2.0 Security Profile](https://openid.bitbucket.io/fapi/fapi-2_0-security-profile.html)<!-- recheck on release -->
