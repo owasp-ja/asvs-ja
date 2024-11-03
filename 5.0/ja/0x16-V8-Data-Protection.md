@@ -31,7 +31,7 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **8.2.1** | [修正] ブラウザで機密データがキャッシュされないように、アプリケーションは十分なキャッシュ防止ヘッダ (つまり Cache-Control: no-store) を設定する。 | ✓ | ✓ | ✓ | 525 |
+| **8.2.1** | [修正] ブラウザで機密データがキャッシュされないように、アプリケーションは十分なキャッシュ防止 HTTP レスポンスヘッダフィールド (つまり Cache-Control: no-store) を設定する。 | ✓ | ✓ | ✓ | 525 |
 | **8.2.2** | [修正, 3.2.3 からマージ] ブラウザの記憶域（localStorage、sessionStorage、IndexedDB、Cookie など）に保存されるデータに、セッション識別子を除いて、センシティブなデータが含まれていない。 | ✓ | ✓ | ✓ | 922 |
 | **8.2.3** | [修正] セッションの終了後、ブラウザの DOM など認証されたデータがクライアントの記憶域から消去される。"Clear-Site-Data ヘッダ" で対応できるかもしれないが、サーバ接続が失われた場合にはクライアント側でもクリアできるようにしておく必要がある。 | ✓ | ✓ | ✓ | 922 |
 
@@ -45,7 +45,7 @@
 
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **8.3.1** | [修正, 3.1.1, 13.1.3 からマージ] センシティブなデータが HTTP メッセージボディまたはヘッダでのみサーバに送信される。URL とクエリ文字列には API キーやセッショントークンなどのセンシティブなデータが含まれない。 | ✓ | ✓ | ✓ | 598 |
+| **8.3.1** | [修正, 3.1.1, 13.1.3 からマージ] センシティブなデータが HTTP メッセージボディまたはヘッダフィールドでのみサーバに送信される。URL とクエリ文字列には API キーやセッショントークンなどのセンシティブなデータが含まれない。 | ✓ | ✓ | ✓ | 598 |
 | **8.3.2** | [修正, 8.3.9 へ分割, レベル L1 > L3] ユーザが自身のデータをオンデマンドで削除できる。 | | | ✓ | |
 | **8.3.3** | [修正, レベル L1 > L3] アプリケーションは個人データの収集および利用する方法に関するガイダンスを提供している。ユーザはこの利用についてオプトインの同意を提供する必要がある。 | | | ✓ | |
 | **8.3.4** | [削除, 1.8.1 へマージ] | | | | |
@@ -63,7 +63,7 @@
 
 詳しくは以下の情報を参照してください。
 
-* [Consider using the Security Headers website to check security and anti-caching headers](https://securityheaders.com/)
+* [Consider using the Security Headers website to check security and anti-caching header fields](https://securityheaders.com/)
 * [Documentation about anti-caching headers by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 * [OWASP Secure Headers project](https://owasp.org/www-project-secure-headers/)
 * [OWASP Privacy Risks Project](https://owasp.org/www-project-top-10-privacy-risks/)
