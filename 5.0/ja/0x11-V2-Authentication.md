@@ -91,7 +91,7 @@ NIST は SMS を 「制限された」オーセンティケータタイプ ( ["r
 
 アーキテクトおよび開発者はコードをビルドまたはリファクタリングする際にこのセクションを順守すべきです。
 
-承認されたパスワードハッシュアルゴリズムの現行リストは NIST SP 800-63B section 5.1.1.2 および [OWASP Password Storage Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#password-hashing-algorithms) で詳しく説明されています。構成ガイダンスに細心の注意を払い、各アルゴリズムの実装上の課題や制限に注意します。
+承認されたパスワードハッシュアルゴリズムの現行リストは NIST SP 800-63B section 5.1.1.2 および [OWASP Password Storage Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#password-hashing-algorithms) で詳しく説明されています。構成ガイダンスに細心の注意を払い、各アルゴリズムの実装上の課題や制限に注意します。執筆時点では、サイドチャネル攻撃への耐性と、カスタマイズ可能なメモリ、CPU、並列処理パラメータに基づいて、Argon2id が推奨されるパスワードハッシュアルゴリズムです。
 
 特に、これらのアルゴリズムは意図的に計算量を多くしているため、非常に長いパスワードを入力するとサービス拒否状態に陥るケースが過去にあったことに注意してください。したがって、これを防ぐことは非常に重要です。
 
