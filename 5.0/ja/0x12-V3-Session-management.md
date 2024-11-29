@@ -61,14 +61,12 @@ TLS や他のセキュアなトランスポートチャネルはセッション�
 
 ## V3.4 クッキーベースのセッション管理
 
-このセクションの要件の一部は [NIST のガイダンス](https://pages.nist.gov/800-63-3/sp800-63b.html) のセクション [7.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#711-browser-cookies) に関連しています。
-
 | # | 説明 | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
-| **3.4.1** | クッキーベースのセッショントークンに Secure 属性が設定されている。 | ✓ | ✓ | ✓ | 614 |
-| **3.4.2** | [修正] クッキーベースのセッショントークンはクライアントサイドのスクリプトで読み取れない。セッショントークンクッキーには HttpOnly 属性が設定されている必要があり、セッショントークン値は Set-Cookie ヘッダフィールドを介してのみクライアントに転送される必要がある。 | ✓ | ✓ | ✓ | 1004 |
-| **3.4.3** | クロスサイトリクエストフォージェリ攻撃を抑制するために、クッキーベースのセッショントークンが SameSite 属性を利用している。 | ✓ | ✓ | ✓ | 1275 |
-| **3.4.4** | クッキーベースのセッショントークンに "__Host-" プレフィックスを使用しており、クッキーは最初にクッキーを設定したホストにのみ送信されている。 | ✓ | ✓ | ✓ | 16 |
+| **3.4.1** | [50.2.1 へ移動] | | | | |
+| **3.4.2** | [50.2.2 へ移動] | | | | |
+| **3.4.3** | [50.2.3 へ移動] | | | | |
+| **3.4.4** | [50.2.4 へ移動] | | | | |
 | **3.4.5** | [削除, 50.1.1 により廃止] | | | | |
 
 ## V3.5 トークンベースのセッション管理
@@ -131,4 +129,3 @@ TLS や他のセキュアなトランスポートチャネルはセッション�
 
 * [OWASP Testing Guide 4.0: Session Management Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/README.html)
 * [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
-* [Set-Cookie __Host- prefix details](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes)
