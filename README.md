@@ -29,6 +29,9 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V53: WebRTC](5.0/ja/0x53-V53-WebRTC.md)
 * [Appendix A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
 * [Appendix B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
+* [Appendix V: 暗号化](5.0/ja/0x97-Appendix-V_Cryptography.md)
+* [Appendix W: LLM セキュリティ](5.0/ja/0x98-Appendix-W_LLM_Security.md)
+* [Appendix X: 推奨事項](5.0/ja/0x99-Appendix-X_Recommendations.md)
 
 ### 参考資料
 
