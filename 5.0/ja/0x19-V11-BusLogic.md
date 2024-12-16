@@ -25,7 +25,7 @@
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **11.1.1** | アプリケーションが同じユーザのビジネスロジックフローを手順通り、省略せずに処理する。 | ✓ | ✓ | ✓ | 841 |
 | **11.1.2** | [11.2.1 へ移動] | | | | |
-| **11.1.3** | [修正, 11.1.5 からマージ] ビジネスロジックの制限とバリデーションはアプリケーションのドキュメントに従って実装される。 | ✓ | ✓ | ✓ | |
+| **11.1.3** | [修正, 11.1.5 からマージ] ビジネスロジックの制限とバリデーションはアプリケーションのドキュメントに従って実装され、負の数量でアイテムを購入するなどのビジネスロジックの欠陥が悪用されることを避けている。 | ✓ | ✓ | ✓ | |
 | **11.1.4** | [11.2.2 へ移動] | | | | |
 | **11.1.5** | [削除, 11.1.3 へマージ] | | | | |
 | **11.1.6** | [10.7.3 へ移動] | | | | |
@@ -46,4 +46,4 @@
 詳しくは以下の情報を参照してください。
 
 * [OWASP Web Security Testing Guide 4.2: Business Logic Testing](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/10-Business_Logic_Testing/README)
-* 対自動処理はこれらを含む、多くの方法で対応できる。 [OWASP Automated Threats to Web Applications](https://owasp.org/www-project-automated-threats-to-web-applications/)
+* 耐自動処理はこれらを含む、多くの方法で対応できる。 [OWASP Automated Threats to Web Applications](https://owasp.org/www-project-automated-threats-to-web-applications/)
