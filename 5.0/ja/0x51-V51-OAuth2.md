@@ -100,6 +100,7 @@ ASVS とこの章のコンテキストでは、リソースサーバは API で�
 | **51.4.13** | [追加] リフレッシュトークンは、スライディングリフレッシュトークン有効期限が適用されている場合も含め、絶対的な有効期限を持つ。 | ✓ | ✓ | ✓ |
 | **51.4.14** | [修正, 3.5.1 からマージ] リフレッシュトークンとリファレンスアクセストークンは認可されたユーザによって失効されることができる。これは、認可サーバのユーザインタフェースを使用するか、失効に認可サーバ API を使用しているクライアントによって実施できる。 | | ✓ | ✓ |
 | **51.4.15** | [追加] サーバサイドクライアント (エンドユーザデバイス上で実行されない) では、認可サーバは 'authorization_details' パラメータ値がクライアントバックエンドからのものであり、ユーザがそれを改竄していないことを確保している。たとえば、プッシュ認可リクエスト (PAR) または JWT で保護された認可リクエスト (JAR) の使用を要求する。 | | | ✓ |
+| **51.4.16** | [追加] 認可サーバが認可されていない動的クライアント登録をサポートしている場合、悪意のあるクライアントアプリケーションのリスクを緩和している。登録された URI などのクライアントメタデータを検証し、ユーザーの同意を確保し、信頼できないクライアントアプリケーションでの認可リクエストを処理する前にユーザに警告しなければならない。 | | ✓ | ✓ |
 
 ## V51.5 OIDC クライアント
 
@@ -143,9 +144,10 @@ ASVS の OAuth 関連の要件については、以下の発行済みおよび�
 * [RFC6750 The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://datatracker.ietf.org/doc/html/rfc6750)
 * [RFC6819 OAuth 2.0 Threat Model and Security Considerations](https://datatracker.ietf.org/doc/html/rfc6819)
 * [RFC7636 Proof Key for Code Exchange by OAuth Public Clients](https://datatracker.ietf.org/doc/html/rfc7636)
-* [RFC9068 JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068)
+* [RFC7591 OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591)
 * [RFC8628 OAuth 2.0 Device Authorization Grant](https://datatracker.ietf.org/doc/html/rfc8628)
 * [RFC8707 Resource Indicators for OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc8707)
+* [RFC9068 JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068)
 * [RFC9126 OAuth 2.0 Pushed Authorization Requests](https://datatracker.ietf.org/doc/html/rfc9126)
 * [RFC9207 OAuth 2.0 Authorization Server Issuer Identification](https://datatracker.ietf.org/doc/html/rfc9207)
 * [RFC9396 OAuth 2.0 Rich Authorization Requests](https://datatracker.ietf.org/doc/html/rfc9396)
