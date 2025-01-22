@@ -159,4 +159,4 @@ ASVS の OAuth 関連の要件については、以下の発行済みおよび�
 OpenID Connect について詳しくは以下の情報を参照してください。
 
 * [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)
-* [FAPI 2.0 Security Profile](https://openid.bitbucket.io/fapi/fapi-2_0-security-profile.html)<!-- recheck on release -->
+* [FAPI 2.0 Security Profile](https://openid.bitbucket.io/fapi/fapi-security-profile-2_0.html)<!-- recheck on release -->
