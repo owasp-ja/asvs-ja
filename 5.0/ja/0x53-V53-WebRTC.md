@@ -70,4 +70,5 @@ Traversal Using Relays around NAT (TURN) サーバは厳しいネットワーク
 * [RFC 8825 - Overview: Real-Time Protocols for Browser-Based Applications](https://www.rfc-editor.org/info/rfc8825)
 * [RFC 8826 - Security Considerations for WebRTC](https://www.rfc-editor.org/info/rfc8826)
 * [RFC 8827 - WebRTC Security Architecture](https://www.rfc-editor.org/info/rfc8827)
-* WebRTC DTLS ClientHello DoS: [A Novel DoS Vulnerability affecting WebRTC Media Servers, Enable Security](https://www.rtcsec.com/article/novel-dos-vulnerability-affecting-webrtc-media-servers/)
+* WebRTC DTLS ClientHello DoS については [セキュリティ専門家を対象とした Enable Security のブログ投稿](https://www.enablesecurity.com/blog/novel-dos-vulnerability-affecting-webrtc-media-servers/) と、関連する [WebRTC 開発者を対象としたホワイトペーパー](https://www.enablesecurity.com/blog/webrtc-hello-race-conditions-paper/) に詳しく記載されています。
+* [DTLS-SRTP Protection Profiles](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml)
