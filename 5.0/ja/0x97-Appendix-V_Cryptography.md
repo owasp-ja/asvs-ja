@@ -84,7 +84,6 @@ V6 は単にベストプラクティスを定義するだけではありませ�
 |--|--|--|--|--|--|
 | GCM | Yes | [NIST SP 800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) | ✓ | ✓ | ✓ |
 | CCM | Yes | [NIST SP 800-38C](https://csrc.nist.gov/pubs/sp/800/38/c/upd1/final) | ✓ | ✓ | ✓ |
-| CCM-8 | Yes | [RFC 6655](https://www.rfc-editor.org/info/rfc6655) | ✓ | ✓ | ✓ |
 | CBC* | No | [NIST SP 800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) | ✓ | ✓ | ✓ |
 
 \* すべての暗号化されたメッセージは認証されなければなりません。このため、CBC モードを使用する場合は必ず、メッセージを検証するためにハッシュ関数または MAC が関連付けられていなければなりません (MUST)。一般的に、これは Encrypt-Then-Hash 方式で適用されなければなりません (MUST) (ただし、TLS 1.2 では代わりに Hash-Then-Encrypt を使用します)。これが保証できない場合、CBC を使用してはいけません (MUST NOT)。
@@ -118,6 +117,10 @@ V6 は単にベストプラクティスを定義するだけではありませ�
 | CFB |
 | OFB |
 | CTR |
+| CCM-8** |
+
+\** CCM-8 を使用する場合、MAC タグは 64 ビットのセキュリティしか持ちません。
+これは、少なくとも 128 ビットのセキュリティを必要とする要件 6.2.9 に準拠していません。
 
 ### 鍵ラッピング
 
