@@ -52,7 +52,7 @@ V6 は単にベストプラクティスを定義するだけではありませ�
 |--|--|--|--|--|
 | AES-256 | [FIPS 197](https://csrc.nist.gov/pubs/fips/197/final) | | ✓ | ✓ |
 | Salsa20 | [Salsa 20 specification](https://cr.yp.to/snuffle/spec.pdf) | | ✓ | ✓ |
-| XChaCha20 |  | ✓ | ✓ | ✓ |
+| XChaCha20 | [XChaCha20 Draft](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-xchacha-03) | ✓ | ✓ | ✓ |
 | XSalsa20 | [Extending the Salsa20 nonce](https://cr.yp.to/snuffle/xsalsa-20110204.pdf) | ✓ | ✓ | ✓ |
 | ChaCha20 | [RFC 8439](https://www.rfc-editor.org/info/rfc8439) | ✓ | ✓ | ✓ |
 | AES-192 | [FIPS 197](https://csrc.nist.gov/pubs/fips/197/final) | ✓ | ✓ | ✓ |
@@ -65,7 +65,7 @@ V6 は単にベストプラクティスを定義するだけではありませ�
 | 対称鍵アルゴリズム |
 |--|
 | 2TDEA |
-| 3TDEA (3DES) |
+| TDEA (3DES/3DEA) |
 | IDEA |
 | RC4 |
 | Blowfish|
@@ -129,7 +129,7 @@ V6 は単にベストプラクティスを定義するだけではありませ�
 この操作は、信頼できないとみなされる場所で鍵を保護したい場合、あるいは信頼できないネットワーク上やアプリケーション内で機密鍵を送信したい場合に実行できます。
 ただし、ラップ/アンラップ手順を実行する前に、元の鍵の性質 (アイデンティティや目的など) を理解することを真剣に検討すべきです。これは、セキュリティと、特に鍵の機能 (署名など) の監査証跡や適切な鍵の保存を含むコンプライアンスの点で、ソースとターゲットの両方のシステム/アプリケーションに影響を及ぼす可能性があります。
 
-鍵ラッピングには、[NIST SP 800-38F](https://csrc.nist.gov/pubs/sp/800/38/f/final) に従い、量子脅威に対する将来を見据えた対策を考慮して、AES-256 のみを使用しなければなりません (MUST)。AES を使用する暗号モードは優先順に以下のとおりです:
+特に、鍵ラッピングには、[NIST SP 800-38F](https://csrc.nist.gov/pubs/sp/800/38/f/final) に従い、量子脅威に対する将来を見据えた対策を考慮して、AES-256 のみを使用しなければなりません (MUST)。AES を使用する暗号モードは優先順に以下のとおりです:
 
 | 鍵ラッピング | リファレンス | L1 | L2 | L3 |
 |--|--|--|--|--|
@@ -156,9 +156,9 @@ AES-192 と AES-128 はユースケースで必要な場合に使用できます
 | KMAC256 | N |[NIST SP 800-185](https://csrc.nist.gov/pubs/sp/800/185/final) | ✓ | ✓ | ✓ |
 | KMAC128 | N |[NIST SP 800-185](https://csrc.nist.gov/pubs/sp/800/185/final) | ✓ | ✓ | ✓ |
 | SHAKE256 | Y |[FIPS 202](https://csrc.nist.gov/pubs/fips/202/final) | ✓ | ✓ | ✓ |
-| BLAKE2s | Y | | ✓ | ✓ | ✓ |
-| BLAKE2b | Y | | ✓ | ✓ | ✓ |
-| BLAKE3 | Y | | ✓ | ✓ | ✓ |
+| BLAKE2s | Y | [BLAKE2: simpler, smaller, fast as MD5](https://eprint.iacr.org/2013/322) | ✓ | ✓ | ✓ |
+| BLAKE2b | Y | [BLAKE2: simpler, smaller, fast as MD5](https://eprint.iacr.org/2013/322) | ✓ | ✓ | ✓ |
+| BLAKE3 | Y | [BLAKE3 one function, fast everywhere](https://github.com/BLAKE3-team/BLAKE3-specs/raw/master/blake3.pdf) | ✓ | ✓ | ✓ |
 
 ### パスワード保存のために承認されているハッシュ関数
 
@@ -168,7 +168,7 @@ AES-192 と AES-128 はユースケースで必要な場合に使用できます
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | --|--|--|
 | argon2 | RFC 9106 | Argon2ID: Memory Cost 19MB, Time Cost 2, Parallelism 1 | | ✓ | ✓ |
 | scrypt | RFC 7914 | 2^15 r = 8 p = 1 | | ✓ | ✓ |
-| bcrypt | -- | At least 10 rounds. | | ✓ | ✓ |
+| bcrypt |[A Future-Adaptable Password Scheme](https://www.usenix.org/legacy/events/usenix99/provos/provos.pdf) | At least 10 rounds. | | ✓ | ✓ |
 | PBKDF2_SHA512 | [NIST SP 800-132](https://csrc.nist.gov/pubs/sp/800/132/final), [FIPS 180-4](https://csrc.nist.gov/pubs/fips/180-4/upd1/final) | 210,000 iterations | ✓ | ✓ | ✓ |
 | PBKDF2_SHA256 | [NIST SP 800-132](https://csrc.nist.gov/pubs/sp/800/132/final), [FIPS 180-4](https://csrc.nist.gov/pubs/fips/180-4/upd1/final) | 600,000 iterations | ✓ | ✓ | ✓ |
 
@@ -185,7 +185,7 @@ AES-192 と AES-128 はユースケースで必要な場合に使用できます
 
 ### デジタル署名のために許可されていないハッシュ関数
 
-デジタル署名の実装では、以下のハッシュ関数は衝突耐性が不十分なため使用してはいけません (MUST NOT)。
+衝突耐性が不十分なため、以下のハッシュ関数はデジタル署名や、衝突耐性を必要とするその他のアプリケーションには使用してはいけません (MUST NOT)。他の用途では、レガシーシステムとの互換性と検証にのみ使用できますが、新しい設計には使用してはいけません。
 
 | ハッシュ関数 | リファレンス |
 | -------------- | -------------------------------------------------------------- |
@@ -247,10 +247,9 @@ AES-192 と AES-128 はユースケースで必要な場合に使用できます
 | HMAC-SHA-256      | [RFC 2104](https://www.rfc-editor.org/info/rfc2104) & [FIPS 198-1](https://csrc.nist.gov/pubs/fips/198-1/final) | ✓                       | ✓  | ✓  | ✓  |
 | HMAC-SHA-384      | [RFC 2104](https://www.rfc-editor.org/info/rfc2104) & [FIPS 198-1](https://csrc.nist.gov/pubs/fips/198-1/final) | ✓                       |    | ✓  | ✓  |
 | HMAC-SHA-512      | [RFC 2104](https://www.rfc-editor.org/info/rfc2104) & [FIPS 198-1](https://csrc.nist.gov/pubs/fips/198-1/final) | ✓                       |    | ✓  | ✓  |
-| HMAC-SHA-1        | [RFC 2104](https://www.rfc-editor.org/info/rfc2104) & [FIPS 198-1](https://csrc.nist.gov/pubs/fips/198-1/final) | ✓                       |    | ✓  | ✓  |
 | KMAC128           | [NIST SP 800-185](https://csrc.nist.gov/pubs/sp/800/185/final)                             | ✓                       | ✓  | ✓  | ✓  |
 | KMAC256           | [NIST SP 800-185](https://csrc.nist.gov/pubs/sp/800/185/final)                             | ✓                       | ✓  | ✓  | ✓  |
-| Blake3            |                                                                                            | ✓                       | ✓  | ✓  | ✓  |
+| BLAKE3            |  [BLAKE3 one function, fast everywhere](https://github.com/BLAKE3-team/BLAKE3-specs/raw/master/blake3.pdf)  | ✓                       | ✓  | ✓  | ✓  |
 
 SHA-1 は一般的に使用すべきではありませんが、HMAC-SHA-1 の使用は現時点では問題がないと考えられています
 ([NIST SP 800-57](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf))。
@@ -309,4 +308,6 @@ SHA-1 は一般的に使用すべきではありませんが、HMAC-SHA-1 の使
 
 ### ポスト量子暗号標準
 
-PQC 実装は [FIPS-203](https://csrc.nist.gov/pubs/fips/203/ipd)/[204](https://csrc.nist.gov/pubs/fips/204/ipd)/[205](https://csrc.nist.gov/pubs/fips/205/ipd) に準拠していなければなりませんが、堅牢化されたコードや実装リファレンスはまだ存在しません。 https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
+PQC 実装は、堅牢化されたコードや実装リファレンスはまだ最低限しか存在しないため、[FIPS-203](https://csrc.nist.gov/pubs/fips/203/ipd)/[204](https://csrc.nist.gov/pubs/fips/204/ipd)/[205](https://csrc.nist.gov/pubs/fips/205/ipd) に準拠していなければなりません。 https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
+
+提案されているハイブリッド TLS 鍵交換グループは、[draft-tls-westerbaan-xyber768x00-03](https://www.ietf.org/archive/id/draft-tls-westerbaan-xyber768d00-03.txt) で規定され、[Firefox リリース 132](https://www.ietf.org/archive/id/draft-tls-westerbaan-xyber768d00-03.txt) や [Chrome リリース 131](https://security.googleblog.com/2024/09/a-new-path-for-kyber-on-web.html) などの主要なブラウザでサポートされており、暗号テスト環境や業界や政府が承認したライブラリ内で利用可能な場合に使用できます (MAY)。
