@@ -251,9 +251,6 @@ AES-192 と AES-128 はユースケースで必要な場合に使用できます
 | KMAC256           | [NIST SP 800-185](https://csrc.nist.gov/pubs/sp/800/185/final)                             | ✓                       | ✓  | ✓  | ✓  |
 | BLAKE3            |  [BLAKE3 one function, fast everywhere](https://github.com/BLAKE3-team/BLAKE3-specs/raw/master/blake3.pdf)  | ✓                       | ✓  | ✓  | ✓  |
 
-SHA-1 は一般的に使用すべきではありませんが、HMAC-SHA-1 の使用は現時点では問題がないと考えられています
-([NIST SP 800-57](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf))。
-
 ### 許可されていない MAC アルゴリズム
 
 以下のアルゴリズムは、既知の脆弱性や不十分なセキュリティ強度のため、明示的に禁止されており、使用してはいけません (MUST NOT):
