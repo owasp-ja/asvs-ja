@@ -61,7 +61,7 @@ NIST SP 800-63 により「記憶された秘密」と呼ばれるパスワー�
 要件 2.1.7 でよく使用されるパスワードのソースとして考えられるものは以下のとおりです。
 
 * <https://github.com/danielmiessler/SecLists/tree/master/Passwords>
-* <https://www.ncsc.gov.uk/blog-post/passwords-passwords-everywhere>
+* <https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt>
 
 ## V2.2 一般的な認証セキュリティ
 
