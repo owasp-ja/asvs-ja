@@ -71,7 +71,7 @@
 
 ## V10.5 セキュリティアーキテクチャ
 
-競合状態、TOC/TOU 脆弱性、デッドロック、ライブロック、スレッド枯渇、不適切な同期などの同時並行性の問題は、予期しない動作やセキュリティリスクにつながる可能性があります。このセクションではこれらのリスクを緩和するためのさまざまな技法と戦略を説明します。
+このセクションでは、サンドボックス化、カプセル化、コンテナ化、ネットワーク分離など、「危険な」操作やライブラリから保護するのに役立つ、アーキテクチャレベルの技法について説明します。
 
 | # | 説明 | レベル | CWE |
 | :---: | :--- | :---: | :---: |
@@ -88,7 +88,7 @@
 
 ## V10.7 同時並行性
 
-Concurrency issues such as race conditions, TOC/TOU vulnerabilities, deadlocks, livelocks, thread starvation, and improper synchronization can lead to unpredictable behavior and security risks. This section includes various techniques and strategies to help mitigate these risks.
+競合状態、TOC/TOU 脆弱性、デッドロック、ライブロック、スレッド枯渇、不適切な同期などの同時並行性の問題は、予期しない動作やセキュリティリスクにつながる可能性があります。このセクションではこれらのリスクを緩和するためのさまざまな技法と戦略を説明します。
 
 | # | 説明 | レベル | CWE |
 | :---: | :--- | :---: | :---: |
