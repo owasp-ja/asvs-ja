@@ -49,7 +49,11 @@
 
 ## V11.3 入力バリデーション
 
-肯定的なバリデーションパターンを使用して適切に実装された入力バリデーションコントロールは、アプリが受け取ることを期待するデータの種類に関するビジネスロジックコントロールまたは機能上の期待の重要な強制を提供します。このコンテキストでは、「入力」は、HTML フォームフィールド、REST リクエスト、URL パラメータ、HTTP ヘッダフィールド、クッキー、ディスク上のファイル、データベース、外部 API など、さまざまなソースからもたらされる可能性があります。
+肯定的な許可リストと強力なデータ型付けを使用して適切に実装された入力バリデーションコントロールは、アプリが受け取ることを期待するデータの種類に関するビジネスロジックコントロールまたは機能上の期待の重要な強制を提供します。
+
+このコンテキストでは、「入力」は、HTML フォームフィールド、REST リクエスト、URL パラメータ、HTTP ヘッダフィールド、クッキー、ディスク上のファイル、データベース、外部 API など、さまざまなソースからもたらされる可能性があります。
+
+ビジネスロジックコントロールでは特定の入力を 100 未満の数値にする必要があるかもしれません。機能上の期待としては、特定の数値は特定の閾値未満である必要があります。その数値は特定のループを実行する回数を支配しており、高い数値は過剰な処理と潜在的なサービス拒否状態につながる可能性があるためです。
 
 入力バリデーションは、データが正しい形式で受信されることを確保する上でアプリケーションに貴重な衛生管理を提供し、可能な限りすべての入力に適用すべきです。但し、他のコンポーネントでデータを使用するときや、出力のためにデータを提示するときに、正しいエンコード、パラメータ化、サニタイゼーションを使用する必要性をなくしたり置き換えたりするものはありません。
 
@@ -65,3 +69,5 @@
 
 * [OWASP Web Security Testing Guide 4.2: Business Logic Testing](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/10-Business_Logic_Testing/README)
 * 対自動処理はこれらを含む、多くの方法で対応できる。 [OWASP Automated Threats to Web Applications](https://owasp.org/www-project-automated-threats-to-web-applications/)
+* [OWASP Testing Guide 4.0: Input Validation Testing](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README.html)
+* [OWASP Cheat Sheet: Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
