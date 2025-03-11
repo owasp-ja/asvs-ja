@@ -14,7 +14,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V2: 認証](5.0/ja/0x11-V2-Authentication.md)
 * [V3: セッション管理](5.0/ja/0x12-V3-Session-management.md)
 * [V4: アクセス制御](5.0/ja/0x12-V4-Access-Control.md)
-* [V5: バリデーション、サニタイゼーション、エンコーディング](5.0/ja/0x13-V5-Validation-Sanitization-Encoding.md)
+* [V5: エンコーディングとサニタイゼーション](5.0/ja/0x13-V5-Encoding-Sanitization.md)
 * [V6: 暗号化](5.0/ja/0x14-V6-Cryptography.md)
 * [V7: セキュリティログ記録とエラー処理](5.0/ja/0x15-V7-Error-Logging.md)
 * [V8: データ保護](5.0/ja/0x16-V8-Data-Protection.md)
