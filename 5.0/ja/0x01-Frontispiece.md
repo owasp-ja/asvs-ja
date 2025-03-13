@@ -6,11 +6,11 @@ OWASP アプリケーションセキュリティ検証標準はアーキテク�
 
 ## 著作権とライセンス
 
-Version 5.0 (Bleeding Edge version), 2024
+Version 5.0 (Bleeding Edge version), 2025
 
 ![license](../images/license.png)
 
-Copyright © 2008-2024 The OWASP Foundation. 本書は [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
+Copyright © 2008-2025 The OWASP Foundation. 本書は [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) に基づいてリリースされています。再利用または配布する場合には、他者に対して本著作物のライセンス条項を明らかにする必要があります。
 
 ## プロジェクトリーダー
 
