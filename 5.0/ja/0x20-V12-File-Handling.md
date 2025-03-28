@@ -1,8 +1,8 @@
-# V12 ファイルとリソース
+# V12 ファイル処理
 
 ## 管理目標
 
-ファイルやその他のリソースを使用すると、サービス拒否、認可されていないアクセス、リソース枯渇など、アプリケーションにさまざまなリスクをもたらす可能性があります。この章にはこれらのリスクに対処するための要件を含みます。
+ファイルを使用すると、サービス拒否、認可されていないアクセス、ストレージ枯渇など、アプリケーションにさまざまなリスクをもたらす可能性があります。この章にはこれらのリスクに対処するための要件を含みます。
 
 ## V1.12 セキュアなファイルアップロードドキュメント
 
@@ -71,19 +71,10 @@
 | :---: | :--- | :---: |
 | **12.6.1** | [14.7.4 へ移動] | |
 
-## V12.7 アプリケーションリソース
-
-このセクションは、アプリケーションは、データベース接続、オープンファイル、スレッドなどのシステムリソースを使用後に解放し、リソース枯渇を防ぐ必要性についてカバーします。
-
-| # | 説明 | レベル |
-| :---: | :--- | :---: |
-| **12.7.1** | [追加] アプリケーションは、データベース接続、オープンファイル、スレッドなどのシステムリソースを使用し終わると、リソースの枯渇を防ぐために積極的に解放している。 | 3 |
-
 ## 参考情報
 
 詳しくは以下の情報を参照してください。
 
 * [File Extension Handling for Sensitive Information](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
-* [OWASP Third Party JavaScript Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html)
 * [Example of using symlinks for arbitrary file read](https://hackerone.com/reports/1439593)
 * [Explanation of "Magic Bytes" from Wikipedia](https://en.wikipedia.org/wiki/List_of_file_signatures)
