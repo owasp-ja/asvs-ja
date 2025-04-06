@@ -11,7 +11,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [監査と認証](5.0/ja/0x04-Assessment_and_Certification.md)
 * [バージョン 4.0 ユーザ向けのガイダンス](5.0/ja/0x05-For-Users-Of-4.0.md)
 * [V1: エンコーディングとサニタイゼーション](5.0/ja/0x10-V1-Encoding-Sanitization.md)
-* [V2: ビジネスロジック](5.0/ja/0x11-V2-Business-Logic.md)
+* [V2: バリデーションとビジネスロジック](5.0/ja/0x11-V2-Validation-Business-Logic.md)
 * [V3: Web フロントエンドセキュリティ](5.0/ja/0x12-V3-Web-Frontend-Security.md)
 * [V4: API と Web サービス](5.0/ja/0x13-V4-API.md)
 * [V5: ファイル処理](5.0/ja/0x14-V5-File-Handling.md)
