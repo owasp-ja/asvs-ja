@@ -10,7 +10,7 @@
 
 ## V1.1 バリデーションおよびサニタイゼーションアーキテクチャ
 
-下記のセクションでは、セキュリティの脆弱性を回避するために、安全でないコンテンツを安全に処理するためのシンタックス固有またはインタプリタ固有の要件を示しました。このセクションの要件は、この処理が行われるべき順序と場所をカバーしています。また、二重エンコーディング問題を防ぐために、データが保存されるときは常に、エンコードまたはエスケープされた状態 (HTML エンコーディングなど) ではなく、元の状態で保存されることを保証することも目的としています。
+下記のセクションでは、セキュリティの脆弱性を回避するために、安全でないコンテンツを安全に処理するためのシンタックス固有またはインタプリタ固有の要件を示します。このセクションの要件は、この処理が行われるべき順序と場所をカバーしています。また、二重エンコーディング問題を防ぐために、データが保存されるときは常に、エンコードまたはエスケープされた状態 (HTML エンコーディングなど) ではなく、元の状態で保存されることを保証することも目的としています。
 
 | # | 説明 | レベル | #v5.0.be |
 | :---: | :--- | :---: | :---: |
@@ -83,7 +83,6 @@
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Testing Guide 4.0: Testing for HTTP Parameter Pollution](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/04-Testing_for_HTTP_Parameter_Pollution.html)
 * [OWASP LDAP Injection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html)
 * [OWASP Testing Guide 4.0: Client-Side Testing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/README)
 * [OWASP Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
