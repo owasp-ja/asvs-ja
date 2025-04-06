@@ -32,9 +32,10 @@ Mitre の [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/) はソフ�
 
 特定の要件については、実装が複雑になり、アプリケーションのニーズに非常に特有となります。よくある例としては、パーミッション、入力バリデーション、さまざまなレベルの機密データに関する保護コントロールなどがあります。これを考慮するために、「すべてのデータは暗号化しなければならない」などの極論的な文言や、要件として考えられるすべてのユースケースをカバーしようとするのではなく、アプリケーション開発者のこの種のコントロールに対するアプローチと構成を文書化することを義務付ける特定の要件があります。これにより適切かどうかをレビューし、実際の実装をドキュメントと比較して、実装が期待と合致しているかどうかを評価できます。
 
+<!--
+
 ### TODO: add more items
 
-<!--
 We set out to ensure that the ASVS 4.0 Level 1 is a comprehensive superset of PCI DSS 3.2.1 Sections 6.5, for application design, coding, testing, secure code reviews, and penetration tests. This necessitated covering buffer overflow and unsafe memory operations in V5, and unsafe memory-related compilation flags in V14, in addition to existing industry-leading application and web service verification requirements.
 
 We have completed the shift of the ASVS from monolithic server-side-only controls, to providing security controls for all modern applications and APIs. In the days of functional programming, server-less API, mobile, cloud, containers, CI/CD and DevSecOps, federation and more, we cannot continue to ignore modern application architecture. Modern applications are designed very differently from those built when the original ASVS was released in 2009. The ASVS must always look far into the future so that we provide sound advice for our primary audience - developers. We have clarified or dropped any requirement that assumes that applications are executed on systems owned by a single organization.
