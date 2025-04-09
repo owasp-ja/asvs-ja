@@ -4,9 +4,9 @@
 
 この章では、信頼できないデータの安全でない処理に関する、最も一般的な Web アプリケーションセキュリティの弱点に焦点を当てます。これは、信頼できないデータが、関連するインタプリタの構文ルールを使用して解釈され、さまざまな技術的な脆弱性につながります。
 
-現代の Web アプリケーションでは、パラメータ化されたクエリ、自動エスケープテンプレートフレームワークなどのより安全な API を使用することが常に最善でしょう。それ以外には、出力のエンコード/エスケープやサニタイズを注意深く実行することが、アプリケーションのセキュリティにとって重要です。
+現代の Web アプリケーションでは、パラメータ化されたクエリ、自動エスケープテンプレートフレームワークなどのより安全な API を使用することが常に最善でしょう。それ以外には、出力のエンコード、エスケープ、サニタイズを注意深く実行することが、アプリケーションのセキュリティにとって重要です。
 
-入力バリデーションは、予期しない危険なコンテンツから保護するための多層防御メカニズムとして機能します。しかし、その主な目的は、入力されるコンテンツが機能上およびビジネス上の期待に一致することを確保することであるため、これに関する要件は「ビジネスロジック」の章にあります。
+入力バリデーションは、予期しない危険なコンテンツから保護するための多層防御メカニズムとして機能します。しかし、その主な目的は、入力されるコンテンツが機能上およびビジネス上の期待に一致することを確保することであるため、これに関する要件は「バリデーションとビジネスロジック」の章にあります。
 
 ## V1.1 バリデーションおよびサニタイゼーションアーキテクチャ
 
@@ -35,13 +35,13 @@
 | **1.2.8** | LaTeX プロセッサは ("--shell-escape" フラグを使用しないなど) 安全に構成されており、LaTeX インジェクション攻撃を防ぐためにコマンドの許可リストを使用している。 | 2 | v5.0.be-5.3.12 |
 | **1.2.9** | アプリケーションが CSV インジェクションや数式インジェクションから保護されている。アプリケーションは CSV コンテンツをエクスポートする際に RFC4180 2.6 および 2.7 で定義されているエスケープ規則に従う必要がある。さらに、CSV やその他のスプレッドシート形式 (xls, xlsx, odf など) をエクスポートする際に、特殊文字 ('=', '+', '-', '@', '\t' (タブ), '\00' (ヌル文字) など) がフィールド値の最初の文字である場合、シングルクォートを使用してエスケープする必要がある。 | 3 | v5.0.be-5.3.11 |
 
-注: パラメータ化クエリや SQL のエスケープだけでは必ずしも十分ではありません。テーブル名やカラム名、ORDER BY などはエスケープできません。これらのフィールドにエスケープされたユーザ作成データが含まれていると、クエリの失敗や SQL インジェクションが発生します。
+注: パラメータ化クエリの使用や SQL のエスケープだけでは必ずしも十分ではありません。テーブル名やカラム名 ("ORDER BY" 句のカラム名を含む) などのクエリ部分はエスケープできません。これらのフィールドにエスケープされたユーザ作成データが含まれていると、クエリの失敗や SQL インジェクションを引き起こします。
 
 ## V1.3 サニタイゼーションとサンドボックス化
 
-信頼できないコンテンツを安全でないコンテキストで使用することに対する理想的な保護は、コンテキスト固有のエンコーディングやエスケープを使用することです。これにより、安全でないコンテンツと同じ意味を維持しながら、この特定のコンテキストで安全に使用できるようになります。これについては、次のセクションで詳しく説明します。
+信頼できないコンテンツを安全でないコンテキストで使用することに対する理想的な保護は、コンテキスト固有のエンコーディングやエスケープを使用することです。これにより、安全でないコンテンツと同じ意味を維持しながら、前のセクションで詳しく説明したように、この特定のコンテキストで安全に使用できるようになります。
 
-これが不可能な場合、他の選択肢としてサニタイゼーションとサンドボックス化があります。サニタイゼーションは、潜在的に危険な文字やコンテンツを削除します。場合によっては、入力の意味を変えるかもしれませんが、セキュリティ上の理由から選択の余地がないこともあります。サンドボックス化は、潜在的に危険な操作を封じ込め、セキュリティ上の脆弱性が生じても、より広範なアプリケーションを危険にさらすことがないようにします。
+これが不可能な場合、他の選択肢としてサニタイゼーションとサンドボックス化があります。サニタイゼーションは、潜在的に危険な文字やコンテンツを削除します。場合によっては入力の意味を変えるかもしれませんが、セキュリティ上の理由から、選択の余地がないこともあります。サンドボックス化は、潜在的に危険な操作を封じ込め、セキュリティ上の脆弱性が生じても、より広範なアプリケーションを危険にさらすことがないようにします。
 
 | # | 説明 | レベル | #v5.0.be |
 | :---: | :--- | :---: | :---: |
@@ -51,7 +51,7 @@
 | **1.3.4** | ユーザが提供する Scalable Vector Graphics (SVG) スクリプト可能コンテンツは、スクリプトや foreignObject を含まないなど、アプリケーションにとって安全なタグや属性 (図形描画など) のみを含むように検証またはサニタイズされている。 | 2 | v5.0.be-5.2.7 |
 | **1.3.5** | ユーザ指定の Markdown、CSS、XSL スタイルシート、BBCode のようなスクリプト可能もしくは式のテンプレート言語コンテンツに対して、アプリケーションがサニタイズ、無効化またはサンドボックス化されている。 | 2 | v5.0.be-5.2.8 |
 | **1.3.6** | アプリケーションは、信頼できないデータをプロトコル、ドメイン、パス、ポートの許可リストに照らして検証し、そのデータを使用して別のサービスを呼び出す前に潜在的に危険な文字をサニタイズすることで、サーバサイドリクエストフォージェリ (SSRF) 攻撃から保護している。 | 2 | v5.0.be-5.2.6 |
-| **1.3.7** | アプリケーションは信頼できない入力に基づくテンプレートの作成を許可しないことで、テンプレートインジェクション攻撃から保護している。代替手段がない場合、テンプレート作成中に動的に含まれるすべての信頼できない入力はサニタイズまたは厳密にバリデーションする必要がある。 | 2 | v5.0.be-5.2.5 |
+| **1.3.7** | アプリケーションは信頼できない入力に基づくテンプレートの作成を許可しないことで、テンプレートインジェクション攻撃から保護している。代替手段がない場合、テンプレート作成中に動的に含まれるすべての信頼できない入力はサニタイズまたは厳密に確認する必要がある。 | 2 | v5.0.be-5.2.5 |
 | **1.3.8** | アプリケーションは正規表現内の特殊文字をエスケープ (通常はバックスラッシュを使用) し、メタ文字として誤って解釈されることを防いでいる。 | 2 | v5.0.be-5.2.9 |
 | **1.3.9** | アプリケーションは Java Naming and Directory Interface (JNDI) クエリで使用する前に信頼できない入力を適切にサニタイズし、JNDI を安全に構成して JNDI インジェクション攻撃を防いでいる。 | 2 | v5.0.be-5.2.11 |
 | **1.3.10** | アプリケーションは memcache に送信する前にコンテンツをサニタイズし、インジェクション攻撃を防いでいる。 | 2 | v5.0.be-5.2.12 |
@@ -83,15 +83,16 @@
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP LDAP Injection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html)
-* [OWASP Testing Guide 4.0: Client-Side Testing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/README)
+* [OWASP LDAP Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html)
 * [OWASP Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 * [OWASP DOM Based Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [OWASP XML External Entity Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+* [OWASP Testing Guide 4.0: Client-Side Testing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/README)
 * [OWASP Java Encoding Project](https://owasp.org/owasp-java-encoder/)
 * [DOMPurify - Client-side HTML Sanitization Library](https://github.com/cure53/DOMPurify)
-* [XML External Entity (XXE) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
 * [RFC4180 - Common Format and MIME Type for Comma-Separated Values (CSV) Files](https://datatracker.ietf.org/doc/html/rfc4180#section-2)
 
+<!-- outdated and/or vendor specific
 自動エスケープの詳細情報はこちらを参照してください。
 
 * [Reducing XSS by way of Automatic Context-Aware Escaping in Template Systems](https://googleonlinesecurity.blogspot.com/2009/03/reducing-xss-by-way-of-automatic.html)
@@ -101,6 +102,7 @@
 * [Angular Security](https://angular.io/guide/security)
 * [ReactJS Escaping](https://reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)
 * [Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
+-->
 
 デシリアライゼーションやパースの問題の詳細情報はこちらを参照してください。
 
