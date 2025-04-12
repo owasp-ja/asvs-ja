@@ -20,7 +20,7 @@ NIST の [Digital Identity Guidelines (SP 800-63)](https://pages.nist.gov/800-63
 
 ### 共通脆弱性タイプ一覧 (Common Weakness Enumeration, CWE) からの脱却
 
-Mitre の [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/) はソフトウェアのさまざまなセキュリティ脆弱性をマップする便利な方法です。特定の CWE はカテゴリのみでありマッピングに使用すべきではないなど使用が困難であったり、特定の既存の要件を一つの CWE にマップするのは困難であったり、ASVS のバージョン 4.0 では緩いマッピングや不正確なマッピングがあったという事実もあります。
+MITRE の [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/) はソフトウェアのさまざまなセキュリティ脆弱性をマップする便利な方法です。特定の CWE はカテゴリのみでありマッピングに使用すべきではないなど使用が困難であったり、特定の既存の要件を一つの CWE にマップするのは困難であったり、ASVS のバージョン 4.0 では緩いマッピングや不正確なマッピングがあったという事実もあります。
 
 解決策は CWE (およびその他のマッピング) を削除し、代わりに ASVA を他のさまざまな OWASP プロジェクトや外部標準にマップする OWASP Common Requirement Enumeration (CRE) プロジェクトにマップすることを目指しました。
 
