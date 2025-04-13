@@ -6,11 +6,9 @@
 
 [NIST SP 800-63](https://pages.nist.gov/800-63-3/)  は最新のエビデンスベースの標準であり、適用可能性とは関係なく、利用可能な最適なアドバイスを表しています。この標準は世界中のすべての組織に役立ちますが、特に米国の代理店および米国の代理店を扱う組織に関連します。
 
-この章では、要件を準備する際に NIST SP 800-63B "Digital Identity Guidelines - Authentication and Lifecycle Management" として知られる NIST 標準の二番目のセクションを参照することが役立ちました。
+この章の要件は標準 (NIST SP 800-63B "Digital Identity Guidelines - Authentication and Lifecycle Management") の二番目のセクションに基づいていますが、この章の焦点は一般的な脅威と頻繁に悪用される認証の弱点にあり、標準のすべてのポイントを包括的に網羅するものではありません。NIST SP 800-63 への完全な準拠が必要な場合は、NIST SP 800-63 を参照してください。
 
-ただし、NIST SP 800-63 の用語は時として異なることがあるため、可能な限り一般的に理解されている用語を使用して、章をより明確にするように努めました。
-
-つまり、この章では選択した NIST SP 800-63B コントロールのサブセットに準拠していますが、一般的な脅威と頻繁に悪用される認証の弱点に焦点を当てています。完全な NIST SP 800-63 準拠が必要な場合は、NIST SP 800-63 を参照してください。
+また、NIST SP 800-63 の用語は時として異なることがあり、この章ではより一般的に理解されている用語をよく使用して、わかりやすさを高めています。
 
 ## V6.1 認証ドキュメント
 
@@ -24,9 +22,9 @@
 
 ## V6.2 パスワードセキュリティ
 
-NIST SP 800-63 により「記憶された秘密」と呼ばれるパスワードには、パスワード、PIN、ロック解除パターン、正しい子猫や他の画像要素の選択、およびパスフレーズがあります。それらは一般に「知識認証 (something you know)」とみなされ、多くの場合に単要素認証メカニズムとして使用されます。L2 以降では、多要素認証メカニズムが必要となり、パスワードはその要素の一つとなることがあります。
+NIST SP 800-63 により「記憶された秘密 (Memorized Secrets)」と呼ばれるパスワードには、パスワード、パスフレーズ、PIN、ロック解除パターン、および正しい子猫や他の画像要素の選択があります。それらは一般に「知識認証 (something you know)」とみなされ、多くの場合に単要素認証メカニズムとして使用されます。
 
-そのため、このセクションはパスワードが安全に作成され処理されるようにするための要件を含みます。
+そのため、このセクションはパスワードが安全に作成され処理されるようにするための要件を含みます。要件のほとんどはそのレベルで最も重要であるため L1 となっています。L2 以降では、多要素認証メカニズムが必要となり、パスワードはその要素の一つとなることがあります。
 
 このセクションの要件は主に [NIST のガイダンス](https://pages.nist.gov/800-63-3/sp800-63b.html) の [&sect; 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver) に関連しています。
 
@@ -38,23 +36,18 @@ NIST SP 800-63 により「記憶された秘密」と呼ばれるパスワー�
 | **6.2.4** | アカウント登録またはパスワード変更時に送信されるパスワードは、アプリケーションのパスワードポリシー (最小長など) に合致する、少なくとも上位 3000 件の利用可能な一連のパスワードと照合されている。 | 1 | v5.0.be-2.1.7 |
 | **6.2.5** | パスワードはどのような構成でも使用でき、許可される文字の種類を制限するルールはない。大文字、小文字、数字、特殊文字の最低数についての要求を設けてはいけない。 | 1 | v5.0.be-2.1.9 |
 | **6.2.6** | パスワード入力フィールドは type=password を使用して、そのエントリをマスクしている。アプリケーションはユーザがマスクしたパスワード全体または最後に入力したパスワードの文字を一時的に閲覧できるようにしている。 | 1 | v5.0.be-2.1.12 |
-| **6.2.7** | パスワード入力に対して、ペースト、ブラウザのパスワードヘルパー、および外部パスワードマネージャが使用できる。 | 1 | v5.0.be-2.1.11 |
+| **6.2.7** | 「貼り付け」機能、ブラウザのパスワードヘルパー、および外部のパスワードマネージャが許可されている。 | 1 | v5.0.be-2.1.11 |
 | **6.2.8** | アプリケーションは切り捨てや大文字小文字の変換などの修正をなにも加えずに、ユーザーから受け取ったパスワードを正確に検証している。 | 2 | v5.0.be-2.1.3 |
 | **6.2.9** | 64 文字以上のパスワードが許可されている。 | 2 | v5.0.be-2.1.2 |
 | **6.2.10** | ユーザのパスワードは侵害されたことが判明するか、ユーザーが変更するまで有効のままである。アプリケーションは定期的なクレデンシャルのローテーションを要求してはいけない。 | 2 | v5.0.be-2.1.10 |
 | **6.2.11** | コンテキスト固有の単語の文書化されたリストを使用して、推測されやすいパスワードが作成されることを防いでいる。 | 2 | v5.0.be-2.1.14 |
 | **6.2.12** | アカウント登録またはパスワード変更時に送信されるパスワードは一連の侵害されたパスワードと照合されている。 | 3 | v5.0.be-2.1.13 |
 
-要件 6.2.4 でよく使用されるパスワードのソースとして考えられるものは以下のとおりです。
-
-* <https://github.com/danielmiessler/SecLists/tree/master/Passwords>
-* <https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt>
-
 ## V6.3 一般的な認証セキュリティ
 
-このセクションは認証メカニズムのセキュリティに関する一般的な要件を含むほか、L2 では多要素認証を要求し、L3 ではハードウェアベースのメカニズムをサポートするなど、レベルごとにさまざまな期待事項を規定しています。
+このセクションは認証メカニズムのセキュリティに関する一般的な要件を含むほか、L2 では多要素認証を要求し、Fast IDentity Online (FIDO) Alliance が提供する標準など、L3 ではハードウェアベースのメカニズムをサポートするなど、レベルごとにさまざまな期待事項を規定しています。
 
-NIST SP 800-63 は電子メールを認証メカニズムとして [受け入れられない (not acceptable)](https://pages.nist.gov/800-63-FAQ/#q-b11) としていることに注意してください。
+リリース時点でにおいて、NIST SP 800-63 は電子メールを認証メカニズムとして [受け入れられない (not acceptable)](https://pages.nist.gov/800-63-FAQ/#q-b11) としていることに注意してください ([アーカイブされたコピー](https://web.archive.org/web/20250330115328/https://pages.nist.gov/800-63-FAQ/#q-b11))。
 
 このセクションの要件は [NIST のガイダンス](https://pages.nist.gov/800-63-3/sp800-63b.html) の [&sect; 4.2.1](https://pages.nist.gov/800-63-3/sp800-63b.html#421-permitted-authenticator-types), [&sect; 4.3.1](https://pages.nist.gov/800-63-3/sp800-63b.html#431-permitted-authenticator-types), [&sect; 5.2.2](https://pages.nist.gov/800-63-3/sp800-63b.html#522-rate-limiting-throttling), [&sect; 6.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#-612-post-enrollment-binding) などのさまざまなセクションに関連しています。
 
@@ -94,11 +87,11 @@ NIST SP 800-63 は電子メールを認証メカニズムとして [受け入れ
 * 時間ベースのワンタイムパスワード (TOTP)
 * 経路外メカニズム
 
-ルックアップシークレットはトランザクション認証番号 (TAN) 、ソーシャルメディアリカバリーコードなどの、事前に生成されたシークレットコードのリスト、またはランダム値のセットを含むグリッドです。このタイプの認証メカニズムは、コードがランダムであり、どこかに保存しておく必要があるため、「所有物認証 (something you have)」とみなされます。
+ルックアップシークレットはトランザクション認証番号 (TAN) 、ソーシャルメディアリカバリーコードなどの、事前に生成されたシークレットコードのリスト、またはランダム値のセットを含むグリッドです。このタイプの認証メカニズムは、コードが意図的に記憶しにくいものであり、どこかに保存しておく必要があるため、「所有物認証 (something you have)」とみなされます。
 
 時間ベースのワンタイムパスワード (Time-based, One-time Password, TOTP) は継続的に変化する疑似ランダムワンタイムチャレンジを表示する物理トークンまたはソフトトークンです。このタイプの認証メカニズムは「所有物認証 (something you have)」とみなされます。多要素トークンは単要素 TOTP と似ていますが、有効な PIN コード、生体認証ロック解除、USB 挿入または NFC ペアリングまたは追加の値 (トランザクション署名計算機など) を入力して最終 OTP を作成する必要があります。
 
-経路外メカニズムの詳細については、以降のセクションで説明します。
+経路外メカニズムの詳細については、次のセクションで説明します。
 
 このセクションの要件は主に [NIST のガイダンス](https://pages.nist.gov/800-63-3/sp800-63b.html) の [&sect; 5.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#-512-look-up-secrets), [&sect; 5.1.3](https://pages.nist.gov/800-63-3/sp800-63b.html#-513-out-of-band-devices), [&sect; 5.1.4.2](https://pages.nist.gov/800-63-3/sp800-63b.html#5142-single-factor-otp-verifiers), [&sect; 5.1.5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#5152-multi-factor-otp-verifiers), [&sect; 5.2.1](https://pages.nist.gov/800-63-3/sp800-63b.html#521-physical-authenticators), [&sect; 5.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#523-use-of-biometrics)  に関連しています。
 
@@ -115,9 +108,9 @@ NIST SP 800-63 は電子メールを認証メカニズムとして [受け入れ
 
 ## V6.6 経路外認証メカニズム
 
-これは一般的に認証サーバが安全なセカンダリチャネルを介して物理デバイスと通信します。たとえばモバイルデバイスへのプッシュ通知や、SMS 経由でユーザに送信されるワンタイムパスワード (OTP) などがあります。このタイプの認証メカニズムは「所有物認証 (something you have)」とみなされます。
+通常、これは認証サーバが安全なセカンダリチャネルを介して物理デバイスと通信します。たとえば、モバイルデバイスへのプッシュ通知などがあります。このタイプの認証メカニズムは「所有物認証 (something you have)」とみなされます。
 
-電子メールや VOIP などの安全でない経路外認証メカニズムは許可されていません。PSTN および SMS 認証は現在 NIST により [「制限された」認証メカニズム ("restricted" authentication mechanism)](https://pages.nist.gov/800-63-FAQ/#q-b01) と考えられており、廃止対象であり、プッシュ通知などを推奨しています。電話または SMS の経路外認証を使用する必要がある場合には、NIST SP 800-63B [&sect; 5.1.3.3](https://pages.nist.gov/800-63-3/sp800-63b.html#-5133-authentication-using-the-public-switched-telephone-network) を参照してください。
+電子メールや VOIP などの安全でない経路外認証メカニズムは許可されていません。PSTN および SMS 認証は現在 NIST により [「制限された」認証メカニズム ("restricted" authentication mechanism)](https://pages.nist.gov/800-63-FAQ/#q-b01) と考えられており、廃止対象であり、プッシュ通知などを推奨しています。NIST SP 800-63B [&sect; 5.1.3.3](https://pages.nist.gov/800-63-3/sp800-63b.html#-5133-authentication-using-the-public-switched-telephone-network) では、電話または SMS の経路外認証を絶対に使用する必要がある場合のガイダンスを提供しています。
 
 | # | 説明 | レベル | #v5.0.be |
 | :---: | :--- | :---: | :---: |
@@ -156,12 +149,11 @@ NIST SP 800-63 は電子メールを認証メカニズムとして [受け入れ
 詳しくは以下の情報を参照してください。
 
 * [NIST SP 800-63 - Digital Identity Guidelines](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf)
-* [NIST SP 800-63A - Enrollment and Identity Proofing](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63a.pdf)
 * [NIST SP 800-63B - Authentication and Lifecycle Management](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf)
-* [NIST SP 800-63C - Federation and Assertions](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63c.pdf)
 * [NIST SP 800-63 FAQ](https://pages.nist.gov/800-63-FAQ/)
 * [OWASP Testing Guide 4.0: Testing for Authentication](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/04-Authentication_Testing/README.html)
 * [OWASP Cheat Sheet - Password storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 * [OWASP Cheat Sheet - Forgot password](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
 * [OWASP Cheat Sheet - Choosing and using security questions](https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html)
 * [CISA Guidance on "Number Matching"](https://www.cisa.gov/sites/default/files/publications/fact-sheet-implement-number-matching-in-mfa-applications-508c.pdf)
+* [Details on the FIDO Alliance](https://fidoalliance.org/)
