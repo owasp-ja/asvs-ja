@@ -6,24 +6,17 @@
 
 この章で推進される一般的な概念は以下のとおりです。
 
-* コンテンツの機密性に関わらず、TLS または強力な暗号を必要としている。
-* 以下のような最新のガイダンスに従っている。
-    * 構成に関する勧告
-    * 優先アルゴリズムと暗号方式
-* 最後の手段を除いて、脆弱または近い将来廃止予定のアルゴリズムや暗号方式を避けている。
-* 非推奨または既知の安全でないアルゴリズムや暗号方式を無効にしている。
+* 通信が外部で暗号化され、理想的には内部でも暗号化されていることを確保すること。
+* 優先アルゴリズムや暗号方式など、最新のガイダンスを使用して暗号メカニズムを構成すること。
+* 署名された証明書を使用して、通信が不正な第三者に傍受されていないことをチェックすること。
 
-これらの要件を満たすために:
-
-* 安全な TLS 構成に関する業界の推奨事項は、(多くの場合、既存のアルゴリズムや暗号方式の壊滅的な破綻が原因で) 頻繁に変更されるため、最新の状態に保ちます。
-* 最新バージョンの TLS 構成レビューツールを使用して、優先順位とアルゴリズム選択を設定します。
-* 構成を定期的にチェックして、安全な通信が常に存在し有効であることを確認します。
-
-このドキュメントでは、一般的な原則とベストプラクティスを概説するだけでなく、[付録 V](./0x97-Appendix-V_Cryptography.md) で暗号強度に関するより詳細な技術情報も提供しています。
+ASVS では、一般的な原則とベストプラクティスを概説するだけでなく、[付録 V](./0x97-Appendix-V_Cryptography.md) で暗号強度に関するより詳細な技術情報も提供しています。
 
 ## V12.1 一般的な TLS セキュリティガイダンス
 
-安全な TLS 構成と最新のツールを使用して構成を定期的に確認します。ワイルドカード TLS 証明書の使用は本質的に安全ではありませんが、所有するすべての環境 (実稼働、ステージング、開発、テストなど) にわたって展開される証明書の侵害は、それを使用するアプリケーションのセキュリティ態勢の侵害につながる可能性があります。可能であれば、異なる環境での個別の TLS 証明書の適切な保護、管理、使用を採用する必要があります。
+このセクションは TLS 通信を保護する方法についての最初のガイダンスを提供します。最新のツールを使用して TLS 構成を継続的にレビューする必要があります。
+
+ワイルドカード TLS 証明書の使用は本質的に安全ではありませんが、所有するすべての環境 (実稼働、ステージング、開発、テストなど) にわたって展開される証明書の侵害は、それを使用するアプリケーションのセキュリティ態勢の侵害につながる可能性があります。可能であれば、異なる環境での個別の TLS 証明書の適切な保護、管理、使用を採用する必要があります。
 
 | # | 説明 | レベル | #v5.0.be |
 | :---: | :--- | :---: | :---: |
@@ -58,5 +51,7 @@
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP – TLS Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html)
-* セクション 9.4 への準拠を達成する理想的な方法は [Mozilla's Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS) などのガイドを参照したり、[既知の適切な構成をつくり](https://mozilla.github.io/server-side-tls/ssl-config-generator/)、既存で最新の TLS 評価ツールを使用して望ましいレベルのセキュリティを確保することです。
+* [OWASP - Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html)
+* [Mozilla's Server Side TLS configuration guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
+* [Mozilla's tool to generate known good TLS configurations](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+* [O-Saft - OWASP Project to validate TLS configuration](https://owasp.org/www-project-o-saft/)
