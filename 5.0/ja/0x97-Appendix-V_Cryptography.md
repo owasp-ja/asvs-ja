@@ -176,11 +176,11 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 
 すべての鍵交換スキームに対して 112 ビット以上のセキュリティ強度が確保されていなければならず (MUST)、その実装は以下の表のパラメータ選択に従わなければなりません (MUST)。
 
-| スキーム | ドメインパラメータ | ステータス |
-|--|--|--|
-| RSA | k >= 3072 | A |
-| Finite Field Diffie-Hellman (FFDH) | L >= 3072 & N >= 256 | A |
-| Elliptic Curve Diffie-Hellman (ECDH) | f >= 256-383 | A |
+| スキーム | ドメインパラメータ | 前方秘匿性 | ステータス |
+|--|--|--|--|
+| Finite Field Diffie-Hellman (FFDH) | L >= 3072 & N >= 256 | Yes | A |
+| Elliptic Curve Diffie-Hellman (ECDH) | f >= 256-383 | Yes | A |
+| Encrypted key transport with RSA-PKCS#1 v1.5 | k >= 3072 | No | L |
 
 ここでのパラメータは以下のとおりです:
 
