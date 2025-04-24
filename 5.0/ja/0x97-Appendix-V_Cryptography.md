@@ -13,6 +13,13 @@
 * 暗号分野における新たな進化
 * 何らかの規制への準拠
 
+## 暗号インベントリとドキュメント (V11.1)
+
+アルゴリズム、鍵、証明書などの暗号資産を定期的に発見し、インベントリ化し、評価することが重要です。レベル 3 では、これにはアプリケーションでの暗号の使用を発見するための静的スキャンおよび動的スキャンの使用を含むべきです。SAST や DAST などのツールがこれに役立つかもしれませんが、より包括的なカバレッジを得るには専用のツールが必要になるかもしれません。フリーウェアのツールの例には以下のものがあります。
+
+* [CryptoMon - Network Cryptography Monitor - using eBPF, written in python](https://github.com/Santandersecurityresearch/CryptoMon)
+* [Cryptobom Forge Tool: Generating Comprehensive CBOMs from CodeQL Outputs](https://github.com/Santandersecurityresearch/cryptobom-forge)
+
 ## アルゴリズム (V11.2)
 
 ## 暗号パラメータの等価な強度
@@ -249,7 +256,7 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 | MD5-based KDFs | [RFC 1321](https://www.rfc-editor.org/info/rfc1321)                                | D      |
 | SHA-1-based KDFs | [RFC 3174](https://www.rfc-editor.org/info/rfc3174) & [RFC 6194](https://www.rfc-editor.org/info/rfc6194) | D      |
 
-### ポスト量子暗号標準
+## ポスト量子暗号標準
 
 PQC 実装は、堅牢化されたコードや実装リファレンスはまだ最低限しか存在しないため、[FIPS-203](https://csrc.nist.gov/pubs/fips/203/ipd)/[204](https://csrc.nist.gov/pubs/fips/204/ipd)/[205](https://csrc.nist.gov/pubs/fips/205/ipd) に準拠していなければなりません。 https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
 
