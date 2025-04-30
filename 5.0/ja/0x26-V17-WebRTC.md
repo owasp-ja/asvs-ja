@@ -40,13 +40,13 @@ WebRTC 市場は三つのセグメントに大別できます。
 | # | 説明 | レベル | #v5.0.be |
 | :---: | :--- | :---: | :---: |
 | **17.2.1** | データグラムトランスポート層セキュリティ (Datagram Transport Layer Security, DTLS) 証明書の鍵は非公開であり、既存の製品やオープンソースプロジェクトで再利用されておらず、配布や漏洩がないことを確認している。 | 2 | v5.0.be-53.2.1 |
-| **17.2.2** | メディアサーバは、強力で安全な DTLS 暗号スイートと DTLS-SRTP 保護プロファイルを使用およびサポートするように構成されている。 | 2 | v5.0.be-53.2.2 |
+| **17.2.2** | メディアサーバは、強力で安全なデータグラムトランスポート層セキュリティ (Datagram Transport Layer Security, DTLS) 暗号スイートと、セキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol) の鍵を確立するための DTLS 拡張 (DTLS-SRTP) 用の安全な保護プロファイルを使用およびサポートするように構成されている。 | 2 | v5.0.be-53.2.2 |
 | **17.2.3** | セキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol, SRTP) 認証はメディアサーバで確認されており、リアルタイムトランスポートプロトコル (Real-time Transport Protocol, RTP) インジェクション攻撃によるサービス拒否状態や、メディアストリームへの音声または映像メディアの挿入を防止している。 | 2 | v5.0.be-53.2.4 |
-| **17.2.4** | 不正な SRTP パケットに遭遇した場合でも、メディアサーバは受信メディアトラフィックの処理を継続できる。 | 2 | v5.0.be-53.2.7 |
+| **17.2.4** | 不正なセキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol, SRTP) パケットに遭遇した場合でも、メディアサーバは受信メディアトラフィックの処理を継続できる。 | 2 | v5.0.be-53.2.7 |
 | **17.2.5** | 正規のユーザからセキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol, SRTP) パケットが大量送信されている間も、メディアサーバは受信メディアトラフィックの処理を継続できる。 | 3 | v5.0.be-53.2.5 |
-| **17.2.6** | メディアサーバは "WebRTC DTLS ClientHello Race Condition" 脆弱性の影響を受けておらず、メディアサーバが脆弱性を持つことを公表しているかどうかを確認し、競合状態テストを実行している。 | 3 | v5.0.be-53.2.3 |
+| **17.2.6** | メディアサーバはデータグラムトランスポート層セキュリティ (Datagram Transport Layer Security, DTLS) での "ClientHello" Race Condition 脆弱性の影響を受けておらず、メディアサーバが脆弱性を持つことを公表しているかどうかを確認し、競合状態テストを実行している。 | 3 | v5.0.be-53.2.3 |
 | **17.2.7** | 正規のユーザからセキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol, SRTP) パケットが大量送信されている間も、メディアサーバに関連付けられた音声や映像のレコーディングメカニズムは受信メディアトラフィックの処理を継続できる。 | 3 | v5.0.be-53.2.6 |
-| **17.2.8** | DTLS 証明書は SDP フィンガープリント属性と照合され、チェックに失敗した場合はメディアストリームを終了して、メディアストリームの真正性を確保している。 | 3 | v5.0.be-53.2.8 |
+| **17.2.8** | データグラムトランスポート層セキュリティ (Datagram Transport Layer Security, DTLS) 証明書はセキュアリアルタイムトランスポートプロトコル (Secure Real-time Transport Protocol, SRTP) フィンガープリント属性と照合され、チェックに失敗した場合はメディアストリームを終了して、メディアストリームの真正性を確保している。 | 3 | v5.0.be-53.2.8 |
 
 ## V17.3 シグナリング
 
@@ -63,8 +63,11 @@ WebRTC 市場は三つのセグメントに大別できます。
 
 詳しくは以下の情報を参照してください。
 
+* WebRTC DTLS ClientHello DoS については [セキュリティ専門家を対象とした Enable Security のブログ投稿](https://www.enablesecurity.com/blog/novel-dos-vulnerability-affecting-webrtc-media-servers/) と、関連する [WebRTC 開発者を対象としたホワイトペーパー](https://www.enablesecurity.com/blog/webrtc-hello-race-conditions-paper/) に詳しく記載されています。
+* [RFC 3550 - RTP: A Transport Protocol for Real-Time Applications](https://www.rfc-editor.org/rfc/rfc3550)
+* [RFC 3711 - The Secure Real-time Transport Protocol (SRTP)](https://datatracker.ietf.org/doc/html/rfc3711)
+* [RFC 5764 - Datagram Transport Layer Security (DTLS) Extension to Establish Keys for the Secure Real-time Transport Protocol (SRTP))](https://datatracker.ietf.org/doc/html/rfc5764)
 * [RFC 8825 - Overview: Real-Time Protocols for Browser-Based Applications](https://www.rfc-editor.org/info/rfc8825)
 * [RFC 8826 - Security Considerations for WebRTC](https://www.rfc-editor.org/info/rfc8826)
 * [RFC 8827 - WebRTC Security Architecture](https://www.rfc-editor.org/info/rfc8827)
-* WebRTC DTLS ClientHello DoS については [セキュリティ専門家を対象とした Enable Security のブログ投稿](https://www.enablesecurity.com/blog/novel-dos-vulnerability-affecting-webrtc-media-servers/) と、関連する [WebRTC 開発者を対象としたホワイトペーパー](https://www.enablesecurity.com/blog/webrtc-hello-race-conditions-paper/) に詳しく記載されています。
 * [DTLS-SRTP Protection Profiles](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml)
