@@ -27,10 +27,10 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V15: セキュアコーディングアーキテクチャと実装](5.0/ja/0x24-V15-Coding.md)
 * [V16: セキュリティログ記録とエラー処理](5.0/ja/0x25-V16-Logging-and-Error-Handling.md)
 * [V17: WebRTC](5.0/ja/0x26-V17-WebRTC.md)
-* [Appendix A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
-* [Appendix B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
-* [Appendix V: 暗号化](5.0/ja/0x97-Appendix-V_Cryptography.md)
-* [Appendix X: 推奨事項](5.0/ja/0x99-Appendix-X_Recommendations.md)
+* [付録 A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
+* [付録 B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
+* [付録 V: 暗号化](5.0/ja/0x97-Appendix-V_Cryptography.md)
+* [付録 X: 推奨事項](5.0/ja/0x99-Appendix-X_Recommendations.md)
 
 ### 参考資料
 
