@@ -24,7 +24,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V12: 安全な通信](5.0/ja/0x21-V12-Secure-Communication.md)
 * [V13: 構成](5.0/ja/0x22-V13-Configuration.md)
 * [V14: データ保護](5.0/ja/0x23-V14-Data-Protection.md)
-* [V15: セキュアコーディングとアーキテクチャ](5.0/ja/0x24-V15-Coding.md)
+* [V15: セキュアコーディングとアーキテクチャ](5.0/ja/0x24-V15-Secure-Coding-and-Architecture.md)
 * [V16: セキュリティログ記録とエラー処理](5.0/ja/0x25-V16-Logging-and-Error-Handling.md)
 * [V17: WebRTC](5.0/ja/0x26-V17-WebRTC.md)
 * [付録 A: 用語集](5.0/ja/0x90-Appendix-A_Glossary.md)
