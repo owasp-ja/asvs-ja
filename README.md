@@ -21,7 +21,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [V9: 自己完結型トークン](5.0/ja/0x18-V9-Self-contained-Tokens.md)
 * [V10: OAuth と OIDC](5.0/ja/0x19-V10-OAuth-and-OIDC.md)
 * [V11: 暗号化](5.0/ja/0x20-V11-Cryptography.md)
-* [V12: 安全な通信](5.0/ja/0x21-V12-Communications.md)
+* [V12: 安全な通信](5.0/ja/0x21-V12-Secure-Communication.md)
 * [V13: 構成](5.0/ja/0x22-V13-Config.md)
 * [V14: データ保護](5.0/ja/0x23-V14-Data-Protection.md)
 * [V15: セキュアコーディングとアーキテクチャ](5.0/ja/0x24-V15-Coding.md)
