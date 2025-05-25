@@ -85,7 +85,7 @@ HMAC-DRBG または Hash-DRBG で使用される基礎となるハッシュ関�
 
 ### AES 暗号モード
 
-現代の暗号はさまざまな目的でさまざまなモード、特に AES を使用しています。ここでは AES 暗号モードの要件について説明します。一部の暗号モードはディスクレベルのブロック暗号にのみ承認されています。
+現代の暗号はさまざまな目的でさまざまなモード、特に AES を使用しています。AES 暗号モードの要件をこちらで説明しています。一部の AES モードはディスクレベルのブロック暗号にのみ承認されています。
 
 | モード | 認証済み | リファレンス | ステータス | 制限 |
 |--|--|--|--|--|
@@ -235,20 +235,34 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 
 ### Diffie-Hellman グループ
 
-以下のグループが承認されており、Diffie-Hellman KEX の実装に使用しなければなりません (MUST)。IKEv2 グループはリファレンスとして提供されています ([NIST SP 800-77](https://csrc.nist.gov/pubs/sp/800/77/r1/final))。同等のグループが他のプロトコルで使用されるかもしれません。このリストは最も強力なものから最も弱いものの順に並べられています。セキュリティ強度は [NIST SP 800-56A](https://csrc.nist.gov/pubs/sp/800/56/a/r3/final), Appendix D および [NIST SP 800-57 Part 1 Rev.5](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) に記載されています。
+Diffie-Hellman 鍵交換の実装には以下のグループが承認されています。セキュリティ強度は [NIST SP 800-56A](https://csrc.nist.gov/pubs/sp/800/56/a/r3/final), Appendix D および [NIST SP 800-57 Part 1 Rev.5](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) に記載されています。
 
-| グループ | スキーム | パラメータ | セキュリティビット | ステータス |
-|--|--|--|--|--|
-| 21 | ECC | 521-bit random ECP group | 260 | A |
-| 32 | ECC | Curve448 | 224 | A |
-| 18 | MODP | 8192-bit MODP Group | 192 < 200 | A |
-| 20 | ECC | 384-bit random ECP group | 192 | A |
-| 17 | MODP | 6144-bit MODP Group | 128 < 176 | A |
-| 16 | MODP | 4096-bit MODP Group | 128 < 152 | A |
-| 31 | ECC | Curve25519 | 128 | A |
-| 19 | ECC | 256-bit random ECP group | 128 | A |
-| 15 | MODP | 3072-bit MODP Group | 128 | A |
-| 14 | MODP | 2048-bit MODP Group | 112 | A |
+| グループ         | ステータス |
+|------------------|------------|
+| P-224, secp224r1 | A      |
+| P-256, secp256r1 | A      |
+| P-384, secp384r1 | A      |
+| P-521, secp521r1 | A      |
+| K-233, sect233k1 | A      |
+| K-283, sect283k1 | A      |
+| K-409, sect409k1 | A      |
+| K-571, sect571k1 | A      |
+| B-233, sect233r1 | A      |
+| B-283, sect283r1 | A      |
+| B-409, sect409r1 | A      |
+| B-571, sect571r1 | A      |
+| Curve448         | A      |
+| Curve25519       | A      |
+| MODP-2048        | A      |
+| MODP-3072        | A      |
+| MODP-4096        | A      |
+| MODP-6144        | A      |
+| MODP-8192        | A      |
+| ffdhe2048        | A      |
+| ffdhe3072        | A      |
+| ffdhe4096        | A      |
+| ffdhe6144        | A      |
+| ffdhe8192        | A      |
 
 ## メッセージ認証コード (MAC)
 
