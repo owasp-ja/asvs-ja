@@ -7,7 +7,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [ヘッダ](5.0/ja/0x00-Header.md)
 * [口絵](5.0/ja/0x01-Frontispiece.md)
 * [序文](5.0/ja/0x02-Preface.md)
-* [ASVS の使い方](5.0/ja/0x03-Using-ASVS.md)
+* [ASVS とは何か？](5.0/ja/0x03-What-is-the-ASVS.md)
 * [監査と認証](5.0/ja/0x04-Assessment_and_Certification.md)
 * [バージョン 4.0 ユーザ向けのガイダンス](5.0/ja/0x05-For-Users-Of-4.0.md)
 * [V1: エンコーディングとサニタイゼーション](5.0/ja/0x10-V1-Encoding-and-Sanitization.md)
