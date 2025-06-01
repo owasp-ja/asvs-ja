@@ -9,7 +9,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [序文](5.0/ja/0x02-Preface.md)
 * [ASVS とは何か？](5.0/ja/0x03-What-is-the-ASVS.md)
 * [監査と認証](5.0/ja/0x04-Assessment_and_Certification.md)
-* [バージョン 4.0 ユーザ向けのガイダンス](5.0/ja/0x05-For-Users-Of-4.0.md)
+* [v4.x と比較した変更点](5.0/ja/0x05-For-Users-Of-4.0.md)
 * [V1: エンコーディングとサニタイゼーション](5.0/ja/0x10-V1-Encoding-and-Sanitization.md)
 * [V2: バリデーションとビジネスロジック](5.0/ja/0x11-V2-Validation-and-Business-Logic.md)
 * [V3: Web フロントエンドセキュリティ](5.0/ja/0x12-V3-Web-Frontend-Security.md)
