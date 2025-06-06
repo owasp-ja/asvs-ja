@@ -4,7 +4,6 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 
 ## OWASP アプリケーションセキュリティ検証標準 5.0 邦訳版
 
-* [ヘッダ](5.0/ja/0x00-Header.md)
 * [口絵](5.0/ja/0x01-Frontispiece.md)
 * [序文](5.0/ja/0x02-Preface.md)
 * [ASVS とは何か？](5.0/ja/0x03-What-is-the-ASVS.md)
