@@ -223,7 +223,7 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 |--|--|--|--|
 | Finite Field Diffie-Hellman (FFDH) | L >= 3072 & N >= 256 | Yes | A |
 | Elliptic Curve Diffie-Hellman (ECDH) | f >= 256-383 | Yes | A |
-| Encrypted key transport with RSA-PKCS#1 v1.5 | k >= 3072 | No | L |
+| Encrypted key transport with RSA-PKCS#1 v1.5 | | No | D |
 
 ここでのパラメータは以下のとおりです:
 
