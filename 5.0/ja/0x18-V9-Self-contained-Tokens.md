@@ -33,4 +33,4 @@ OAuth と OIDC の具体的な要件については専用の章で説明しま�
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Cheatsheet - JSON Web Token Cheat Sheet for Java](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html) (なお役に立つ一般的なガイダンスがあります)
+* [OWASP JSON Web Token Cheat Sheet for Java Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html) (なお役に立つ一般的なガイダンスがあります)
