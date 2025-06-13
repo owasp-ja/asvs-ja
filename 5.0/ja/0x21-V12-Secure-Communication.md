@@ -53,5 +53,5 @@ ASVS では、一般的な原則とベストプラクティスを概説するだ
 
 * [OWASP - Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html)
 * [Mozilla's Server Side TLS configuration guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
-* [Mozilla's tool to generate known good TLS configurations](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+* [Mozilla's tool to generate known good TLS configurations](https://ssl-config.mozilla.org/)
 * [O-Saft - OWASP Project to validate TLS configuration](https://owasp.org/www-project-o-saft/)
