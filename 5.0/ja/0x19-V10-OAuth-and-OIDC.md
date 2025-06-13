@@ -143,7 +143,7 @@ ID トークンフロー (コードフローではない) を使用する場合�
 OAuth について詳しくは以下の情報を参照してください。
 
 * [oauth.net](https://oauth.net/)
-* [OWASP Cheat Sheet: OAuth 2.0 Protocol Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+* [OWASP OAuth 2.0 Protocol Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
 
 ASVS の OAuth 関連の要件については、以下の発行済みおよびドラフト状態の RFC が使用されます。
 
