@@ -6,7 +6,7 @@
 
 ## 著作権とライセンス
 
-Version 5.0 (Bleeding Edge version), 2025
+Version 5.0.0, May 2025
 
 ![license](../images/license.png)
 
@@ -32,14 +32,15 @@ Copyright © 2008-2025 The OWASP Foundation.
 
 ## その他の主要執筆者
 
-|                 |                 |
-|---------------- |---------------- |
-| Sjoerd Langkemper | Isaac Lewis   |
+|                   |                   |
+|-------------------|-------------------|
+| Sjoerd Langkemper | Isaac Lewis       |
+| Mark Carney       | Sandro Gauci      |
 
 ## その他の執筆者およびレビュー担当者
 
-\<\<TABLE REMOVED PENDING AN UPDATE>>
+付録 E にその他の執筆者のリストがあります。
 
-クレジットが上記の 5.x クレジットリストにない場合は、将来の 5.x アップデートで認識されるように GitHub のチケットを記録してください。
+クレジットが 5.x クレジットリストにない場合は、将来の 5.x アップデートで認識されるように GitHub のチケットを記録してください。
 
 アプリケーションセキュリティ検証標準は ASVS 1.0 (2008) から 4.0 (2019) に至る関係者の成果に基づいて構築しています。現在も ASVS に残っている構成と検証項目の多くはもともと Andrew van der Stock, Mike Boberski, Jeff Williams, Dave Wichers をはじめとする多くの執筆者によって書かれました。これまで貢献してくださったすべての皆様に感謝します。以前の執筆者の包括的なリストについては、以前の各バージョンを確認してください。
