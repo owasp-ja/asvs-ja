@@ -30,6 +30,7 @@ This is draft for Japanese translation of the [OWASP Application Security Verifi
 * [付録 B: 参考情報](5.0/ja/0x91-Appendix-B_References.md)
 * [付録 C: 暗号化標準](5.0/ja/0x92-Appendix-C_Cryptography.md)
 * [付録 D: 推奨事項](5.0/ja/0x93-Appendix-D_Recommendations.md)
+* [付録 E: 貢献者](5.0/ja/0x94-Appendix-E_Contributors.md)
 
 ### 参考資料
 
