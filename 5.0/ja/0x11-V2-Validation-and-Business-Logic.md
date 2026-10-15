@@ -66,7 +66,7 @@
 
 詳しくは以下の情報を参照してください。
 
-* [OWASP Web Security Testing Guide: Input Validation Testing](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README.html)
+* [OWASP Web Security Testing Guide: Input Validation Testing](https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/07-Input_Validation_Testing/)
 * [OWASP Web Security Testing Guide: Business Logic Testing](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/10-Business_Logic_Testing/README)
 * [OWASP Automated Threats to Web Applications](https://owasp.org/www-project-automated-threats-to-web-applications/) の使用など、アンチオートメーションはさまざまな方法で実現できます。
 * [OWASP Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
