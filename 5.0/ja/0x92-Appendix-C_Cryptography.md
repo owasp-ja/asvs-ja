@@ -50,7 +50,7 @@
 
 | 名称 | バージョン/リファレンス | 備考 | ステータス |
 |:---|:----|:----|:-:|
-| `/dev/random` | Linux 4.8 以降 [(2016 年 10 月)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=818e607b57c94ade9824dad63a96c2ea6b21baf3)、iOS、Android、その他の Linux ベースの POSIX オペレーティングシステムにもあります。[RFC7539](https://datatracker.ietf.org/doc/html/rfc7539) に基づいています。 | ChaCha20 ストリームを利用します。iOS [`SecRandomCopyBytes`](https://developer.apple.com/documentation/security/secrandomcopybytes(_:_:_:)?language=objc) および Android [`Secure Random`](https://developer.android.com/reference/java/security/SecureRandom) にあり、それぞれに正しい設定が提供されています。 | A |
+| `/dev/random` | Linux 4.8 以降 [(2016 年 10 月)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=818e607b57c94ade9824dad63a96c2ea6b21baf3)、iOS、Android、その他の Linux ベースの POSIX オペレーティングシステムにもあります。[RFC8439](https://datatracker.ietf.org/doc/html/rfc8439) に基づいています。 | ChaCha20 ストリームを利用します。iOS [`SecRandomCopyBytes`](https://developer.apple.com/documentation/security/secrandomcopybytes(_:_:_:)?language=objc) および Android [`Secure Random`](https://developer.android.com/reference/java/security/SecureRandom) にあり、それぞれに正しい設定が提供されています。 | A |
 | `/dev/urandom` | ランダムデータを提供するための Linux カーネルの特殊ファイルです。 | ハードウェアのランダム性から高性能のエントロピーソースを提供します。 | A |
 | `AES-CTR-DRBG` | [NIST SP800-90A](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) | [`BCRYPT_RNG_ALGORITHM`](https://learn.microsoft.com/en-us/windows/win32/seccng/cng-algorithm-identifiers) で設定された [Windows CNG API `BCryptGenRandom`](https://learn.microsoft.com/en-us/windows/win32/api/bcrypt/nf-bcrypt-bcryptgenrandom) などの一般的な実装で使用されます。 | A |
 | `HMAC-DRBG` | [NIST SP800-90A](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) | | A |
@@ -135,7 +135,7 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 |---|---------|:-:|
 | AES-GCM | [SP 800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) | A |
 | AES-CCM | [SP 800-38C](https://csrc.nist.gov/pubs/sp/800/38/c/upd1/final) | A |
-| ChaCha-Poly1305 | [RFC 7539](https://datatracker.ietf.org/doc/html/rfc7539) | A |
+| ChaCha-Poly1305 | [RFC 8439](https://datatracker.ietf.org/doc/html/rfc8439) | A |
 | AEGIS-256  | [AEGIS: A Fast Authenticated Encryption Algorithm (v1.1)](https://competitions.cr.yp.to/round3/aegisv11.pdf) | A |
 | AEGIS-128  | [AEGIS: A Fast Authenticated Encryption Algorithm (v1.1)](https://competitions.cr.yp.to/round3/aegisv11.pdf) | A |
 | AEGIS-128L | [AEGIS: A Fast Authenticated Encryption Algorithm (v1.1)](https://competitions.cr.yp.to/round3/aegisv11.pdf) | A |
@@ -202,7 +202,7 @@ MAC-then-encrypt はレガシーアプリケーションとの互換性のため
 | 鍵導出関数       | リファレンス                                                                                  | ステータス |
 | ---------------- | -------- |:-:|
 | HKDF             | [RFC 5869](https://www.rfc-editor.org/info/rfc5869)                                           | A          |
-| TLS 1.2 PRF      | [RFC 5248](https://www.rfc-editor.org/info/rfc5248)                                           | L          |
+| TLS 1.2 PRF      | [RFC 5246](https://www.rfc-editor.org/info/rfc5246)                                           | L          |
 | MD5-based KDFs   | [RFC 1321](https://www.rfc-editor.org/info/rfc1321)                                           | D          |
 | SHA-1-based KDFs | [RFC 3174](https://www.rfc-editor.org/info/rfc3174) & [RFC 6194](https://www.rfc-editor.org/info/rfc6194) | D          |
 
@@ -299,13 +299,13 @@ Diffie-Hellman 鍵交換の実装には以下のグループが承認されて�
 | ------------------------------ | ---------------------------------------------              | :-:    |
 | EdDSA (Ed25519, Ed448)         | [RFC 8032](https://www.rfc-editor.org/info/rfc8032)        | A      |
 | XEdDSA (Curve25519, Curve448)  | [XEdDSA](https://signal.org/docs/specifications/xeddsa/)   | A      |
-| ECDSA (P-256, P-384, P-521)    | [FIPS 186-4](https://csrc.nist.gov/pubs/fips/186-5/final)  | A      |
-| RSA-RSSA-PSS                   | [RFC 8017](https://www.rfc-editor.org/info/rfc8017)        | A      |
+| ECDSA (P-256, P-384, P-521)    | [FIPS 186-5](https://csrc.nist.gov/pubs/fips/186-5/final)  | A      |
+| RSASSA-PSS                     | [RFC 8017](https://www.rfc-editor.org/info/rfc8017)        | A      |
 | RSA-SSA-PKCS#1 v1.5            | [RFC 8017](https://www.rfc-editor.org/info/rfc8017)        | D      |
 | DSA (any key size)             | [FIPS 186-4](https://csrc.nist.gov/pubs/fips/186-4/final)  | D      |
 
 ## ポスト量子暗号標準
 
-ポスト量子暗号 (PQC) 実装は [FIPS-203](https://csrc.nist.gov/pubs/fips/203/ipd)、[FIPS-204](https://csrc.nist.gov/pubs/fips/204/ipd)、[FIPS-205](https://csrc.nist.gov/pubs/fips/205/ipd) に準拠する必要があります。現時点では、これらの標準に対応した堅牢化されたコード例やリファレンス実装は多くありません。詳細については、[NIST による最初の三つの最終決定されたポスト量子暗号標準に関する発表 (2024年8月)](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards) を参照してください。
+ポスト量子暗号 (PQC) 実装は [FIPS-203](https://csrc.nist.gov/pubs/fips/203/final)、[FIPS-204](https://csrc.nist.gov/pubs/fips/204/final)、[FIPS-205](https://csrc.nist.gov/pubs/fips/205/final) に準拠する必要があります。現時点では、これらの標準に対応した堅牢化されたコード例やリファレンス実装は多くありません。詳細については、[NIST による最初の三つの最終決定されたポスト量子暗号標準に関する発表 (2024年8月)](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards) を参照してください。
 
 提案されている [mlkem768x25519](https://datatracker.ietf.org/doc/draft-kwiatkowski-tls-ecdhe-mlkem/03/) ポスト量子ハイブリッド TLS 鍵交換方式は、[Firefox リリース 132](https://www.mozilla.org/en-US/firefox/132.0/releasenotes/) や [Chrome リリース 131](https://security.googleblog.com/2024/09/a-new-path-for-kyber-on-web.html) などの主要なブラウザでサポートされています。暗号テスト環境や、業界や政府が承認したライブラリ内で利用可能な場合に使用できます (MAY)。
